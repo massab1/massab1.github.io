@@ -54,7 +54,7 @@
     .about-img-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #1a2540, #0d1525); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; color: var(--gray); }
     .about-corner { position: absolute; bottom: -1px; right: -1px; width: 70px; height: 70px; background: var(--gold); clip-path: polygon(100% 0, 100% 100%, 0 100%); }
     .about-text p { color: var(--gray); line-height: 1.9; margin-bottom: 1.3rem; font-size: .98rem; }
-    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: 1.8rem; }
+  .  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: 1.8rem; }
     .skill-tag { padding: .42rem .75rem; border: 1px solid var(--border); border-radius: 2px; font-size: .76rem; color: var(--gold-light); text-align: center; transition: all .3s; }
     .skill-tag:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
 
@@ -190,10 +190,9 @@
 <section id="about">
   <div class="about-grid">
     <div class="about-img-wrap reveal">
-      <div class="about-img-placeholder">
-        <svg width="60" height="60" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        <span style="font-size:.78rem;text-align:center;padding:0 1.5rem;line-height:1.7">Upload your photo to GitHub as <strong style="color:var(--gold)">photo.jpg</strong> and update the src here</span>
-      </div>
+      <div class="about-img-wrap reveal">
+      <img src="photo.jpeg" alt="Massab Farooq" 
+      style="width:100%;height:100%;object-fit:cover;display:block;">
       <div class="about-corner"></div>
     </div>
     <div class="about-text reveal">
