@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Massab Farooq | Portfolio</title>
+<title>Massab Farooq | Full Stack Django Developer & Tech Entrepreneur</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -11,29 +11,20 @@
   --bg:#050810;--bg2:#080d1a;--bg3:#0c1220;
   --gold:#d4a84b;--gold2:#f0c96a;--gold3:rgba(212,168,75,0.15);
   --cyan:#00d4ff;--cyan2:rgba(0,212,255,0.1);
+  --green:#10b981;--green2:rgba(16,185,129,0.12);
   --white:#ffffff;--cream:#e8e0d0;--gray:#6b7280;--gray2:#9ca3af;
   --border:rgba(212,168,75,0.18);--border2:rgba(255,255,255,0.06);
   --red:#a51c30;
 }
 html{scroll-behavior:smooth;cursor:none}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;line-height:1.6}
-
-/* CUSTOM CURSOR */
-.cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .2s,height .2s,background .2s;mix-blend-mode:difference}
+.cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .2s,height .2s;mix-blend-mode:difference}
 .cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(212,168,75,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .12s ease-out,width .3s,height .3s,border-color .3s}
 .cursor.hover{width:6px;height:6px}
 .cursor-ring.hover{width:52px;height:52px;border-color:var(--gold)}
-
-/* PARTICLES CANVAS */
 #particles{position:fixed;inset:0;z-index:0;pointer-events:none}
-
-/* NOISE OVERLAY */
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4;z-index:1;pointer-events:none}
-
-/* SCROLLBAR */
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:1.4rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
@@ -59,9 +50,7 @@ nav.scrolled{background:rgba(5,8,16,0.95);backdrop-filter:blur(20px);border-bott
 .hero-line:nth-child(3){left:65%;height:50%;top:20%;animation-delay:2s}
 .hero-line:nth-child(4){left:82%;height:35%;top:15%;animation-delay:.5s}
 @keyframes lineFloat{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-20px)}}
-
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;width:100%;position:relative;z-index:2;padding-top:5rem}
-.hero-left{}
 .hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:2rem;opacity:0;animation:fadeUp .8s .3s ease forwards}
 .hero-eyebrow-line{width:40px;height:1px;background:var(--gold)}
 .hero-eyebrow span{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500}
@@ -74,14 +63,17 @@ nav.scrolled{background:rgba(5,8,16,0.95);backdrop-filter:blur(20px);border-bott
 .badge-harvard{border-color:rgba(165,28,48,0.5);background:rgba(165,28,48,0.1);color:#e8a0a8}
 .badge-google{border-color:rgba(66,133,244,0.5);background:rgba(66,133,244,0.1);color:#93b4f8}
 .badge-media{border-color:rgba(212,168,75,0.4);background:rgba(212,168,75,0.08);color:var(--gold2)}
+.badge-django{border-color:rgba(16,185,129,0.5);background:rgba(16,185,129,0.1);color:#6ee7b7}
 .hero-desc{color:var(--gray2);line-height:1.8;margin-bottom:2.5rem;font-size:.95rem;max-width:460px;opacity:0;animation:fadeUp .8s .9s ease forwards}
 .hero-btns{display:flex;gap:1rem;opacity:0;animation:fadeUp .8s 1.05s ease forwards}
 .btn-gold{background:var(--gold);color:var(--bg);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--gold);cursor:none}
 .btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(212,168,75,0.3)}
 .btn-ghost{background:transparent;color:var(--cream);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--border2);cursor:none}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-green{background:rgba(16,185,129,0.15);color:var(--green);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid rgba(16,185,129,0.3);cursor:none}
+.btn-green:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
 
-/* HERO RIGHT - PHOTO CARD */
+/* HERO RIGHT */
 .hero-right{display:flex;justify-content:center;align-items:center;opacity:0;animation:fadeIn .8s 1.2s ease forwards}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .profile-card{position:relative;width:340px}
@@ -98,8 +90,6 @@ nav.scrolled{background:rgba(5,8,16,0.95);backdrop-filter:blur(20px);border-bott
 .profile-card-tag{position:absolute;top:1.2rem;right:1.2rem;background:rgba(5,8,16,0.85);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:20px;padding:.35rem .9rem;font-size:.68rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
 .profile-card-corner{position:absolute;top:-1px;left:-1px;width:60px;height:60px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);border-radius:12px 0 0 0;pointer-events:none}
 .profile-card-corner2{position:absolute;bottom:-1px;right:-1px;width:60px;height:60px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);border-radius:0 0 12px 0;pointer-events:none}
-
-/* FLOATING CERTS */
 .floating-cert{position:absolute;background:rgba(8,13,26,0.92);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;display:flex;align-items:center;gap:.6rem;font-size:.72rem;color:var(--cream);white-space:nowrap;animation:floatCert 3s ease-in-out infinite}
 .floating-cert-icon{font-size:1rem}
 .floating-cert span{color:var(--gold);font-weight:500}
@@ -137,7 +127,6 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .skill:hover{border-color:var(--gold);color:var(--gold)}
 .skill:hover::before{transform:translateX(0)}
 .skill span{position:relative;z-index:1}
-.about-right{}
 .about-card{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:2rem;margin-bottom:1.2rem;transition:all .3s;position:relative;overflow:hidden}
 .about-card::before{content:'';position:absolute;left:0;top:0;width:2px;height:0;background:var(--gold);transition:height .4s}
 .about-card:hover{border-color:var(--border);transform:translateX(6px)}
@@ -146,13 +135,51 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .about-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:.4rem;font-weight:600}
 .about-card p{font-size:.82rem;color:var(--gray2);line-height:1.7}
 
+/* PROJECTS SECTION */
+#projects{background:var(--bg)}
+.project-featured{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center;margin-bottom:4rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.project-featured-visual{background:linear-gradient(135deg,#050d1f,#0a1a3a,#050d1f);min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:3rem}
+.project-featured-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(212,168,75,0.08),transparent 70%)}
+.pf-screen{width:100%;max-width:320px;background:var(--bg3);border-radius:10px;border:1px solid var(--border);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.pf-screen-bar{background:#0c1220;padding:.5rem .8rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--border2)}
+.pf-dot{width:7px;height:7px;border-radius:50%}
+.pf-screen-url{font-size:.6rem;color:#555;margin-left:.5rem;font-family:monospace}
+.pf-screen-body{padding:1rem}
+.pf-kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.6rem}
+.pf-kpi{background:var(--bg2);border-radius:6px;padding:.6rem;border:1px solid var(--border2)}
+.pf-kpi-num{font-size:.95rem;font-weight:700;color:var(--gold);display:block}
+.pf-kpi-label{font-size:.55rem;color:#555;text-transform:uppercase;letter-spacing:1px}
+.pf-bar-row{background:var(--bg2);border-radius:6px;padding:.6rem;margin-bottom:.4rem}
+.pf-bar-label{font-size:.58rem;color:#888;margin-bottom:.3rem;display:flex;justify-content:space-between}
+.pf-bar-track{height:3px;background:rgba(255,255,255,0.05);border-radius:2px}
+.pf-bar-fill{height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.pf-live-badge{position:absolute;top:1rem;right:1rem;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:.3rem .7rem;font-size:.62rem;color:var(--green);display:flex;align-items:center;gap:.3rem}
+.pf-live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.project-featured-info{padding:3rem 3rem 3rem 0}
+.project-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.project-tag-dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.project-featured-info h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--white);margin-bottom:1rem;line-height:1.2}
+.project-featured-info p{font-size:.88rem;color:var(--gray2);line-height:1.8;margin-bottom:1.5rem}
+.project-modules{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.pm{padding:.28rem .7rem;border-radius:20px;font-size:.66rem;border:1px solid var(--border2);color:var(--gray2)}
+.project-tech{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem;flex-wrap:wrap}
+.pt{font-size:.7rem;color:var(--gold);background:var(--gold3);border:1px solid var(--border);padding:.2rem .6rem;border-radius:3px}
+.project-btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.project-btn-live{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:var(--green);color:#fff;border-radius:4px;font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;cursor:none}
+.project-btn-live:hover{background:#0da874;transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,0.3)}
+.project-btn-code{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:transparent;color:var(--cream);border-radius:4px;font-size:.78rem;font-weight:500;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--border2);cursor:none}
+.project-btn-code:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.project-demo-note{font-size:.72rem;color:#555;margin-top:.8rem}
+.project-demo-note span{color:var(--gold)}
+
 /* CERTIFICATIONS */
-#certifications{background:var(--bg)}
+#certifications{background:var(--bg2)}
 .cert-filter{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:3rem}
 .cf-btn{padding:.5rem 1.3rem;border:1px solid var(--border2);border-radius:20px;font-size:.76rem;cursor:none;transition:all .3s;color:var(--gray2);background:transparent;font-family:'Outfit',sans-serif;letter-spacing:.5px}
 .cf-btn.active,.cf-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold3)}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem}
-.cert-card{background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:1.5rem;transition:all .35s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:.8rem}
+.cert-card{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:1.5rem;transition:all .35s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:.8rem}
 .cert-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold3),transparent);opacity:0;transition:opacity .35s}
 .cert-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
 .cert-card:hover::after{opacity:1}
@@ -177,8 +204,8 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .venture-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden}
 .venture-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,var(--bg3))}
 .v1 .venture-img{background:linear-gradient(135deg,#0d1f3c,#1a3a6b)}
-.v2 .venture-img{background:linear-gradient(135deg,#1a0d2e,#3d1a6b)}
-.v3 .venture-img{background:linear-gradient(135deg,#0d2e1a,#1a6b3a)}
+.v2 .venture-img{background:linear-gradient(135deg,#051a0d,#0a3320)}
+.v3 .venture-img{background:linear-gradient(135deg,#1a0d2e,#3d1a6b)}
 .venture-body{padding:1.5rem}
 .venture-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
 .venture h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:.6rem}
@@ -199,6 +226,9 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .svc:hover .svc-icon{transform:scale(1.1) rotate(5deg)}
 .svc h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:.6rem}
 .svc p{font-size:.82rem;color:var(--gray2);line-height:1.7}
+.svc-highlight{border-color:rgba(16,185,129,0.3)!important;background:rgba(16,185,129,0.03)!important}
+.svc-highlight .svc-icon{background:rgba(16,185,129,0.1)!important;border-color:rgba(16,185,129,0.3)!important}
+.svc-highlight::before{background:var(--green)!important}
 
 /* CONTACT */
 #contact{background:var(--bg2)}
@@ -215,8 +245,6 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .social-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
 .sc{display:flex;align-items:center;gap:.4rem;padding:.4rem .9rem;border:1px solid var(--border2);border-radius:20px;font-size:.75rem;color:var(--gray2);text-decoration:none;transition:all .3s;cursor:none}
 .sc:hover{border-color:var(--gold);color:var(--gold);background:var(--gold3)}
-
-/* FORM */
 .contact-form{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:2.5rem}
 .form-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--white);margin-bottom:.4rem}
 .form-subtitle{font-size:.8rem;color:var(--gray2);margin-bottom:2rem}
@@ -241,20 +269,14 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{color:var(--gray);text-decoration:none;font-size:.76rem;letter-spacing:.5px;transition:color .3s}
 .footer-links a:hover{color:var(--gold)}
-
-/* SCROLL INDICATOR */
 .scroll-ind{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:2;opacity:0;animation:fadeUp .8s 1.5s ease forwards}
 .scroll-ind span{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
 .scroll-mouse{width:22px;height:34px;border:1px solid rgba(212,168,75,0.4);border-radius:11px;display:flex;justify-content:center;padding-top:6px}
 .scroll-dot{width:3px;height:6px;background:var(--gold);border-radius:2px;animation:scrollDot 1.5s ease-in-out infinite}
 @keyframes scrollDot{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(8px);opacity:.3}}
-
-/* BACK TO TOP */
 .btt{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--bg);text-decoration:none;z-index:50;opacity:0;transform:translateY(20px);transition:all .3s;cursor:none}
 .btt.show{opacity:1;transform:translateY(0)}
 .btt:hover{background:var(--gold2);transform:translateY(-3px)}
-
-/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -262,29 +284,8 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 .reveal-left.visible{opacity:1;transform:translateX(0)}
 .reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease}
 .reveal-right.visible{opacity:1;transform:translateX(0)}
-
-/* COUNTER */
 .count-up{display:inline-block}
 
-/* PROGRESS BARS */
-.skill-bars{margin-top:1.5rem}
-.skill-bar-item{margin-bottom:1rem}
-.skill-bar-top{display:flex;justify-content:space-between;margin-bottom:.4rem}
-.skill-bar-name{font-size:.78rem;color:var(--cream)}
-.skill-bar-pct{font-size:.72rem;color:var(--gold)}
-.skill-bar-bg{height:3px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden}
-.skill-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;width:0;transition:width 1.2s ease}
-
-/* TIMELINE */
-.timeline{position:relative;padding-left:2rem}
-.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),transparent)}
-.tl-item{position:relative;margin-bottom:2rem;padding-left:1.5rem}
-.tl-dot{position:absolute;left:-2.3rem;top:.3rem;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--bg2)}
-.tl-year{font-size:.68rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:.3rem}
-.tl-title{font-size:.92rem;color:var(--white);font-weight:500;margin-bottom:.2rem}
-.tl-sub{font-size:.78rem;color:var(--gray2)}
-
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;gap:3rem;text-align:center}
   .hero-right{display:none}
@@ -294,6 +295,8 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   .about-grid{grid-template-columns:1fr}
   .ventures-grid,.services-grid{grid-template-columns:repeat(2,1fr)}
   .contact-wrap{grid-template-columns:1fr;gap:3rem}
+  .project-featured{grid-template-columns:1fr}
+  .project-featured-info{padding:2rem}
 }
 @media(max-width:768px){
   nav{padding:1rem 4%}
@@ -308,14 +311,9 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
-<!-- PARTICLES -->
 <canvas id="particles"></canvas>
-
-<!-- BACK TO TOP -->
 <a href="#hero" class="btt" id="btt">↑</a>
 
 <!-- NAV -->
@@ -323,6 +321,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   <div class="nav-logo">M<span>F</span></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Credentials</a></li>
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#services">Services</a></li>
@@ -342,32 +341,32 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
     <div class="hero-left">
       <div class="hero-eyebrow"><div class="hero-eyebrow-line"></div><span>Portfolio 2026</span></div>
       <h1 class="hero-name">Massab<strong>Farooq.</strong></h1>
-      <p class="hero-title">Entrepreneur · <span>HarvardX</span> & <span>Google</span> Certified Tech Professional</p>
+      <p class="hero-title">Full Stack Developer · <span>HarvardX</span> & <span>Google</span> Certified · Tech Entrepreneur</p>
       <div class="hero-badges">
+        <span class="badge badge-django">🐍 Django Developer</span>
         <span class="badge badge-harvard">🎓 8× HarvardX</span>
         <span class="badge badge-google">🔵 5× Google</span>
         <span class="badge badge-media">📡 105K+ Followers</span>
-        <span class="badge badge-media">💻 Quaprit Technologies</span>
       </div>
-      <p class="hero-desc">Building impactful ventures across digital media, education, and technology in Pakistan. Passionate about using certified technical skills to solve real-world problems.</p>
+      <p class="hero-desc">I build real-world web applications that solve real problems. My flagship project — MySchool Jhang Portal — is a complete school management system live in production, serving a real school in Pakistan with 20+ modules.</p>
       <div class="hero-btns">
-        <a href="#certifications" class="btn-gold">View Credentials</a>
+        <a href="#projects" class="btn-gold">View Live Project</a>
         <a href="#contact" class="btn-ghost">Let's Connect</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="profile-card">
-        <div class="floating-cert fc1"><span class="floating-cert-icon">🎓</span><span>Harvard</span> CS50x Certified</div>
-        <div class="floating-cert fc2"><span class="floating-cert-icon">🔵</span><span>Google</span> Cybersecurity</div>
+        <div class="floating-cert fc1"><span class="floating-cert-icon">🐍</span><span>Django</span> Live in Production</div>
+        <div class="floating-cert fc2"><span class="floating-cert-icon">🎓</span><span>Harvard</span> CS50x Certified</div>
         <div class="profile-card-inner">
           <img src="photo.jpeg" alt="Massab Farooq"/>
           <div class="profile-card-overlay"></div>
           <div class="profile-card-info">
             <div class="profile-card-name">Massab Farooq</div>
-            <div class="profile-card-role">Tech Entrepreneur · Jhang, PK</div>
+            <div class="profile-card-role">Full Stack Developer · Jhang, PK</div>
             <div class="profile-card-stats">
               <div class="pcs"><span class="pcs-num">13+</span><span class="pcs-label">Certs</span></div>
-              <div class="pcs"><span class="pcs-num">3</span><span class="pcs-label">Ventures</span></div>
+              <div class="pcs"><span class="pcs-num">20+</span><span class="pcs-label">Modules</span></div>
               <div class="pcs"><span class="pcs-num">105K</span><span class="pcs-label">Followers</span></div>
             </div>
           </div>
@@ -388,11 +387,11 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 <div class="stats-bar">
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="13">0</span><div class="stat-item-label">Certifications</div></div>
   <div class="stat-divider"></div>
+  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="20">0</span><div class="stat-item-label">Modules Built</div></div>
+  <div class="stat-divider"></div>
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="105">0</span><div class="stat-item-label">K+ Followers</div></div>
   <div class="stat-divider"></div>
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="3">0</span><div class="stat-item-label">Ventures</div></div>
-  <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="6">0</span><div class="stat-item-label">Services</div></div>
   <div class="stat-divider"></div>
   <div class="stat-item reveal"><span class="stat-item-num">2026</span><div class="stat-item-label">Active</div></div>
 </div>
@@ -406,49 +405,129 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <h2 class="sec-title">Driven by Purpose,<br><strong>Backed by Excellence</strong></h2>
       </div>
       <div class="about-text">
-        <p>I'm <strong>Massab Farooq</strong> — an entrepreneur and tech professional from Jhang, Pakistan. I hold <strong>13+ certifications</strong> from Harvard University (via HarvardX/edX) and Google, covering Computer Science, Cybersecurity, Data Analytics, Python, SQL, and more.</p>
-        <p>I founded and run three impactful ventures: <strong>Voice of Jhang</strong> (105K+ followers digital news channel), <strong>MySchool Jhang</strong> (educational initiative), and <strong>Quaprit Technologies</strong> (freelancing & tech company).</p>
-        <p>I believe technology should create <strong>tangible real-world impact</strong> — not just exist on paper. Every certification I've earned has been applied to build something meaningful.</p>
+        <p>I'm <strong>Massab Farooq</strong> — a Full Stack Django Developer and tech entrepreneur from Jhang, Pakistan. I built a complete school management system from scratch that is <strong>live in production</strong> right now, serving real students and teachers.</p>
+        <p>Beyond development, I hold <strong>13+ certifications</strong> from Harvard University and Google covering Computer Science, Cybersecurity, Data Analytics, Python, SQL, and more. I founded three ventures including <strong>Voice of Jhang</strong> (105K+ followers) and <strong>Quaprit Technologies</strong>.</p>
+        <p>With 18+ years of professional experience in investigative journalism at ARY News, I bring something most developers can't — I understand how organisations work, what data matters, and how to build systems that real people actually use.</p>
       </div>
       <div class="skills-wrap">
         <div class="skills-label">Core Technologies & Skills</div>
         <div class="skills-list">
           <div class="skill"><span>Python</span></div>
+          <div class="skill"><span>Django</span></div>
+          <div class="skill"><span>Full Stack Web Dev</span></div>
           <div class="skill"><span>SQL / Databases</span></div>
+          <div class="skill"><span>HTML / CSS / JavaScript</span></div>
+          <div class="skill"><span>PythonAnywhere Deployment</span></div>
           <div class="skill"><span>Cybersecurity</span></div>
           <div class="skill"><span>Data Analytics</span></div>
-          <div class="skill"><span>Web Dev (CS50W)</span></div>
+          <div class="skill"><span>Business Intelligence</span></div>
           <div class="skill"><span>R / Data Science</span></div>
           <div class="skill"><span>Digital Marketing</span></div>
-          <div class="skill"><span>Business Intelligence</span></div>
-          <div class="skill"><span>IT Support</span></div>
-          <div class="skill"><span>Scratch</span></div>
-          <div class="skill"><span>JavaScript</span></div>
           <div class="skill"><span>Community Building</span></div>
         </div>
       </div>
     </div>
     <div class="reveal-right">
       <div class="about-card">
+        <div class="about-card-icon">🐍</div>
+        <h4>Full Stack Django Developer</h4>
+        <p>Built and deployed a complete school management system with 20+ modules — live in production at a real school in Pakistan. CS50W certified.</p>
+      </div>
+      <div class="about-card">
         <div class="about-card-icon">🎓</div>
-        <h4>Academic Excellence</h4>
-        <p>Harvard University (CS50), Google Professional Certificates across 5 domains — all verified and ACE/FIBAA accredited.</p>
+        <h4>Harvard & Google Certified</h4>
+        <p>13+ verified credentials — CS50, CS50P, CS50W, CS50 Cybersecurity, Google Cybersecurity, Advanced Data Analytics, Business Intelligence and more.</p>
       </div>
       <div class="about-card">
         <div class="about-card-icon">📡</div>
         <h4>Digital Media Pioneer</h4>
-        <p>Founder of Voice of Jhang — a 105K+ follower digital news channel covering regional and national stories.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">🏫</div>
-        <h4>Education Advocate</h4>
-        <p>MySchool Jhang is making quality education accessible to students who would otherwise go without it.</p>
+        <p>Founder of Voice of Jhang — a 105K+ follower digital news channel. Proven ability to build and engage large audiences.</p>
       </div>
       <div class="about-card">
         <div class="about-card-icon">💻</div>
         <h4>Tech Entrepreneur</h4>
         <p>Quaprit Technologies delivers web development, design and consulting services to clients locally and globally.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Live Projects</span></div>
+    <h2 class="sec-title">Built &<br><strong>Deployed</strong></h2>
+    <p class="sec-desc">Real systems live in production — not just tutorials or side projects. Click the demo and see for yourself.</p>
+  </div>
+
+  <!-- FEATURED PROJECT -->
+  <div class="project-featured reveal">
+    <div class="project-featured-visual">
+      <div class="pf-live-badge"><div class="pf-live-dot"></div> Live in Production</div>
+      <div class="pf-screen">
+        <div class="pf-screen-bar">
+          <div class="pf-dot" style="background:#ff5f57"></div>
+          <div class="pf-dot" style="background:#febc2e"></div>
+          <div class="pf-dot" style="background:#28c840"></div>
+          <span class="pf-screen-url">massabfarooq.pythonanywhere.com</span>
+        </div>
+        <div class="pf-screen-body">
+          <div style="font-size:.58rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">💰 Finance Dashboard — March 2026</div>
+          <div class="pf-kpi-row">
+            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">Rs. 45,000</span><span class="pf-kpi-label">Fee Collected</span></div>
+            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--gold)">Rs. 5,200</span><span class="pf-kpi-label">Outstanding</span></div>
+          </div>
+          <div class="pf-kpi-row">
+            <div class="pf-kpi"><span class="pf-kpi-num" style="color:#f43f5e">Rs. 28,000</span><span class="pf-kpi-label">Expenses</span></div>
+            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">+Rs. 17K</span><span class="pf-kpi-label">Net Profit</span></div>
+          </div>
+          <div style="font-size:.58rem;color:#555;margin:.5rem 0 .3rem">Expense Breakdown</div>
+          <div class="pf-bar-row">
+            <div class="pf-bar-label"><span>🏠 Rent</span><span style="color:var(--gold)">35%</span></div>
+            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div>
+          </div>
+          <div class="pf-bar-row">
+            <div class="pf-bar-label"><span>👥 Salaries</span><span style="color:var(--gold)">42%</span></div>
+            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:42%"></div></div>
+          </div>
+          <div class="pf-bar-row">
+            <div class="pf-bar-label"><span>💡 Utilities</span><span style="color:var(--gold)">23%</span></div>
+            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:23%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-featured-info">
+      <div class="project-tag"><div class="project-tag-dot"></div>Featured Project · Django · Python · Live</div>
+      <h3>MySchool Jhang<br>Management Portal</h3>
+      <p>A complete school management system built from scratch — handling admissions, fees, finance, attendance, results, early years development tracking, and more. Currently running for a real school in Jhang, Pakistan.</p>
+      <div class="project-modules">
+        <span class="pm">🎓 Admissions</span>
+        <span class="pm">💰 Fee Management</span>
+        <span class="pm">📊 Finance P&L</span>
+        <span class="pm">🌸 Early Years</span>
+        <span class="pm">⭐ Milestones</span>
+        <span class="pm">📅 Attendance</span>
+        <span class="pm">📝 Results</span>
+        <span class="pm">👩‍🏫 Salary</span>
+        <span class="pm">📔 Diary</span>
+        <span class="pm">🏅 Clubs</span>
+        <span class="pm">📚 Materials</span>
+        <span class="pm">📲 WhatsApp</span>
+      </div>
+      <div class="project-tech">
+        <span class="pt">Python</span>
+        <span class="pt">Django 5.0</span>
+        <span class="pt">SQLite</span>
+        <span class="pt">HTML/CSS/JS</span>
+        <span class="pt">PythonAnywhere</span>
+        <span class="pt">WhiteNoise</span>
+      </div>
+      <div class="project-btns">
+        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
+        <a href="https://github.com/massab1/myschool-jhang" target="_blank" class="project-btn-code">🐙 Source Code</a>
+      </div>
+      <div class="project-demo-note">Demo login: <span>username: demo</span> · <span>password: demo1234</span></div>
     </div>
   </div>
 </section>
@@ -466,58 +545,19 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
     <button class="cf-btn" onclick="filterCerts('g',this)">🔵 Google (5)</button>
   </div>
   <div class="certs-grid" id="certGrid">
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50x: Introduction to Computer Science</div></div></div>
-      <div class="cert-foot"><span class="cert-date">June 5, 2023</span><span class="cert-badge2 cb-v">Verified</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50P: Introduction to Programming with Python</div></div></div>
-      <div class="cert-foot"><span class="cert-date">July 3, 2023</span><span class="cert-badge2 cb-v">Verified</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50S: Introduction to Programming with Scratch</div></div></div>
-      <div class="cert-foot"><span class="cert-date">September 26, 2023</span><span class="cert-badge2 cb-v">Verified</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50W: Web Programming with Python & JavaScript</div></div></div>
-      <div class="cert-foot"><span class="cert-date">HarvardX</span><span class="cert-badge2 cb-v">Verified</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50 Cybersecurity</div></div></div>
-      <div class="cert-foot"><span class="cert-date">2026</span><span class="cert-badge2 cb-v">Verified</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · Professional Certificate</div><div class="cert-title">Computer Science for Python Programming</div></div></div>
-      <div class="cert-foot"><span class="cert-date">July 2023</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · Professional Certificate</div><div class="cert-title">Computer Science for Databases using SQL</div></div></div>
-      <div class="cert-foot"><span class="cert-date">April 2024</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="h">
-      <div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">PH125.1x: Data Science — R Basics</div></div></div>
-      <div class="cert-foot"><span class="cert-date">May 7, 2024</span><span class="cert-badge2 cb-v">Verified</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="g">
-      <div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google IT Support Professional Certificate</div></div></div>
-      <div class="cert-foot"><span class="cert-date">March 9, 2025</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="g">
-      <div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Digital Marketing & E-Commerce Certificate</div></div></div>
-      <div class="cert-foot"><span class="cert-date">August 9, 2024</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="g">
-      <div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Advanced Data Analytics Certificate</div></div></div>
-      <div class="cert-foot"><span class="cert-date">June 26, 2025</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="g">
-      <div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Business Intelligence Certificate</div></div></div>
-      <div class="cert-foot"><span class="cert-date">October 9, 2025</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
-    <div class="cert-card reveal" data-cat="g">
-      <div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Cybersecurity Professional Certificate</div></div></div>
-      <div class="cert-foot"><span class="cert-date">February 12, 2026</span><span class="cert-badge2 cb-p">Professional</span></div>
-    </div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50x: Introduction to Computer Science</div></div></div><div class="cert-foot"><span class="cert-date">June 5, 2023</span><span class="cert-badge2 cb-v">Verified</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50P: Introduction to Programming with Python</div></div></div><div class="cert-foot"><span class="cert-date">July 3, 2023</span><span class="cert-badge2 cb-v">Verified</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50S: Introduction to Programming with Scratch</div></div></div><div class="cert-foot"><span class="cert-date">September 26, 2023</span><span class="cert-badge2 cb-v">Verified</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50W: Web Programming with Python & JavaScript</div></div></div><div class="cert-foot"><span class="cert-date">HarvardX</span><span class="cert-badge2 cb-v">Verified</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50 Cybersecurity</div></div></div><div class="cert-foot"><span class="cert-date">2026</span><span class="cert-badge2 cb-v">Verified</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · Professional Certificate</div><div class="cert-title">Computer Science for Python Programming</div></div></div><div class="cert-foot"><span class="cert-date">July 2023</span><span class="cert-badge2 cb-p">Professional</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · Professional Certificate</div><div class="cert-title">Computer Science for Databases using SQL</div></div></div><div class="cert-foot"><span class="cert-date">April 2024</span><span class="cert-badge2 cb-p">Professional</span></div></div>
+    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">PH125.1x: Data Science — R Basics</div></div></div><div class="cert-foot"><span class="cert-date">May 7, 2024</span><span class="cert-badge2 cb-v">Verified</span></div></div>
+    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google IT Support Professional Certificate</div></div></div><div class="cert-foot"><span class="cert-date">March 9, 2025</span><span class="cert-badge2 cb-p">Professional</span></div></div>
+    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Digital Marketing & E-Commerce Certificate</div></div></div><div class="cert-foot"><span class="cert-date">August 9, 2024</span><span class="cert-badge2 cb-p">Professional</span></div></div>
+    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Advanced Data Analytics Certificate</div></div></div><div class="cert-foot"><span class="cert-date">June 26, 2025</span><span class="cert-badge2 cb-p">Professional</span></div></div>
+    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Business Intelligence Certificate</div></div></div><div class="cert-foot"><span class="cert-date">October 9, 2025</span><span class="cert-badge2 cb-p">Professional</span></div></div>
+    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Cybersecurity Professional Certificate</div></div></div><div class="cert-foot"><span class="cert-date">February 12, 2026</span><span class="cert-badge2 cb-p">Professional</span></div></div>
   </div>
   <div class="certs-cta reveal">
     <a href="https://credly.com/users/massab-farooq" target="_blank" class="btn-ghost">View Full Transcript on Credly ↗</a>
@@ -532,6 +572,15 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
     <p class="sec-desc">Three platforms united by one mission — to inform, educate, and empower communities through digital innovation.</p>
   </div>
   <div class="ventures-grid">
+    <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="venture v2 reveal">
+      <div class="venture-img">🏫</div>
+      <div class="venture-body">
+        <div class="venture-tag">Django · Full Stack · Live System</div>
+        <h3>MySchool Jhang Portal</h3>
+        <p>Complete school management system — admissions, fees, finance P&L, early years tracker, 20+ modules. Built from scratch, live in production.</p>
+        <div class="venture-meta"><span class="venture-followers">🌐 Live at pythonanywhere.com</span><div class="venture-arrow">↗</div></div>
+      </div>
+    </a>
     <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="venture v1 reveal">
       <div class="venture-img">📡</div>
       <div class="venture-body">
@@ -539,15 +588,6 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <h3>Voice of Jhang</h3>
         <p>A thriving digital news and media channel covering stories from Jhang and beyond — Pakistan's community voice.</p>
         <div class="venture-meta"><span class="venture-followers">📊 105,000+ Followers</span><div class="venture-arrow">↗</div></div>
-      </div>
-    </a>
-    <a href="https://web.facebook.com/MySchoolJhang" target="_blank" class="venture v2 reveal">
-      <div class="venture-img">🎓</div>
-      <div class="venture-body">
-        <div class="venture-tag">Education · Community Initiative</div>
-        <h3>MySchool Jhang</h3>
-        <p>Making quality education accessible to every student in Jhang, bridging the gap between traditional and modern learning.</p>
-        <div class="venture-meta"><span class="venture-followers">🏫 Educational Initiative</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
     <a href="https://web.facebook.com/Quaprit" target="_blank" class="venture v3 reveal">
@@ -567,14 +607,14 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   <div class="sec-header reveal">
     <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>What I Offer</span></div>
     <h2 class="sec-title">Services &<br><strong>Expertise</strong></h2>
-    <p class="sec-desc">Harvard & Google-certified expertise combined with real-world entrepreneurial experience across 6 core domains.</p>
+    <p class="sec-desc">Harvard & Google-certified expertise combined with a live production Django system — across 6 core service areas.</p>
   </div>
   <div class="services-grid">
-    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Web Development</h3><p>Custom websites and web apps with Python, JavaScript, HTML/CSS and SQL. CS50W certified, production-ready code.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🔒</div><h3>Cybersecurity</h3><p>Security assessments, threat analysis and consulting. Backed by Harvard CS50 Cybersecurity + Google Cybersecurity certs.</p></div>
-    <div class="svc reveal"><div class="svc-icon">📊</div><h3>Data Analytics</h3><p>Advanced data analysis, dashboards and BI solutions using Python, R and Google Business Intelligence tools.</p></div>
-    <div class="svc reveal"><div class="svc-icon">📱</div><h3>Digital Marketing</h3><p>SEO, e-commerce, and campaign strategy. Google Digital Marketing & E-Commerce certified. 105K+ real-world experience.</p></div>
-    <div class="svc reveal"><div class="svc-icon">📡</div><h3>Media & Content</h3><p>Digital channel management, content strategy and community growth — proven with 105K+ organically built followers.</p></div>
+    <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School Management Systems</h3><p>Complete Django portals for schools — admissions, fees, finance, attendance, results, early years and more. Live demo available. Deployed and running.</p></div>
+    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Web Development</h3><p>Custom websites and web apps with Python/Django, JavaScript, HTML/CSS and SQL. CS50W certified, production-ready deployments.</p></div>
+    <div class="svc reveal"><div class="svc-icon">📊</div><h3>Data Analytics & BI</h3><p>Dashboards, reports and business intelligence using Python, R and Google BI tools. Google Advanced Data Analytics certified.</p></div>
+    <div class="svc reveal"><div class="svc-icon">🔒</div><h3>Cybersecurity</h3><p>Security assessments, threat analysis and consulting. Harvard CS50 Cybersecurity + Google Cybersecurity Professional certified.</p></div>
+    <div class="svc reveal"><div class="svc-icon">📱</div><h3>Digital Marketing</h3><p>SEO, e-commerce, and campaign strategy. Google certified with 105K+ real-world audience building experience.</p></div>
     <div class="svc reveal"><div class="svc-icon">🖥️</div><h3>IT Support & Training</h3><p>Technical support, system administration, networking and security. Google IT Support Professional certified.</p></div>
   </div>
 </section>
@@ -587,27 +627,18 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Get In Touch</span></div>
         <h2 class="sec-title">Let's Build<br><strong>Something Great</strong></h2>
       </div>
-      <p>Have a project, partnership, or collaboration in mind? I'm always open to new opportunities and conversations. Reach out and let's talk.</p>
+      <p>Need a school management system, a custom web application, or data analytics solution? I build real systems that actually get deployed. Let's talk.</p>
       <div class="contact-links">
-        <a href="mailto:massab98@gmail.com" class="cl">
-          <div class="cl-icon">✉️</div><div><span class="cl-label">Email</span><span class="cl-val">massab98@gmail.com</span></div>
-        </a>
-        <a href="https://github.com/massab1" target="_blank" class="cl">
-          <div class="cl-icon">🐙</div><div><span class="cl-label">GitHub</span><span class="cl-val">github.com/massab1</span></div>
-        </a>
-        <a href="https://www.linkedin.com/in/musabfarouq" target="_blank" class="cl">
-          <div class="cl-icon">💼</div><div><span class="cl-label">LinkedIn</span><span class="cl-val">linkedin.com/in/musabfarouq</span></div>
-        </a>
-        <a href="https://credly.com/users/massab-farooq" target="_blank" class="cl">
-          <div class="cl-icon">🏅</div><div><span class="cl-label">Credly</span><span class="cl-val">credly.com/users/massab-farooq</span></div>
-        </a>
-        <a href="https://web.facebook.com/massab.farouq" target="_blank" class="cl">
-          <div class="cl-icon">📘</div><div><span class="cl-label">Facebook</span><span class="cl-val">web.facebook.com/massab.farouq</span></div>
-        </a>
+        <a href="mailto:musabfarouq555@gmail.com" class="cl"><div class="cl-icon">✉️</div><div><span class="cl-label">Email</span><span class="cl-val">musabfarouq555@gmail.com</span></div></a>
+        <a href="https://github.com/massab1" target="_blank" class="cl"><div class="cl-icon">🐙</div><div><span class="cl-label">GitHub</span><span class="cl-val">github.com/massab1</span></div></a>
+        <a href="https://www.linkedin.com/in/musabfarouq" target="_blank" class="cl"><div class="cl-icon">💼</div><div><span class="cl-label">LinkedIn</span><span class="cl-val">linkedin.com/in/musabfarouq</span></div></a>
+        <a href="https://credly.com/users/massab-farooq" target="_blank" class="cl"><div class="cl-icon">🏅</div><div><span class="cl-label">Credly — Verified Certs</span><span class="cl-val">credly.com/users/massab-farooq</span></div></a>
+        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="cl"><div class="cl-icon">🌐</div><div><span class="cl-label">Live Project</span><span class="cl-val">massabfarooq.pythonanywhere.com</span></div></a>
       </div>
       <div class="social-chips">
+        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="sc">🏫 MySchool Live Demo</a>
+        <a href="https://github.com/massab1/myschool-jhang" target="_blank" class="sc">🐙 GitHub Repo</a>
         <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="sc">📡 Voice of Jhang</a>
-        <a href="https://web.facebook.com/MySchoolJhang" target="_blank" class="sc">🎓 MySchool</a>
         <a href="https://web.facebook.com/Quaprit" target="_blank" class="sc">💻 Quaprit Tech</a>
       </div>
     </div>
@@ -623,12 +654,12 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <div class="fg"><label>Topic</label>
           <select>
             <option value="">Select a topic…</option>
-            <option>Web Development Project</option>
+            <option>School Management System</option>
+            <option>Custom Web Application (Django)</option>
+            <option>Data Analytics / Dashboard</option>
             <option>Cybersecurity Consulting</option>
-            <option>Data Analytics</option>
             <option>Digital Marketing</option>
             <option>Media Collaboration</option>
-            <option>Educational Partnership</option>
             <option>General Inquiry</option>
           </select>
         </div>
@@ -647,20 +678,20 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Massab Farooq</div>
-    <div class="footer-copy">© 2026 · massab1.github.io · All rights reserved</div>
+    <div class="footer-copy">© 2026 · massab1.github.io · Full Stack Django Developer</div>
     <div class="footer-links">
       <a href="https://github.com/massab1" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/musabfarouq" target="_blank">LinkedIn</a>
+      <a href="https://massabfarooq.pythonanywhere.com" target="_blank">Live Demo</a>
       <a href="https://credly.com/users/massab-farooq" target="_blank">Credly</a>
-      <a href="https://web.facebook.com/massab.farouq" target="_blank">Facebook</a>
     </div>
   </div>
 </footer>
 
 <script>
 // CURSOR
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
 function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)}
@@ -673,22 +704,21 @@ document.querySelectorAll('a,button,.svc,.cert-card,.venture,.about-card,.skill'
 // PARTICLES
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
-let W,H,particles=[];
+let W,H,parts=[];
 function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
 resize();window.addEventListener('resize',resize);
-class Particle{constructor(){this.reset()}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.5+.3;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.alpha=Math.random()*.4+.1;this.color=Math.random()>.5?'212,168,75':'0,212,255'}
+class P{constructor(){this.reset()}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.5+.3;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.alpha=Math.random()*.4+.1;this.color=Math.random()>.5?'212,168,75':'0,212,255'}
 update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset()}
 draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(${this.color},${this.alpha})`;ctx.fill()}}
-for(let i=0;i<80;i++)particles.push(new Particle());
-function animP(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw()});
-// draw lines between close particles
-for(let i=0;i<particles.length;i++)for(let j=i+1;j<particles.length;j++){
-  const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);
-  if(d<100){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(212,168,75,${.08*(1-d/100)})`;ctx.lineWidth=.5;ctx.stroke()}}
+for(let i=0;i<80;i++)parts.push(new P());
+function animP(){ctx.clearRect(0,0,W,H);parts.forEach(p=>{p.update();p.draw()});
+for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){
+  const dx=parts[i].x-parts[j].x,dy=parts[i].y-parts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+  if(d<100){ctx.beginPath();ctx.moveTo(parts[i].x,parts[i].y);ctx.lineTo(parts[j].x,parts[j].y);ctx.strokeStyle=`rgba(212,168,75,${.08*(1-d/100)})`;ctx.lineWidth=.5;ctx.stroke()}}
 requestAnimationFrame(animP)}
 animP();
 
-// NAV SCROLL
+// NAV
 const navbar=document.getElementById('navbar');
 const btt=document.getElementById('btt');
 window.addEventListener('scroll',()=>{
@@ -724,7 +754,7 @@ function filterCerts(cat,btn){
   });
 }
 
-// FORM SUBMIT
+// FORM
 function submitForm(){
   const btn=document.querySelector('.form-btn');
   btn.textContent='Sending…';btn.disabled=true;
@@ -734,14 +764,6 @@ function submitForm(){
     document.getElementById('formSuccess').style.display='block';
   },1200);
 }
-
-// SKILL BAR ANIMATION
-document.querySelectorAll('.skill-bar-fill').forEach(bar=>{
-  const bObs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.width;bObs.unobserve(e.target)}});
-  },{threshold:.5});
-  bObs.observe(bar);
-});
 </script>
 </body>
 </html>
