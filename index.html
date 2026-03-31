@@ -14,7 +14,7 @@
   --green:#10b981;--green2:rgba(16,185,129,0.12);
   --white:#ffffff;--cream:#e8e0d0;--gray:#6b7280;--gray2:#9ca3af;
   --border:rgba(212,168,75,0.18);--border2:rgba(255,255,255,0.06);
-  --red:#a51c30;
+  --red:#a51c30;--teal:#017E84;--purple:#714B67;
 }
 html{scroll-behavior:smooth;cursor:none}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;line-height:1.6}
@@ -65,13 +65,13 @@ nav.scrolled{background:rgba(5,8,16,0.95);backdrop-filter:blur(20px);border-bott
 .badge-media{border-color:rgba(212,168,75,0.4);background:rgba(212,168,75,0.08);color:var(--gold2)}
 .badge-django{border-color:rgba(16,185,129,0.5);background:rgba(16,185,129,0.1);color:#6ee7b7}
 .hero-desc{color:var(--gray2);line-height:1.8;margin-bottom:2.5rem;font-size:.95rem;max-width:460px;opacity:0;animation:fadeUp .8s .9s ease forwards}
-.hero-btns{display:flex;gap:1rem;opacity:0;animation:fadeUp .8s 1.05s ease forwards}
+.hero-btns{display:flex;gap:1rem;opacity:0;animation:fadeUp .8s 1.05s ease forwards;flex-wrap:wrap}
 .btn-gold{background:var(--gold);color:var(--bg);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--gold);cursor:none}
 .btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(212,168,75,0.3)}
 .btn-ghost{background:transparent;color:var(--cream);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--border2);cursor:none}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-.btn-green{background:rgba(16,185,129,0.15);color:var(--green);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid rgba(16,185,129,0.3);cursor:none}
-.btn-green:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+.btn-teal{background:rgba(1,126,132,0.15);color:#5eead4;padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid rgba(1,126,132,0.4);cursor:none}
+.btn-teal:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
 
 /* HERO RIGHT */
 .hero-right{display:flex;justify-content:center;align-items:center;opacity:0;animation:fadeIn .8s 1.2s ease forwards}
@@ -135,29 +135,57 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .about-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:.4rem;font-weight:600}
 .about-card p{font-size:.82rem;color:var(--gray2);line-height:1.7}
 
-/* PROJECTS SECTION */
+/* PROJECTS */
 #projects{background:var(--bg)}
-.project-featured{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center;margin-bottom:4rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.project-featured{display:grid;grid-template-columns:1.1fr 1fr;gap:0;align-items:stretch;margin-bottom:4rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
 .project-featured-visual{background:linear-gradient(135deg,#050d1f,#0a1a3a,#050d1f);min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:3rem}
 .project-featured-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(212,168,75,0.08),transparent 70%)}
-.pf-screen{width:100%;max-width:320px;background:var(--bg3);border-radius:10px;border:1px solid var(--border);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
-.pf-screen-bar{background:#0c1220;padding:.5rem .8rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--border2)}
-.pf-dot{width:7px;height:7px;border-radius:50%}
-.pf-screen-url{font-size:.6rem;color:#555;margin-left:.5rem;font-family:monospace}
-.pf-screen-body{padding:1rem}
-.pf-kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.6rem}
-.pf-kpi{background:var(--bg2);border-radius:6px;padding:.6rem;border:1px solid var(--border2)}
-.pf-kpi-num{font-size:.95rem;font-weight:700;color:var(--gold);display:block}
-.pf-kpi-label{font-size:.55rem;color:#555;text-transform:uppercase;letter-spacing:1px}
-.pf-bar-row{background:var(--bg2);border-radius:6px;padding:.6rem;margin-bottom:.4rem}
-.pf-bar-label{font-size:.58rem;color:#888;margin-bottom:.3rem;display:flex;justify-content:space-between}
-.pf-bar-track{height:3px;background:rgba(255,255,255,0.05);border-radius:2px}
-.pf-bar-fill{height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
-.pf-live-badge{position:absolute;top:1rem;right:1rem;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:.3rem .7rem;font-size:.62rem;color:var(--green);display:flex;align-items:center;gap:.3rem}
-.pf-live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
+
+/* POS Screen mockup */
+.pos-screen{width:100%;max-width:360px;background:#0f172a;border-radius:10px;border:1px solid rgba(1,126,132,0.3);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.pos-topbar{background:#1e293b;padding:.4rem .8rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.pos-dot{width:7px;height:7px;border-radius:50%}
+.pos-url{font-size:.55rem;color:#475569;margin-left:.3rem;font-family:monospace}
+.pos-body{display:grid;grid-template-columns:1fr 120px;gap:0;min-height:260px}
+.pos-menu{padding:.7rem;border-right:1px solid rgba(255,255,255,.05)}
+.pos-menu-title{font-size:.5rem;color:#017E84;text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem}
+.pos-items-grid{display:grid;grid-template-columns:1fr 1fr;gap:.3rem}
+.pos-item{background:#1e293b;border-radius:4px;padding:.4rem;border:1px solid rgba(255,255,255,.04)}
+.pos-item-emoji{font-size:.9rem;display:block;margin-bottom:.2rem}
+.pos-item-name{font-size:.45rem;color:#94a3b8;display:block}
+.pos-item-price{font-size:.5rem;color:#017E84;font-weight:700;display:block}
+.pos-order{background:#1a0d24;padding:.6rem}
+.pos-order-title{font-size:.48rem;color:#714B67;text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem;font-weight:700}
+.pos-cart-item{display:flex;justify-content:space-between;align-items:center;padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.44rem}
+.pos-cart-qty{background:#017E84;color:#fff;border-radius:3px;padding:1px 4px;font-size:.4rem;font-weight:700}
+.pos-cart-name{color:#cbd5e1;flex:1;margin:0 .3rem}
+.pos-cart-price{color:#f0c96a;font-weight:700}
+.pos-total{background:#017E84;border-radius:4px;padding:.4rem;margin-top:.4rem;text-align:center}
+.pos-total-label{font-size:.44rem;color:rgba(255,255,255,.7)}
+.pos-total-amount{font-size:.7rem;font-weight:700;color:#fff}
+.pos-live-badge{position:absolute;top:1rem;right:1rem;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:.3rem .7rem;font-size:.62rem;color:var(--green);display:flex;align-items:center;gap:.3rem}
+.pos-live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.project-featured-info{padding:3rem 3rem 3rem 0}
-.project-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+
+/* KDS screen */
+.kds-screen{width:100%;max-width:360px;background:#0f172a;border-radius:10px;border:1px solid rgba(212,168,75,0.2);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.kds-header{background:#1e293b;padding:.5rem .8rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+.kds-title{font-size:.55rem;color:#ef4444;font-weight:700}
+.kds-clock{font-size:.55rem;color:#fbbf24;font-family:monospace}
+.kds-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.3rem;padding:.6rem}
+.kds-col-hdr{font-size:.44rem;font-weight:700;text-align:center;padding:.2rem;border-radius:3px;margin-bottom:.3rem}
+.kds-new{background:#1a1040;color:#a78bfa}
+.kds-prep{background:#1a2310;color:#fbbf24}
+.kds-ready{background:#0d2818;color:#6ee7b7}
+.kds-card{background:#1e293b;border-radius:5px;padding:.4rem;margin-bottom:.3rem;border:1px solid rgba(255,255,255,.06);font-size:.42rem}
+.kds-card-hdr{background:#065f46;border-radius:3px;padding:.25rem .4rem;margin-bottom:.3rem;display:flex;justify-content:space-between}
+.kds-card-tbl{color:#fff;font-weight:700}
+.kds-card-time{color:#fbbf24}
+.kds-item{color:#94a3b8;padding:.1rem 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.kds-btn{background:#059669;color:#fff;border:none;border-radius:3px;padding:.2rem .5rem;font-size:.4rem;font-weight:700;width:100%;margin-top:.3rem;cursor:pointer}
+
+.project-featured-info{padding:3rem}
+.project-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .project-tag-dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
 .project-featured-info h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--white);margin-bottom:1rem;line-height:1.2}
 .project-featured-info p{font-size:.88rem;color:var(--gray2);line-height:1.8;margin-bottom:1.5rem}
@@ -172,6 +200,28 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .project-btn-code:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
 .project-demo-note{font-size:.72rem;color:#555;margin-top:.8rem}
 .project-demo-note span{color:var(--gold)}
+
+/* FEATURE HIGHLIGHTS */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.feat{background:rgba(1,126,132,0.08);border:1px solid rgba(1,126,132,0.2);border-radius:8px;padding:.9rem;text-align:center}
+.feat-icon{font-size:1.3rem;margin-bottom:.4rem}
+.feat-label{font-size:.7rem;color:#5eead4;font-weight:600;display:block}
+.feat-desc{font-size:.62rem;color:var(--gray2);margin-top:.2rem}
+
+/* OLD PROJECT MOCKUP */
+.pf-screen{width:100%;max-width:320px;background:var(--bg3);border-radius:10px;border:1px solid var(--border);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.pf-screen-bar{background:#0c1220;padding:.5rem .8rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--border2)}
+.pf-dot{width:7px;height:7px;border-radius:50%}
+.pf-screen-url{font-size:.6rem;color:#555;margin-left:.5rem;font-family:monospace}
+.pf-screen-body{padding:1rem}
+.pf-kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.6rem}
+.pf-kpi{background:var(--bg2);border-radius:6px;padding:.6rem;border:1px solid var(--border2)}
+.pf-kpi-num{font-size:.95rem;font-weight:700;color:var(--gold);display:block}
+.pf-kpi-label{font-size:.55rem;color:#555;text-transform:uppercase;letter-spacing:1px}
+.pf-bar-row{background:var(--bg2);border-radius:6px;padding:.6rem;margin-bottom:.4rem}
+.pf-bar-label{font-size:.58rem;color:#888;margin-bottom:.3rem;display:flex;justify-content:space-between}
+.pf-bar-track{height:3px;background:rgba(255,255,255,0.05);border-radius:2px}
+.pf-bar-fill{height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
 
 /* CERTIFICATIONS */
 #certifications{background:var(--bg2)}
@@ -206,6 +256,7 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .v1 .venture-img{background:linear-gradient(135deg,#0d1f3c,#1a3a6b)}
 .v2 .venture-img{background:linear-gradient(135deg,#051a0d,#0a3320)}
 .v3 .venture-img{background:linear-gradient(135deg,#1a0d2e,#3d1a6b)}
+.v4 .venture-img{background:linear-gradient(135deg,#001a1a,#014f53)}
 .venture-body{padding:1.5rem}
 .venture-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
 .venture h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:.6rem}
@@ -229,6 +280,9 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .svc-highlight{border-color:rgba(16,185,129,0.3)!important;background:rgba(16,185,129,0.03)!important}
 .svc-highlight .svc-icon{background:rgba(16,185,129,0.1)!important;border-color:rgba(16,185,129,0.3)!important}
 .svc-highlight::before{background:var(--green)!important}
+.svc-teal{border-color:rgba(1,126,132,0.3)!important;background:rgba(1,126,132,0.03)!important}
+.svc-teal .svc-icon{background:rgba(1,126,132,0.1)!important;border-color:rgba(1,126,132,0.3)!important}
+.svc-teal::before{background:var(--teal)!important}
 
 /* CONTACT */
 #contact{background:var(--bg2)}
@@ -297,6 +351,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   .contact-wrap{grid-template-columns:1fr;gap:3rem}
   .project-featured{grid-template-columns:1fr}
   .project-featured-info{padding:2rem}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
   nav{padding:1rem 4%}
@@ -306,6 +361,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   .form-row2{grid-template-columns:1fr}
   .stats-bar{gap:.5rem}
   .stat-divider{display:none}
+  .feat-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -348,16 +404,17 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <span class="badge badge-google">🔵 5× Google</span>
         <span class="badge badge-media">📡 105K+ Followers</span>
       </div>
-      <p class="hero-desc">I build real-world web applications that solve real problems. My flagship project — MySchool Jhang Portal — is a complete school management system live in production, serving a real school in Pakistan with 20+ modules.</p>
+      <p class="hero-desc">I build real-world web applications that solve real problems — from complete school management systems to restaurant POS with membership portals. Both live in production in Pakistan.</p>
       <div class="hero-btns">
-        <a href="#projects" class="btn-gold">View Live Project</a>
+        <a href="#projects" class="btn-gold">View Live Projects</a>
+        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="btn-teal">🍽️ MTC POS Live</a>
         <a href="#contact" class="btn-ghost">Let's Connect</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="profile-card">
-        <div class="floating-cert fc1"><span class="floating-cert-icon">🐍</span><span>Django</span> Live in Production</div>
-        <div class="floating-cert fc2"><span class="floating-cert-icon">🎓</span><span>Harvard</span> CS50x Certified</div>
+        <div class="floating-cert fc1"><span class="floating-cert-icon">🐍</span><span>Django</span> 2 Live Systems</div>
+        <div class="floating-cert fc2"><span class="floating-cert-icon">🎓</span><span>Harvard</span> CS50W Certified</div>
         <div class="profile-card-inner">
           <img src="photo.jpeg" alt="Massab Farooq"/>
           <div class="profile-card-overlay"></div>
@@ -366,7 +423,7 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
             <div class="profile-card-role">Full Stack Developer · Jhang, PK</div>
             <div class="profile-card-stats">
               <div class="pcs"><span class="pcs-num">13+</span><span class="pcs-label">Certs</span></div>
-              <div class="pcs"><span class="pcs-num">20+</span><span class="pcs-label">Modules</span></div>
+              <div class="pcs"><span class="pcs-num">2</span><span class="pcs-label">Live Apps</span></div>
               <div class="pcs"><span class="pcs-num">105K</span><span class="pcs-label">Followers</span></div>
             </div>
           </div>
@@ -387,11 +444,11 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 <div class="stats-bar">
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="13">0</span><div class="stat-item-label">Certifications</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="20">0</span><div class="stat-item-label">Modules Built</div></div>
+  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="2">0</span><div class="stat-item-label">Live Systems</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="30">0</span><div class="stat-item-label">Modules Built</div></div>
   <div class="stat-divider"></div>
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="105">0</span><div class="stat-item-label">K+ Followers</div></div>
-  <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="3">0</span><div class="stat-item-label">Ventures</div></div>
   <div class="stat-divider"></div>
   <div class="stat-item reveal"><span class="stat-item-num">2026</span><div class="stat-item-label">Active</div></div>
 </div>
@@ -405,9 +462,9 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <h2 class="sec-title">Driven by Purpose,<br><strong>Backed by Excellence</strong></h2>
       </div>
       <div class="about-text">
-        <p>I'm <strong>Massab Farooq</strong> — a Full Stack Django Developer and tech entrepreneur from Jhang, Pakistan. I built a complete school management system from scratch that is <strong>live in production</strong> right now, serving real students and teachers.</p>
+        <p>I'm <strong>Massab Farooq</strong> — a Full Stack Django Developer and tech entrepreneur from Jhang, Pakistan. I've built and deployed <strong>two complete production systems</strong> from scratch: a school management portal and a full restaurant POS & membership system — both live and serving real users.</p>
         <p>Beyond development, I hold <strong>13+ certifications</strong> from Harvard University and Google covering Computer Science, Cybersecurity, Data Analytics, Python, SQL, and more. I founded three ventures including <strong>Voice of Jhang</strong> (105K+ followers) and <strong>Quaprit Technologies</strong>.</p>
-        <p>With 18+ years of professional experience in investigative journalism at ARY News, I bring something most developers can't — I understand how organisations work, what data matters, and how to build systems that real people actually use.</p>
+        <p>With 18+ years in investigative journalism at ARY News, I understand how organisations actually work — what data matters, and how to build systems real people use every day.</p>
       </div>
       <div class="skills-wrap">
         <div class="skills-label">Core Technologies & Skills</div>
@@ -416,37 +473,37 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
           <div class="skill"><span>Django</span></div>
           <div class="skill"><span>Full Stack Web Dev</span></div>
           <div class="skill"><span>SQL / Databases</span></div>
+          <div class="skill"><span>REST APIs / AJAX</span></div>
           <div class="skill"><span>HTML / CSS / JavaScript</span></div>
           <div class="skill"><span>PythonAnywhere Deployment</span></div>
           <div class="skill"><span>Cybersecurity</span></div>
           <div class="skill"><span>Data Analytics</span></div>
-          <div class="skill"><span>Business Intelligence</span></div>
-          <div class="skill"><span>R / Data Science</span></div>
-          <div class="skill"><span>Digital Marketing</span></div>
-          <div class="skill"><span>Community Building</span></div>
+          <div class="skill"><span>POS Systems</span></div>
+          <div class="skill"><span>Membership Portals</span></div>
+          <div class="skill"><span>Kitchen Display Systems</span></div>
         </div>
       </div>
     </div>
     <div class="reveal-right">
       <div class="about-card">
-        <div class="about-card-icon">🐍</div>
-        <h4>Full Stack Django Developer</h4>
-        <p>Built and deployed a complete school management system with 20+ modules — live in production at a real school in Pakistan. CS50W certified.</p>
+        <div class="about-card-icon">🏫</div>
+        <h4>School Management System</h4>
+        <p>20+ modules — admissions, fees, finance P&L, early years tracker, attendance, results. Live at a real school in Jhang, Pakistan.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">🍽️</div>
+        <h4>Restaurant POS & ERP</h4>
+        <p>Complete POS system with kitchen display, member portal, mobile ordering, receipt printing and admin panel — live at Model Town Club, Lahore.</p>
       </div>
       <div class="about-card">
         <div class="about-card-icon">🎓</div>
         <h4>Harvard & Google Certified</h4>
-        <p>13+ verified credentials — CS50, CS50P, CS50W, CS50 Cybersecurity, Google Cybersecurity, Advanced Data Analytics, Business Intelligence and more.</p>
+        <p>13+ verified credentials — CS50, CS50P, CS50W, Cybersecurity, Google Advanced Data Analytics, Business Intelligence and more.</p>
       </div>
       <div class="about-card">
         <div class="about-card-icon">📡</div>
         <h4>Digital Media Pioneer</h4>
         <p>Founder of Voice of Jhang — a 105K+ follower digital news channel. Proven ability to build and engage large audiences.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">💻</div>
-        <h4>Tech Entrepreneur</h4>
-        <p>Quaprit Technologies delivers web development, design and consulting services to clients locally and globally.</p>
       </div>
     </div>
   </div>
@@ -457,13 +514,123 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   <div class="sec-header reveal">
     <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Live Projects</span></div>
     <h2 class="sec-title">Built &<br><strong>Deployed</strong></h2>
-    <p class="sec-desc">Real systems live in production — not just tutorials or side projects. Click the demo and see for yourself.</p>
+    <p class="sec-desc">Two complete Django systems live in production — not tutorials, not demos. Real systems serving real organisations in Pakistan.</p>
   </div>
 
-  <!-- FEATURED PROJECT -->
+  <!-- PROJECT 1: MODEL TOWN CLUB POS -->
   <div class="project-featured reveal">
-    <div class="project-featured-visual">
-      <div class="pf-live-badge"><div class="pf-live-dot"></div> Live in Production</div>
+    <div class="project-featured-visual" style="background:linear-gradient(135deg,#020c14,#041a24,#0a0d1a)">
+      <div class="pos-live-badge"><div class="pos-live-dot"></div> Live at modeltownclub.pythonanywhere.com</div>
+
+      <!-- Animated POS mockup -->
+      <div class="pos-screen">
+        <div class="pos-topbar">
+          <div class="pos-dot" style="background:#ff5f57"></div>
+          <div class="pos-dot" style="background:#febc2e"></div>
+          <div class="pos-dot" style="background:#28c840"></div>
+          <span class="pos-url">modeltownclub.pythonanywhere.com/pos</span>
+        </div>
+        <!-- Topbar sim -->
+        <div style="background:#1e293b;padding:.3rem .6rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid rgba(255,255,255,.05)">
+          <span style="font-size:.5rem;font-weight:700;color:#017E84;font-family:'Cormorant Garamond',serif">Model</span>
+          <span style="font-size:.5rem;font-weight:700;color:#714B67;font-family:'Cormorant Garamond',serif">Town</span>
+          <span style="font-size:.5rem;font-weight:700;color:#017E84;font-family:'Cormorant Garamond',serif">Club</span>
+          <span style="margin-left:auto;font-size:.45rem;background:#f3eef1;color:#714B67;padding:1px 5px;border-radius:8px">MTC001 — Ahmed</span>
+          <span style="font-size:.45rem;background:#e6f7f7;color:#017E84;padding:1px 5px;border-radius:8px">Main Hall — T1</span>
+        </div>
+        <div class="pos-body">
+          <div class="pos-menu">
+            <div class="pos-menu-title">Menu</div>
+            <div class="pos-items-grid">
+              <div class="pos-item"><span class="pos-item-emoji">☕</span><span class="pos-item-name">Cappuccino</span><span class="pos-item-price">Rs.700</span></div>
+              <div class="pos-item"><span class="pos-item-emoji">🍔</span><span class="pos-item-name">Smash Burger</span><span class="pos-item-price">Rs.1050</span></div>
+              <div class="pos-item"><span class="pos-item-emoji">🥗</span><span class="pos-item-name">Caesar Salad</span><span class="pos-item-price">Rs.700</span></div>
+              <div class="pos-item" style="border:1px solid rgba(1,126,132,0.4)"><span class="pos-item-emoji">🥤</span><span class="pos-item-name">Cafe Shake</span><span class="pos-item-price" style="color:#f59e0b">Rs.650</span></div>
+            </div>
+          </div>
+          <div class="pos-order">
+            <div class="pos-order-title">Current Order</div>
+            <div class="pos-cart-item"><span class="pos-cart-qty">2</span><span class="pos-cart-name">Cappuccino</span><span class="pos-cart-price">1400</span></div>
+            <div class="pos-cart-item"><span class="pos-cart-qty">1</span><span class="pos-cart-name">Smash Burger</span><span class="pos-cart-price">1050</span></div>
+            <div class="pos-cart-item" style="border-color:rgba(1,126,132,0.3)"><span class="pos-cart-qty">1</span><span class="pos-cart-name">Cafe Shake</span><span class="pos-cart-price">650</span></div>
+            <div class="pos-total">
+              <div class="pos-total-label">TOTAL</div>
+              <div class="pos-total-amount">Rs. 3,100</div>
+            </div>
+            <!-- Mini numpad -->
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:.3rem">
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">1</div>
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">2</div>
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">3</div>
+              <div style="background:#714B67;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#fff">Qty</div>
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">4</div>
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">5</div>
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">6</div>
+              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#714B67">Disc%</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px">
+              <div style="background:#7c2d12;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#fed7aa">🔥 Kitchen</div>
+              <div style="background:#017E84;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#fff">💳 Pay</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-featured-info">
+      <div class="project-tag">
+        <div class="project-tag-dot"></div>
+        Live Production · Django · REST · Mobile-First
+        <span style="background:rgba(1,126,132,0.15);color:#5eead4;border:1px solid rgba(1,126,132,0.3);border-radius:10px;padding:2px 8px;font-size:.6rem">Lahore, Pakistan</span>
+      </div>
+      <h3>Model Town Club<br>POS & ERP System</h3>
+      <p>A complete cloud-based Point of Sale and club management system built from scratch for Model Town Club Lahore. Handles everything from table-side ordering on mobile to kitchen display, member portal, and admin management — all in one Django application.</p>
+
+      <div class="feat-grid">
+        <div class="feat"><div class="feat-icon">📱</div><span class="feat-label">Mobile POS</span><div class="feat-desc">Waiters take orders from tablets — slides up from bottom</div></div>
+        <div class="feat"><div class="feat-icon">🔥</div><span class="feat-label">Kitchen Display</span><div class="feat-desc">3-column kanban: New → Preparing → Ready</div></div>
+        <div class="feat"><div class="feat-icon">🪪</div><span class="feat-label">200+ Members</span><div class="feat-desc">Member portal with orders, history & announcements</div></div>
+        <div class="feat"><div class="feat-icon">🖨️</div><span class="feat-label">Receipt Printing</span><div class="feat-desc">80mm thermal printer with logo & Quaprit footer</div></div>
+        <div class="feat"><div class="feat-icon">⚙️</div><span class="feat-label">Frontend Admin</span><div class="feat-desc">Manage menu, tables, staff — no Django admin needed</div></div>
+        <div class="feat"><div class="feat-icon">📊</div><span class="feat-label">Live Dashboard</span><div class="feat-desc">Today's revenue, top items, served orders</div></div>
+      </div>
+
+      <div class="project-modules" style="margin-top:1.5rem">
+        <span class="pm">🍽️ Hybrid POS</span>
+        <span class="pm">🔥 Kitchen KDS</span>
+        <span class="pm">🪪 Member Portal</span>
+        <span class="pm">📱 Mobile Order</span>
+        <span class="pm">🏠 Floor & Tables</span>
+        <span class="pm">⏸️ Hold Orders</span>
+        <span class="pm">💳 Payment & Print</span>
+        <span class="pm">👨‍🍳 Cancel Orders</span>
+        <span class="pm">📢 Announcements</span>
+        <span class="pm">👨‍👩‍👧 Family Members</span>
+        <span class="pm">🏅 VIP Pricing</span>
+        <span class="pm">📈 Admin Panel</span>
+      </div>
+
+      <div class="project-tech" style="margin-top:1rem">
+        <span class="pt">Python 3.11</span>
+        <span class="pt">Django 5.0</span>
+        <span class="pt">SQLite</span>
+        <span class="pt">Vanilla JS</span>
+        <span class="pt">PythonAnywhere</span>
+        <span class="pt">80mm Thermal</span>
+      </div>
+
+      <div class="project-btns">
+        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
+        <a href="#contact" class="project-btn-code">💬 Build Similar System</a>
+      </div>
+      <div class="project-demo-note">Demo: <span>membership: MTC001</span> · <span>password: MTC001</span> (member view) · Admin available on request</div>
+    </div>
+  </div>
+
+  <!-- PROJECT 2: MYSCHOOL -->
+  <div class="project-featured reveal" style="background:var(--bg2)">
+    <div class="project-featured-visual" style="background:linear-gradient(135deg,#050d1f,#0a1a3a,#050d1f)">
+      <div class="pos-live-badge"><div class="pos-live-dot"></div> Live at massabfarooq.pythonanywhere.com</div>
       <div class="pf-screen">
         <div class="pf-screen-bar">
           <div class="pf-dot" style="background:#ff5f57"></div>
@@ -481,123 +648,30 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
             <div class="pf-kpi"><span class="pf-kpi-num" style="color:#f43f5e">Rs. 28,000</span><span class="pf-kpi-label">Expenses</span></div>
             <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">+Rs. 17K</span><span class="pf-kpi-label">Net Profit</span></div>
           </div>
-          <div style="font-size:.58rem;color:#555;margin:.5rem 0 .3rem">Expense Breakdown</div>
-          <div class="pf-bar-row">
-            <div class="pf-bar-label"><span>🏠 Rent</span><span style="color:var(--gold)">35%</span></div>
-            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div>
-          </div>
-          <div class="pf-bar-row">
-            <div class="pf-bar-label"><span>👥 Salaries</span><span style="color:var(--gold)">42%</span></div>
-            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:42%"></div></div>
-          </div>
-          <div class="pf-bar-row">
-            <div class="pf-bar-label"><span>💡 Utilities</span><span style="color:var(--gold)">23%</span></div>
-            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:23%"></div></div>
-          </div>
+          <div class="pf-bar-row"><div class="pf-bar-label"><span>🏠 Rent</span><span style="color:var(--gold)">35%</span></div><div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div></div>
+          <div class="pf-bar-row"><div class="pf-bar-label"><span>👥 Salaries</span><span style="color:var(--gold)">42%</span></div><div class="pf-bar-track"><div class="pf-bar-fill" style="width:42%"></div></div></div>
+          <div class="pf-bar-row"><div class="pf-bar-label"><span>💡 Utilities</span><span style="color:var(--gold)">23%</span></div><div class="pf-bar-track"><div class="pf-bar-fill" style="width:23%"></div></div></div>
         </div>
       </div>
     </div>
     <div class="project-featured-info">
-      <div class="project-tag"><div class="project-tag-dot"></div>Featured Project · Django · Python · Live</div>
+      <div class="project-tag"><div class="project-tag-dot"></div>Featured Project · Django · Python · Live<span style="background:rgba(16,185,129,0.1);color:#6ee7b7;border:1px solid rgba(16,185,129,0.3);border-radius:10px;padding:2px 8px;font-size:.6rem">Jhang, Pakistan</span></div>
       <h3>MySchool Jhang<br>Management Portal</h3>
-      <p>A complete school management system built from scratch — handling admissions, fees, finance, attendance, results, early years development tracking, and more. Currently running for a real school in Jhang, Pakistan.</p>
+      <p>A complete school management system built from scratch — handling admissions, fees, finance P&L, attendance, results, early years development tracking, staff salary, and more. Currently running for a real school in Jhang, Pakistan.</p>
       <div class="project-modules">
-        <span class="pm">🎓 Admissions</span>
-        <span class="pm">💰 Fee Management</span>
-        <span class="pm">📊 Finance P&L</span>
-        <span class="pm">🌸 Early Years</span>
-        <span class="pm">⭐ Milestones</span>
-        <span class="pm">📅 Attendance</span>
-        <span class="pm">📝 Results</span>
-        <span class="pm">👩‍🏫 Salary</span>
-        <span class="pm">📔 Diary</span>
-        <span class="pm">🏅 Clubs</span>
-        <span class="pm">📚 Materials</span>
-        <span class="pm">📲 WhatsApp</span>
+        <span class="pm">🎓 Admissions</span><span class="pm">💰 Fee Management</span><span class="pm">📊 Finance P&L</span>
+        <span class="pm">🌸 Early Years</span><span class="pm">⭐ Milestones</span><span class="pm">📅 Attendance</span>
+        <span class="pm">📝 Results</span><span class="pm">👩‍🏫 Salary</span><span class="pm">📔 Diary</span>
+        <span class="pm">🏅 Clubs</span><span class="pm">📚 Materials</span><span class="pm">📲 WhatsApp</span>
       </div>
       <div class="project-tech">
-        <span class="pt">Python</span>
-        <span class="pt">Django 5.0</span>
-        <span class="pt">SQLite</span>
-        <span class="pt">HTML/CSS/JS</span>
-        <span class="pt">PythonAnywhere</span>
-        <span class="pt">WhiteNoise</span>
+        <span class="pt">Python</span><span class="pt">Django 5.0</span><span class="pt">SQLite</span>
+        <span class="pt">HTML/CSS/JS</span><span class="pt">PythonAnywhere</span><span class="pt">WhiteNoise</span>
       </div>
       <div class="project-btns">
         <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
-        
       </div>
       <div class="project-demo-note">Demo login: <span>username: demo</span> · <span>password: demo1234</span></div>
-    </div>
-  </div>
-  <!-- FEATURED PROJECT -->
-  <div class="project-featured reveal">
-    <div class="project-featured-visual">
-      <div class="pf-live-badge"><div class="pf-live-dot"></div> Live in Production</div>
-      <div class="pf-screen">
-        <div class="pf-screen-bar">
-          <div class="pf-dot" style="background:#ff5f57"></div>
-          <div class="pf-dot" style="background:#febc2e"></div>
-          <div class="pf-dot" style="background:#28c840"></div>
-          <span class="pf-screen-url">massabfarooq.pythonanywhere.com</span>
-        </div>
-        <div class="pf-screen-body">
-          <div style="font-size:.58rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">💰 Finance Dashboard — March 2026</div>
-          <div class="pf-kpi-row">
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">Rs. 45,000</span><span class="pf-kpi-label">Fee Collected</span></div>
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--gold)">Rs. 5,200</span><span class="pf-kpi-label">Outstanding</span></div>
-          </div>
-          <div class="pf-kpi-row">
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:#f43f5e">Rs. 28,000</span><span class="pf-kpi-label">Expenses</span></div>
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">+Rs. 17K</span><span class="pf-kpi-label">Net Profit</span></div>
-          </div>
-          <div style="font-size:.58rem;color:#555;margin:.5rem 0 .3rem">Expense Breakdown</div>
-          <div class="pf-bar-row">
-            <div class="pf-bar-label"><span>🏠 Rent</span><span style="color:var(--gold)">35%</span></div>
-            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div>
-          </div>
-          <div class="pf-bar-row">
-            <div class="pf-bar-label"><span>👥 Salaries</span><span style="color:var(--gold)">42%</span></div>
-            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:42%"></div></div>
-          </div>
-          <div class="pf-bar-row">
-            <div class="pf-bar-label"><span>💡 Utilities</span><span style="color:var(--gold)">23%</span></div>
-            <div class="pf-bar-track"><div class="pf-bar-fill" style="width:23%"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="project-featured-info">
-      <div class="project-tag"><div class="project-tag-dot"></div>Featured Project · Django · Python · Live</div>
-      <h3>MySchool Jhang<br>Management Portal</h3>
-      <p>A complete restaurant management system ERP built from scratch — handling POS, Kitchen, finance, attendance, Dayend, inventory tracking, and more. Currently running for Model Town Club in Lahore, Pakistan.</p>
-      <div class="project-modules">
-        <span class="pm"> Online Order</span>
-        <span class="pm"> Mobile Order taking </span>
-        <span class="pm">📊 Membership Management </span>
-        <span class="pm"> Day end close </span>
-        <span class="pm"> Kitchen Management</span>
-        <span class="pm"> Table booking </span>
-        <span class="pm"> Members portal </span>
-        <span class="pm"> Hybrid POS </span>
-        <span class="pm"> Cloud and Desktop </span>
-        <span class="pm"> Tex Management</span>
-        <span class="pm"> Receipt Printng </span>
-        <span class="pm">📲 WhatsApp</span>
-      </div>
-      <div class="project-tech">
-        <span class="pt">Python</span>
-        <span class="pt">Django 5.0</span>
-        <span class="pt">MySQL</span>
-        <span class="pt">HTML/CSS/JS</span>
-        <span class="pt">PythonAnywhere</span>
-        <span class="pt">WhiteNoise</span>
-      </div>
-      <div class="project-btns">
-        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
-        
-      </div>
-      <div class="project-demo-note">Demo login: <span>username: demo</span> · <span>password: massab786</span></div>
     </div>
   </div>
 </section>
@@ -639,16 +713,25 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   <div class="sec-header reveal">
     <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>What I've Built</span></div>
     <h2 class="sec-title">My <strong>Ventures</strong></h2>
-    <p class="sec-desc">Three platforms united by one mission — to inform, educate, and empower communities through digital innovation.</p>
+    <p class="sec-desc">Four platforms united by one mission — to inform, educate, and empower communities through digital innovation.</p>
   </div>
-  <div class="ventures-grid">
+  <div class="ventures-grid" style="grid-template-columns:repeat(2,1fr)">
+    <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="venture v4 reveal">
+      <div class="venture-img">🍽️</div>
+      <div class="venture-body">
+        <div class="venture-tag">Django · POS · ERP · Membership · Live</div>
+        <h3>Model Town Club POS</h3>
+        <p>Full restaurant POS with kitchen display, 200+ member portal, mobile ordering, admin panel, and receipt printing. Built from scratch, live in Lahore.</p>
+        <div class="venture-meta"><span class="venture-followers">🌐 modeltownclub.pythonanywhere.com</span><div class="venture-arrow">↗</div></div>
+      </div>
+    </a>
     <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="venture v2 reveal">
       <div class="venture-img">🏫</div>
       <div class="venture-body">
-        <div class="venture-tag">Django · Full Stack · Live System</div>
+        <div class="venture-tag">Django · Full Stack · 20+ Modules · Live</div>
         <h3>MySchool Jhang Portal</h3>
         <p>Complete school management system — admissions, fees, finance P&L, early years tracker, 20+ modules. Built from scratch, live in production.</p>
-        <div class="venture-meta"><span class="venture-followers">🌐 Live at pythonanywhere.com</span><div class="venture-arrow">↗</div></div>
+        <div class="venture-meta"><span class="venture-followers">🌐 massabfarooq.pythonanywhere.com</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
     <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="venture v1 reveal">
@@ -663,10 +746,10 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
     <a href="https://web.facebook.com/Quaprit" target="_blank" class="venture v3 reveal">
       <div class="venture-img">💻</div>
       <div class="venture-body">
-        <div class="venture-tag">Technology · Freelancing</div>
+        <div class="venture-tag">Technology · Freelancing · POS · School Software</div>
         <h3>Quaprit Technologies</h3>
-        <p>A freelancing and technology company delivering web development, design, and consulting for clients globally.</p>
-        <div class="venture-meta"><span class="venture-followers">🌐 Global Clients</span><div class="venture-arrow">↗</div></div>
+        <p>Web development, POS systems, school management portals and consulting. Custom Django solutions for businesses across Pakistan.</p>
+        <div class="venture-meta"><span class="venture-followers">📞 0333 673 5267</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
   </div>
@@ -677,15 +760,15 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
   <div class="sec-header reveal">
     <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>What I Offer</span></div>
     <h2 class="sec-title">Services &<br><strong>Expertise</strong></h2>
-    <p class="sec-desc">Harvard & Google-certified expertise combined with a live production Django system — across 6 core service areas.</p>
+    <p class="sec-desc">Harvard & Google-certified expertise with two live production Django systems — across 6 core service areas.</p>
   </div>
   <div class="services-grid">
-    <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School Management Systems</h3><p>Complete Django portals for schools — admissions, fees, finance, attendance, results, early years and more. Live demo available. Deployed and running.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Web Development</h3><p>Custom websites and web apps with Python/Django, JavaScript, HTML/CSS and SQL. CS50W certified, production-ready deployments.</p></div>
+    <div class="svc svc-teal reveal"><div class="svc-icon">🍽️</div><h3>Restaurant POS Systems</h3><p>Complete cloud POS — kitchen display, member portal, mobile ordering, receipt printing, admin panel. As deployed at Model Town Club, Lahore.</p></div>
+    <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School Management Systems</h3><p>Complete Django portals — admissions, fees, finance, early years, 20+ modules. Live demo available. As deployed at MySchool Jhang.</p></div>
+    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Custom Web Applications</h3><p>Bespoke Django web apps — ERPs, membership portals, dashboards. CS50W certified, production-ready PythonAnywhere deployments.</p></div>
     <div class="svc reveal"><div class="svc-icon">📊</div><h3>Data Analytics & BI</h3><p>Dashboards, reports and business intelligence using Python, R and Google BI tools. Google Advanced Data Analytics certified.</p></div>
     <div class="svc reveal"><div class="svc-icon">🔒</div><h3>Cybersecurity</h3><p>Security assessments, threat analysis and consulting. Harvard CS50 Cybersecurity + Google Cybersecurity Professional certified.</p></div>
     <div class="svc reveal"><div class="svc-icon">📱</div><h3>Digital Marketing</h3><p>SEO, e-commerce, and campaign strategy. Google certified with 105K+ real-world audience building experience.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🖥️</div><h3>IT Support & Training</h3><p>Technical support, system administration, networking and security. Google IT Support Professional certified.</p></div>
   </div>
 </section>
 
@@ -697,17 +780,17 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
         <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Get In Touch</span></div>
         <h2 class="sec-title">Let's Build<br><strong>Something Great</strong></h2>
       </div>
-      <p>Need a school management system, a custom web application, or data analytics solution? I build real systems that actually get deployed. Let's talk.</p>
+      <p>Need a restaurant POS, school management system, or custom web application? I build real systems that actually get deployed. Two live systems — let's make it three.</p>
       <div class="contact-links">
         <a href="mailto:musabfarouq555@gmail.com" class="cl"><div class="cl-icon">✉️</div><div><span class="cl-label">Email</span><span class="cl-val">musabfarouq555@gmail.com</span></div></a>
+        <a href="tel:+923336735267" class="cl"><div class="cl-icon">📞</div><div><span class="cl-label">Phone / WhatsApp</span><span class="cl-val">0333 673 5267</span></div></a>
         <a href="https://github.com/massab1" target="_blank" class="cl"><div class="cl-icon">🐙</div><div><span class="cl-label">GitHub</span><span class="cl-val">github.com/massab1</span></div></a>
         <a href="https://www.linkedin.com/in/musabfarouq" target="_blank" class="cl"><div class="cl-icon">💼</div><div><span class="cl-label">LinkedIn</span><span class="cl-val">linkedin.com/in/musabfarouq</span></div></a>
         <a href="https://credly.com/users/massab-farooq" target="_blank" class="cl"><div class="cl-icon">🏅</div><div><span class="cl-label">Credly — Verified Certs</span><span class="cl-val">credly.com/users/massab-farooq</span></div></a>
-        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="cl"><div class="cl-icon">🌐</div><div><span class="cl-label">Live Project</span><span class="cl-val">massabfarooq.pythonanywhere.com</span></div></a>
       </div>
       <div class="social-chips">
-        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="sc">🏫 MySchool Live Demo</a>
-        <a href="https://github.com/massab1/myschool-jhang" target="_blank" class="sc">🐙 GitHub Repo</a>
+        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="sc">🍽️ MTC POS Live</a>
+        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="sc">🏫 MySchool Live</a>
         <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="sc">📡 Voice of Jhang</a>
         <a href="https://web.facebook.com/Quaprit" target="_blank" class="sc">💻 Quaprit Tech</a>
       </div>
@@ -715,25 +798,26 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
     <div class="reveal-right">
       <div class="contact-form" id="contactForm">
         <div class="form-title">Send a Message</div>
-        <div class="form-subtitle">I typically respond within 24 hours</div>
+        <div class="form-subtitle">I typically respond within 24 hours · WhatsApp: 0333 673 5267</div>
         <div class="form-row2">
           <div class="fg"><label>First Name</label><input type="text" placeholder="Your first name" required/></div>
           <div class="fg"><label>Last Name</label><input type="text" placeholder="Your last name" required/></div>
         </div>
         <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com" required/></div>
-        <div class="fg"><label>Topic</label>
+        <div class="fg"><label>I Need</label>
           <select>
-            <option value="">Select a topic…</option>
-            <option>School Management System</option>
+            <option value="">Select what you need…</option>
+            <option>Restaurant POS System (like Model Town Club)</option>
+            <option>School Management System (like MySchool Jhang)</option>
             <option>Custom Web Application (Django)</option>
+            <option>Membership / Club Portal</option>
             <option>Data Analytics / Dashboard</option>
             <option>Cybersecurity Consulting</option>
             <option>Digital Marketing</option>
-            <option>Media Collaboration</option>
             <option>General Inquiry</option>
           </select>
         </div>
-        <div class="fg"><label>Message</label><textarea placeholder="Tell me about your project or idea…" required></textarea></div>
+        <div class="fg"><label>Message</label><textarea placeholder="Tell me about your project…" required></textarea></div>
         <button class="form-btn" onclick="submitForm()">Send Message →</button>
         <div class="form-success" id="formSuccess">
           <div class="form-success-icon">✅</div>
@@ -748,18 +832,18 @@ footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 5
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Massab Farooq</div>
-    <div class="footer-copy">© 2026 · massab1.github.io · Full Stack Django Developer</div>
+    <div class="footer-copy">© 2026 · Quaprit Technologies · Full Stack Django Developer · 0333 673 5267</div>
     <div class="footer-links">
       <a href="https://github.com/massab1" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/musabfarouq" target="_blank">LinkedIn</a>
-      <a href="https://massabfarooq.pythonanywhere.com" target="_blank">Live Demo</a>
+      <a href="https://modeltownclub.pythonanywhere.com" target="_blank">MTC Live</a>
+      <a href="https://massabfarooq.pythonanywhere.com" target="_blank">School Live</a>
       <a href="https://credly.com/users/massab-farooq" target="_blank">Credly</a>
     </div>
   </div>
 </footer>
 
 <script>
-// CURSOR
 const cursor=document.getElementById('cursor');
 const ring=document.getElementById('cursorRing');
 let mx=0,my=0,rx=0,ry=0;
@@ -771,7 +855,6 @@ document.querySelectorAll('a,button,.svc,.cert-card,.venture,.about-card,.skill'
   el.addEventListener('mouseleave',()=>{cursor.classList.remove('hover');ring.classList.remove('hover')});
 });
 
-// PARTICLES
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
 let W,H,parts=[];
@@ -788,52 +871,21 @@ for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){
 requestAnimationFrame(animP)}
 animP();
 
-// NAV
 const navbar=document.getElementById('navbar');
 const btt=document.getElementById('btt');
-window.addEventListener('scroll',()=>{
-  navbar.classList.toggle('scrolled',scrollY>50);
-  btt.classList.toggle('show',scrollY>400);
-});
+window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',scrollY>50);btt.classList.toggle('show',scrollY>400)});
 
-// SCROLL REVEAL
 const reveals=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target)}});
-},{threshold:.1});
+const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target)}});},{threshold:.1});
 reveals.forEach(el=>obs.observe(el));
 
-// COUNT UP
 const counters=document.querySelectorAll('.count-up');
-const cObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){
-    const target=+e.target.dataset.target,duration=1500,step=target/duration*16;
-    let current=0;
-    const timer=setInterval(()=>{current+=step;if(current>=target){e.target.textContent=target;clearInterval(timer)}else{e.target.textContent=Math.floor(current)}},16);
-    cObs.unobserve(e.target);
-  }});
-},{threshold:.5});
+const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const target=+e.target.dataset.target,duration=1500,step=target/duration*16;let current=0;const timer=setInterval(()=>{current+=step;if(current>=target){e.target.textContent=target;clearInterval(timer)}else{e.target.textContent=Math.floor(current)}},16);cObs.unobserve(e.target)}});},{threshold:.5});
 counters.forEach(c=>cObs.observe(c));
 
-// CERT FILTER
-function filterCerts(cat,btn){
-  document.querySelectorAll('.cf-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.cert-card').forEach(c=>{
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'flex':'none';
-  });
-}
+function filterCerts(cat,btn){document.querySelectorAll('.cf-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.cert-card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'flex':'none'});}
 
-// FORM
-function submitForm(){
-  const btn=document.querySelector('.form-btn');
-  btn.textContent='Sending…';btn.disabled=true;
-  setTimeout(()=>{
-    document.querySelectorAll('.fg').forEach(f=>f.style.display='none');
-    btn.style.display='none';
-    document.getElementById('formSuccess').style.display='block';
-  },1200);
-}
+function submitForm(){const btn=document.querySelector('.form-btn');btn.textContent='Sending…';btn.disabled=true;setTimeout(()=>{document.querySelectorAll('.fg').forEach(f=>f.style.display='none');btn.style.display='none';document.getElementById('formSuccess').style.display='block';},1200);}
 </script>
 </body>
 </html>
