@@ -18,7 +18,7 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 | 🏥 **Quaprit HMS** | Hospital & clinic system — patient tokens, OPD, laboratory, X-ray/MRI, e-prescriptions, role-based access. In daily use at a private hospital. |
 | 🍽️ **Model Town Club POS** | Restaurant POS & membership system — kitchen display, member portal, mobile ordering. Live in Lahore. |
 
-🎬 Promo reels and the MySchool ERP brochure are in [`media/`](media/) and on the site's **Showreel** section.
+🎬 Demo reels (MySchool ERP, Quaprit HMS, Model Town Club POS) and the MySchool ERP brochure are in [`media/`](media/) and on the site's **Showreel** section.
 
 ---
 
