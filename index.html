@@ -4,9 +4,10 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Massab Farooq | Full Stack Django Developer & Tech Entrepreneur</title>
-<meta name="description" content="Full Stack Django Developer from Jhang, Pakistan. HarvardX & Google Certified. Built 2 live production systems — Model Town Club POS & MySchool Jhang."/>
+<meta name="description" content="Full Stack Django Developer from Jhang, Pakistan. HarvardX & Google Certified. Builder of 3 live production systems — MySchool ERP for schools & colleges, Quaprit HMS for hospitals & clinics, and Model Town Club POS."/>
 <meta property="og:title" content="Massab Farooq | Full Stack Django Developer"/>
-<meta property="og:description" content="HarvardX & Google Certified Django Developer with 2 live production systems in Pakistan."/>
+<meta property="og:description" content="HarvardX & Google Certified Django Developer with 3 live production systems — school ERP, hospital management and restaurant POS."/>
+<meta property="og:image" content="https://massab1.github.io/media/myschool-erp-reel.jpg"/>
 <meta property="og:type" content="website"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -304,6 +305,40 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 .reveal.visible,.reveal-left.visible,.reveal-right.visible{opacity:1;transform:none}
 
 /* RESPONSIVE */
+
+/* ---- 2026 update: photo, showreel, third project ---- */
+.profile-photo{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.new-pill{display:inline-block;background:var(--green);color:#04261a;font-size:.6rem;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:10px;margin-left:.4rem;vertical-align:middle;text-transform:uppercase}
+.hl-list{list-style:none;margin:0 0 1.4rem;display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1rem}
+.hl-list li{font-size:.8rem;color:var(--gray2);padding-left:1.1rem;position:relative;line-height:1.5}
+.hl-list li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+.hl-list li b{color:var(--cream);font-weight:600}
+.reel-grid{display:grid;grid-template-columns:repeat(2,minmax(0,330px));gap:2rem;justify-content:center}
+.reel-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.reel-card video{width:100%;aspect-ratio:9/16;display:block;background:#000}
+.reel-body{padding:1.2rem 1.4rem 1.4rem}
+.reel-body h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--white);font-weight:600;margin-bottom:.3rem}
+.reel-body p{font-size:.8rem;color:var(--gray2);line-height:1.6}
+.reel-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.7rem}
+.reel-tags span{font-size:.62rem;border:1px solid var(--border2);border-radius:10px;padding:2px 8px;color:var(--gray2)}
+.dl-row{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
+.dl-card{display:flex;align-items:center;gap:1rem;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem 1.3rem;text-decoration:none;color:var(--cream);transition:all .3s;max-width:420px}
+.dl-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.dl-card .dl-ico{font-size:1.8rem}
+.dl-card b{display:block;color:var(--white);font-size:.95rem}
+.dl-card span{font-size:.75rem;color:var(--gray2)}
+.tok-screen{width:100%;max-width:320px;border-radius:10px;overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(45,212,191,.35);background:#06202b}
+.tok-now{background:linear-gradient(135deg,#0d9488,#0f766e);text-align:center;padding:1rem .8rem;color:#fff}
+.tok-now small{font-size:.55rem;letter-spacing:3px;font-weight:600;opacity:.85}
+.tok-now b{display:block;font-size:2.6rem;font-weight:700;line-height:1;letter-spacing:2px;margin:.2rem 0}
+.tok-now span{font-size:.6rem}
+.tok-row{display:grid;grid-template-columns:3.2rem 1fr auto;align-items:center;gap:.4rem;padding:.5rem .8rem;border-top:1px solid rgba(255,255,255,.07);font-size:.65rem;color:#cbd5e1}
+.tok-row b{color:#7dd3fc}
+.tok-st{font-size:.5rem;font-weight:700;padding:1px 7px;border-radius:8px;color:#022}
+.hms-lab{margin-top:.8rem;width:100%;max-width:320px;background:#fff;border-radius:10px;padding:.7rem .9rem;color:#0f2733;font-size:.6rem;position:relative;z-index:2}
+.hms-lab .r{display:grid;grid-template-columns:1.4fr .7fr 1fr;padding:.25rem 0;border-top:1px solid #e6eef2}
+.hms-lab .hi{color:#e11d48;font-weight:700}
+@media(max-width:768px){.reel-grid{grid-template-columns:minmax(0,330px)}.hl-list{grid-template-columns:1fr}}
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;gap:3rem}
   .hero-right{order:-1}.profile-card{width:280px}.fc1,.fc2{display:none}
@@ -337,6 +372,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#showreel">Showreel</a></li>
     <li><a href="#certifications">Certs</a></li>
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#services">Services</a></li>
@@ -362,27 +398,28 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         <span class="badge badge-harvard">🎓 8× HarvardX</span>
         <span class="badge badge-google">🔵 5× Google</span>
         <span class="badge badge-media">📡 105K+ Followers</span>
+        <span class="badge badge-django">🏥 Hospital Systems</span>
       </div>
-      <p class="hero-desc">I build real-world web applications that solve real problems — from complete school management systems to restaurant POS with membership portals. Both live in production in Pakistan.</p>
+      <p class="hero-desc">I build real-world systems that organisations use every day — <b>MySchool ERP</b> for schools &amp; colleges, <b>Quaprit HMS</b> for hospitals &amp; clinics, and a restaurant POS with a membership portal. All three are live in production in Pakistan.</p>
       <div class="hero-btns">
         <a href="#projects" class="btn-gold">View Live Projects</a>
-        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="btn-teal">🍽️ MTC POS Live</a>
+        <a href="#showreel" class="btn-teal">▶ Watch Showreel</a>
         <a href="#contact" class="btn-ghost">Let's Connect</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="profile-card">
-        <div class="floating-cert fc1"><span style="font-size:1rem">🐍</span><span>Django</span> 2 Live Systems</div>
+        <div class="floating-cert fc1"><span style="font-size:1rem">🐍</span><span>Django</span> 3 Live Systems</div>
         <div class="floating-cert fc2"><span style="font-size:1rem">🎓</span><span>Harvard</span> CS50W Certified</div>
         <div class="profile-card-inner">
-          <div class="profile-card-placeholder">👨‍💻</div>
+          <img class="profile-photo" src="photo.jpeg" alt="Massab Farooq" loading="eager"/>
           <div class="profile-card-overlay"></div>
           <div class="profile-card-info">
             <div class="profile-card-name">Massab Farooq</div>
             <div class="profile-card-role">Full Stack Developer · Jhang, PK</div>
             <div class="profile-card-stats">
               <div class="pcs"><span class="pcs-num">13+</span><span class="pcs-label">Certs</span></div>
-              <div class="pcs"><span class="pcs-num">2</span><span class="pcs-label">Live Apps</span></div>
+              <div class="pcs"><span class="pcs-num">3</span><span class="pcs-label">Live Apps</span></div>
               <div class="pcs"><span class="pcs-num">105K</span><span class="pcs-label">Followers</span></div>
             </div>
           </div>
@@ -402,13 +439,13 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 <div class="stats-bar">
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="13">0</span><div class="stat-item-label">Certifications</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="2">0</span><div class="stat-item-label">Live Systems</div></div>
+  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="3">0</span><div class="stat-item-label">Live Systems</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="30">0</span><div class="stat-item-label">Modules Built</div></div>
+  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="45">0</span><div class="stat-item-label">+ Modules Built</div></div>
   <div class="stat-divider"></div>
   <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="105">0</span><div class="stat-item-label">K+ Followers</div></div>
   <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num">2026</span><div class="stat-item-label">Active</div></div>
+  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="277">0</span><div class="stat-item-label">Lesson Worksheets</div></div>
 </div>
 
 <section id="about">
@@ -419,7 +456,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         <h2 class="sec-title">Driven by Purpose,<br><strong>Backed by Excellence</strong></h2>
       </div>
       <div class="about-text">
-        <p>I'm <strong>Massab Farooq</strong> — a Full Stack Django Developer and tech entrepreneur from Jhang, Pakistan. I've built and deployed <strong>two complete production systems</strong> from scratch: a school management portal and a full restaurant POS &amp; membership system — both live and serving real users.</p>
+        <p>I'm <strong>Massab Farooq</strong> — a Full Stack Django Developer and tech entrepreneur from Jhang, Pakistan. I've built and deployed <strong>three complete production systems</strong> from scratch: <strong>MySchool ERP</strong> (a full ERP for schools &amp; colleges), <strong>Quaprit HMS</strong> (a real-time hospital &amp; clinic system) and a restaurant POS &amp; membership system — all live and serving real users.</p>
         <p>Beyond development, I hold <strong>13+ certifications</strong> from Harvard University and Google covering Computer Science, Cybersecurity, Data Analytics, Python, SQL, and more. I founded three ventures including <strong>Voice of Jhang</strong> (105K+ followers) and <strong>Quaprit Technologies</strong>.</p>
         <p>With 18+ years in investigative journalism at ARY News, I understand how organisations actually work — what data matters, and how to build systems real people use every day.</p>
       </div>
@@ -432,11 +469,15 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
           <div class="skill"><span>PythonAnywhere Deployment</span></div><div class="skill"><span>Cybersecurity</span></div>
           <div class="skill"><span>Data Analytics</span></div><div class="skill"><span>POS Systems</span></div>
           <div class="skill"><span>Membership Portals</span></div><div class="skill"><span>Kitchen Display Systems</span></div>
+          <div class="skill"><span>School &amp; College ERP</span></div><div class="skill"><span>Hospital Management</span></div>
+          <div class="skill"><span>Double-Entry Accounting</span></div><div class="skill"><span>PDF Reports (ReportLab)</span></div>
+          <div class="skill"><span>PWA / Mobile Web</span></div><div class="skill"><span>Promo Videos &amp; Brochures</span></div>
         </div>
       </div>
     </div>
     <div class="reveal-right">
-      <div class="about-card"><div class="about-card-icon">🏫</div><h4>School Management System</h4><p>20+ modules — admissions, fees, finance P&amp;L, early years tracker, attendance, results. Live at a real school in Jhang, Pakistan.</p></div>
+      <div class="about-card"><div class="about-card-icon">🏫</div><h4>MySchool ERP — Schools &amp; Colleges</h4><p>28 connected modules — online admission &amp; entrance test, real-time result cards, finance &amp; HR, parents app, WhatsApp quizzes and 277 ready lesson worksheets. Live at MySchool Jhang.</p></div>
+      <div class="about-card"><div class="about-card-icon">🏥</div><h4>Quaprit HMS — Hospitals &amp; Clinics</h4><p>Real-time hospital system — patient tokens, OPD, laboratory, X-ray &amp; MRI, digital prescriptions and role-based access. In daily use at a private hospital.</p></div>
       <div class="about-card"><div class="about-card-icon">🍽️</div><h4>Restaurant POS &amp; ERP</h4><p>Complete POS system with kitchen display, member portal, mobile ordering, receipt printing and admin panel — live at Model Town Club, Lahore.</p></div>
       <div class="about-card"><div class="about-card-icon">🎓</div><h4>Harvard &amp; Google Certified</h4><p>13+ verified credentials — CS50, CS50P, CS50W, Cybersecurity, Google Advanced Data Analytics, Business Intelligence and more.</p></div>
       <div class="about-card"><div class="about-card-icon">📡</div><h4>Digital Media Pioneer</h4><p>Founder of Voice of Jhang — a 105K+ follower digital news channel. Proven ability to build and engage large audiences.</p></div>
@@ -448,7 +489,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <div class="sec-header reveal">
     <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Live Projects</span></div>
     <h2 class="sec-title">Built &amp;<br><strong>Deployed</strong></h2>
-    <p class="sec-desc">Two complete Django systems live in production — not tutorials, not demos. Real systems serving real organisations in Pakistan.</p>
+    <p class="sec-desc">Three complete Django systems live in production — not tutorials, not demos. Real systems serving schools, hospitals and clubs in Pakistan.</p>
   </div>
 
   <!-- PROJECT 1: MODEL TOWN CLUB POS -->
@@ -570,24 +611,105 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         Featured Project · Django · Python · Live
         <span style="background:rgba(16,185,129,0.1);color:#6ee7b7;border:1px solid rgba(16,185,129,0.3);border-radius:10px;padding:2px 8px;font-size:.6rem">Jhang, Pakistan</span>
       </div>
-      <h3>MySchool Jhang<br>Management Portal</h3>
-      <p>A complete school management system built from scratch — handling admissions, fees, finance P&amp;L, attendance, results, early years development tracking, staff salary, and more. Currently running for a real school in Jhang, Pakistan.</p>
+      <h3>MySchool ERP<br>for Schools &amp; Colleges <span class="new-pill">Updated</span></h3>
+      <p>A complete school &amp; college ERP built from scratch and sold in plans for every size — Basic, Standard and Premium, with single packs that switch on later without losing data. Running every day at MySchool Jhang; also installable offline with a licence key.</p>
+      <ul class="hl-list">
+        <li><b>Online admission</b>, entrance test &amp; merit list</li>
+        <li><b>Real-time result cards</b> (single or whole class PDF)</li>
+        <li><b>School leaving certificates</b> in one click</li>
+        <li><b>Question bank &amp; Paper Studio</b>, daily tests</li>
+        <li><b>Online &amp; remote exams</b> with tab-switch control</li>
+        <li><b>277 lesson worksheets</b> — OPE Books 1–5, 3 levels, audio QR</li>
+        <li><b>WhatsApp quizzes</b> &amp; weekly parent reports</li>
+        <li><b>Parents app</b> (PWA) — results, fee, diary</li>
+        <li><b>Double-entry finance</b>: chart of accounts, vouchers, P&amp;L</li>
+        <li><b>Fee heads</b>, family fee, bank-list import</li>
+        <li><b>HR &amp; payroll</b>, CNIC-validated records</li>
+        <li><b>AI fee agent</b>, analytics &amp; command center</li>
+      </ul>
       <div class="project-modules">
-        <span class="pm">🎓 Admissions</span><span class="pm">💰 Fee Management</span><span class="pm">📊 Finance P&amp;L</span>
-        <span class="pm">🌸 Early Years</span><span class="pm">⭐ Milestones</span><span class="pm">📅 Attendance</span>
-        <span class="pm">📝 Results</span><span class="pm">👩‍🏫 Salary</span><span class="pm">📔 Diary</span>
-        <span class="pm">🏅 Clubs</span><span class="pm">📚 Materials</span><span class="pm">📲 WhatsApp</span>
+        <span class="pm">🎓 Admissions</span><span class="pm">🌐 Online Admission</span><span class="pm">📝 Results</span>
+        <span class="pm">📄 Paper Studio</span><span class="pm">💻 Remote Exams</span><span class="pm">📚 Worksheets</span>
+        <span class="pm">💰 Fees</span><span class="pm">📊 Finance</span><span class="pm">👩‍🏫 HR</span>
+        <span class="pm">📲 WhatsApp</span><span class="pm">📱 Parents App</span><span class="pm">🏢 Multi-Campus</span>
       </div>
       <div class="project-tech">
-        <span class="pt">Python</span><span class="pt">Django 5.0</span><span class="pt">SQLite</span>
-        <span class="pt">HTML/CSS/JS</span><span class="pt">PythonAnywhere</span><span class="pt">WhiteNoise</span>
+        <span class="pt">Python</span><span class="pt">Django 5</span><span class="pt">SQLite / MySQL</span>
+        <span class="pt">ReportLab PDF</span><span class="pt">PWA</span><span class="pt">PythonAnywhere</span><span class="pt">Offline Licence</span>
       </div>
       <div class="project-btns">
         <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
-        <a href="#contact" class="project-btn-code">💬 Build Similar System</a>
+        <a href="media/MySchool-ERP-Brochure.pdf" target="_blank" class="project-btn-code">📄 Brochure</a>
+        <a href="#showreel" class="project-btn-code">▶ Reel</a>
       </div>
       <div class="project-demo-note">Demo login: <span>username: demo</span> · <span>password: demo1234</span></div>
     </div>
+  </div>
+  <!-- PROJECT 3: QUAPRIT HMS -->
+  <div class="project-featured reveal">
+    <div class="project-featured-visual" style="background:linear-gradient(135deg,#03111b,#072a3a,#04141f)">
+      <div class="pos-live-badge"><div class="pos-live-dot"></div> In daily use at a private hospital</div>
+      <div class="tok-screen">
+        <div class="tok-now"><small>NOW SERVING</small><b>A-047</b><span>Room 3 · Medicine OPD</span></div>
+        <div class="tok-row"><b>A-048</b><span>Medicine</span><span class="tok-st" style="background:#fbbf24">Waiting</span></div>
+        <div class="tok-row"><b>B-012</b><span>Orthopaedics</span><span class="tok-st" style="background:#38bdf8">Called</span></div>
+        <div class="tok-row"><b>C-005</b><span>Paediatrics</span><span class="tok-st" style="background:#2dd4bf">Seen</span></div>
+      </div>
+      <div class="hms-lab">
+        <div style="font-weight:700;margin-bottom:.3rem">CBC · Sample patient</div>
+        <div class="r"><span>Haemoglobin</span><b>13.8</b><span>13.0 – 17.0</span></div>
+        <div class="r"><span>WBC count</span><b class="hi">11.6 H</b><span>4.0 – 11.0</span></div>
+        <div class="r"><span>Platelets</span><b>245</b><span>150 – 400</span></div>
+      </div>
+    </div>
+    <div class="project-featured-info">
+      <div class="project-tag">
+        <div class="project-tag-dot"></div>
+        Live Production · Django · Real-time <span class="new-pill">New</span>
+      </div>
+      <h3>Quaprit HMS<br>Hospital &amp; Clinic System</h3>
+      <p>A real-time hospital management system — from token to report. Reception, OPD doctors, laboratory and radiology work on one live system, so no paper slips move between departments. Built for any hospital, clinic or diagnostic centre.</p>
+      <ul class="hl-list">
+        <li><b>Token &amp; queue</b> with "now serving" display</li>
+        <li><b>OPD</b> — patient history, vitals, diagnosis</li>
+        <li><b>Laboratory</b> — orders, sample status, reports</li>
+        <li><b>Radiology</b> — X-ray, MRI &amp; ultrasound tracking</li>
+        <li><b>Digital e-prescriptions</b> with follow-up</li>
+        <li><b>Role-based access</b> for every department</li>
+      </ul>
+      <div class="project-tech">
+        <span class="pt">Python</span><span class="pt">Django</span><span class="pt">JavaScript</span>
+        <span class="pt">SQL Database</span><span class="pt">PDF Printing</span><span class="pt">Role-based Logins</span>
+      </div>
+      <div class="project-btns">
+        <a href="#showreel" class="project-btn-live">▶ Watch Reel</a>
+        <a href="#contact" class="project-btn-code">💬 Book a Demo</a>
+      </div>
+      <div class="project-demo-note">Screens shown use <span>sample data only</span> — no real patient information.</div>
+    </div>
+  </div>
+</section>
+
+<section id="showreel">
+  <div class="sec-header reveal">
+    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Showreel</span></div>
+    <h2 class="sec-title">Promo Reels &amp;<br><strong>Brochures</strong></h2>
+    <p class="sec-desc">Marketing I produce for my own products — animated social-media reels with original, copyright-free music, and print-ready brochures.</p>
+  </div>
+  <div class="reel-grid">
+    <div class="reel-card reveal">
+      <video controls playsinline preload="none" poster="media/myschool-erp-reel.jpg"><source src="media/myschool-erp-reel.mp4" type="video/mp4"/></video>
+      <div class="reel-body"><h3>MySchool ERP</h3><p>Admissions, result cards, finance, WhatsApp quizzes, worksheets and plans for every size — in 44 seconds.</p>
+        <div class="reel-tags"><span>1080×1920</span><span>Facebook Reel</span><span>Original music</span></div></div>
+    </div>
+    <div class="reel-card reveal">
+      <video controls playsinline preload="none" poster="media/quaprit-hms-reel.jpg"><source src="media/quaprit-hms-reel.mp4" type="video/mp4"/></video>
+      <div class="reel-body"><h3>Quaprit HMS</h3><p>Token queue, OPD, lab reports, radiology and e-prescriptions — the patient journey from token to report.</p>
+        <div class="reel-tags"><span>1080×1920</span><span>Facebook Reel</span><span>Sample data</span></div></div>
+    </div>
+  </div>
+  <div class="dl-row reveal">
+    <a class="dl-card" href="media/MySchool-ERP-Brochure.pdf" target="_blank"><div class="dl-ico">📄</div><div><b>MySchool ERP Brochure</b><span>6-page A4 PDF · features, plans &amp; technology</span></div></a>
   </div>
 </section>
 
@@ -643,7 +765,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       <div class="venture-body">
         <div class="venture-tag">Technology · Web Dev · POS · Consulting</div>
         <h3>Quaprit Technologies</h3>
-        <p>Web development, POS systems, school management portals and consulting. Custom Django solutions for businesses across Pakistan. Powering both live production systems.</p>
+        <p>Software company behind MySchool ERP (schools &amp; colleges), Quaprit HMS (hospitals &amp; clinics) and restaurant POS systems — with demos, installation and training. Contact 0341 603 5267 · 0333 673 5267.</p>
         <div class="venture-meta"><span class="venture-followers">📞 0333 673 5267</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
@@ -659,9 +781,9 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="venture v1 reveal">
       <div class="venture-img">🏫</div>
       <div class="venture-body">
-        <div class="venture-tag">Django · Full Stack · 20+ Modules · Live</div>
-        <h3>MySchool Jhang Portal</h3>
-        <p>Complete school management system — admissions, fees, finance P&amp;L, early years tracker, 20+ modules. Built from scratch, live in production in Jhang.</p>
+        <div class="venture-tag">Django · ERP · 28 Modules · Live</div>
+        <h3>MySchool ERP</h3>
+        <p>School &amp; college ERP — online admission, real-time result cards, finance &amp; HR, parents app, WhatsApp quizzes and 277 lesson worksheets. Live at MySchool Jhang.</p>
         <div class="venture-meta"><span class="venture-followers">🌐 Live on PythonAnywhere</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
@@ -672,15 +794,18 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <div class="sec-header reveal">
     <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>What I Offer</span></div>
     <h2 class="sec-title">Services &amp;<br><strong>Expertise</strong></h2>
-    <p class="sec-desc">Harvard &amp; Google-certified expertise with two live production Django systems — across 6 core service areas.</p>
+    <p class="sec-desc">Harvard &amp; Google-certified expertise with three live production Django systems — across 9 core service areas.</p>
   </div>
   <div class="services-grid">
     <div class="svc svc-teal reveal"><div class="svc-icon">🍽️</div><h3>Restaurant POS Systems</h3><p>Complete cloud POS — kitchen display, member portal, mobile ordering, receipt printing, admin panel. As deployed at Model Town Club, Lahore.</p></div>
-    <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School Management Systems</h3><p>Complete Django portals — admissions, fees, finance, early years, 20+ modules. Live demo available. As deployed at MySchool Jhang.</p></div>
+    <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School &amp; College ERP</h3><p>MySchool ERP — 28 modules in Basic, Standard &amp; Premium plans: admissions, result cards, exams, finance, HR, parents app. Live at MySchool Jhang.</p></div>
+    <div class="svc svc-teal reveal"><div class="svc-icon">🏥</div><h3>Hospital &amp; Clinic Systems</h3><p>Quaprit HMS — patient tokens, OPD, laboratory, radiology and e-prescriptions in real time. For hospitals, clinics and diagnostic centres.</p></div>
     <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Custom Web Applications</h3><p>Bespoke Django web apps — ERPs, membership portals, dashboards. CS50W certified, production-ready PythonAnywhere deployments.</p></div>
     <div class="svc reveal"><div class="svc-icon">📊</div><h3>Data Analytics &amp; BI</h3><p>Dashboards, reports and business intelligence using Python, R and Google BI tools. Google Advanced Data Analytics certified.</p></div>
     <div class="svc reveal"><div class="svc-icon">🔒</div><h3>Cybersecurity</h3><p>Security assessments, threat analysis and consulting. Harvard CS50 Cybersecurity + Google Cybersecurity Professional certified.</p></div>
     <div class="svc reveal"><div class="svc-icon">📱</div><h3>Digital Marketing</h3><p>SEO, e-commerce, and campaign strategy. Google certified with 105K+ real-world audience building experience.</p></div>
+    <div class="svc reveal"><div class="svc-icon">🎬</div><h3>Promo Reels &amp; Brochures</h3><p>Animated Facebook/Instagram reels with original copyright-free music, and print-ready product brochures in English &amp; Urdu.</p></div>
+    <div class="svc reveal"><div class="svc-icon">📚</div><h3>Educational Content</h3><p>Question banks and printable A4 worksheets mapped to textbooks — 277 lessons for Oxford Progressive English Books 1–5.</p></div>
   </div>
 </section>
 
@@ -691,7 +816,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Get In Touch</span></div>
         <h2 class="sec-title">Let's Build<br><strong>Something Great</strong></h2>
       </div>
-      <p>Need a restaurant POS, school management system, or custom web application? I build real systems that actually get deployed. Two live systems — let's make it three.</p>
+      <p>Need a school or college ERP, a hospital or clinic system, a restaurant POS, or a custom web application? I build real systems that actually get deployed. Three live systems — let's make it four.</p>
       <div class="contact-links">
         <a href="mailto:musabfarouq555@gmail.com" class="cl"><div class="cl-icon">✉️</div><div><span class="cl-label">Email</span><span class="cl-val">musabfarouq555@gmail.com</span></div></a>
         <a href="tel:+923336735267" class="cl"><div class="cl-icon">📞</div><div><span class="cl-label">Phone / WhatsApp</span><span class="cl-val">0333 673 5267</span></div></a>
@@ -702,6 +827,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       <div class="social-chips">
         <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="sc">🍽️ MTC POS Live</a>
         <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="sc">🏫 MySchool Live</a>
+        <a href="#showreel" class="sc">🎬 Showreel</a>
         <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="sc">📡 Voice of Jhang</a>
         <a href="https://web.facebook.com/Quaprit" target="_blank" class="sc">💻 Quaprit Tech</a>
       </div>
@@ -720,7 +846,8 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
           <select>
             <option value="">Select what you need…</option>
             <option>Restaurant POS System (like Model Town Club)</option>
-            <option>School Management System (like MySchool Jhang)</option>
+            <option>School / College ERP (MySchool ERP)</option>
+            <option>Hospital / Clinic System (Quaprit HMS)</option>
             <option>Custom Web Application (Django)</option>
             <option>Membership / Club Portal</option>
             <option>Data Analytics / Dashboard</option>

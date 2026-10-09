@@ -10,6 +10,18 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 
 ---
 
+## 🚀 Live Systems (2026)
+
+| System | What it does |
+|---|---|
+| 🏫 **MySchool ERP** | School & college ERP — 28 modules: online admission & entrance test, real-time result cards, leaving certificates, paper studio & online exams, 277 lesson worksheets (OPE 1–5), WhatsApp quizzes, parents app, double-entry finance, HR. Live at MySchool Jhang. |
+| 🏥 **Quaprit HMS** | Hospital & clinic system — patient tokens, OPD, laboratory, X-ray/MRI, e-prescriptions, role-based access. In daily use at a private hospital. |
+| 🍽️ **Model Town Club POS** | Restaurant POS & membership system — kitchen display, member portal, mobile ordering. Live in Lahore. |
+
+🎬 Promo reels and the MySchool ERP brochure are in [`media/`](media/) and on the site's **Showreel** section.
+
+---
+
 ## 🎓 Certifications
 
 ### HarvardX / CS50 (via edX)
@@ -39,12 +51,15 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 |---|---|---|
 | 📡 **Voice of Jhang** | Digital news channel · 105K+ followers | [Facebook](https://web.facebook.com/voiceofjhang3) |
 | 🎓 **MySchool Jhang** | Educational initiative for students | [Facebook](https://web.facebook.com/MySchoolJhang) |
-| 💻 **Quaprit Technologies** | Freelancing & tech company | [Facebook](https://web.facebook.com/Quaprit) |
+| 💻 **Quaprit Technologies** | Software company — MySchool ERP, Quaprit HMS, POS systems | [Facebook](https://web.facebook.com/Quaprit) |
 
 ---
 
 ## 🛠️ Services
+- School & College ERP (MySchool ERP)
+- Hospital & Clinic Systems (Quaprit HMS)
 - Web Development
+- Promo Reels & Brochures
 - Cybersecurity Consulting
 - Data Analytics & Business Intelligence
 - Digital Marketing
