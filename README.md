@@ -49,7 +49,7 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 
 | Venture | Description | Link |
 |---|---|---|
-| 📡 **Voice of Jhang** | Digital news channel · 105K+ followers | [Facebook](https://web.facebook.com/voiceofjhang3) |
+| 📡 **Voice of Jhang** | Digital news channel · 133K+ followers | [Facebook](https://web.facebook.com/voiceofjhang3) |
 | 🎓 **MySchool Jhang** | Educational initiative for students | [Facebook](https://web.facebook.com/MySchoolJhang) |
 | 💻 **Quaprit Technologies** | Software company — MySchool ERP, Quaprit HMS, POS systems | [Facebook](https://web.facebook.com/Quaprit) |
 
