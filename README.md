@@ -15,10 +15,10 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 | System | What it does |
 |---|---|
 | 🏫 **MySchool ERP** | School & college ERP — 28 modules: online admission & entrance test, real-time result cards, leaving certificates, paper studio & online exams, 277 lesson worksheets (OPE 1–5), WhatsApp quizzes, parents app, double-entry finance, HR. Live at MySchool Jhang. |
-| 🏥 **Quaprit HMS** | Hospital & clinic system — patient tokens, OPD, laboratory, X-ray/MRI, e-prescriptions, role-based access. In daily use at a private hospital. |
+| 🏥 **Hospital & Clinic System** | Hospital system — patient tokens, OPD, laboratory, X-ray/MRI, e-prescriptions, role-based access. In daily use at a private hospital. |
 | 🍽️ **Model Town Club POS** | Restaurant POS & membership system — kitchen display, member portal, mobile ordering. Live in Lahore. |
 
-🎬 Demo reels (MySchool ERP, Quaprit HMS, Model Town Club POS) and the MySchool ERP brochure are in [`media/`](media/) and on the site's **Showreel** section.
+📄 Case studies are in [`projects/`](projects/), the CV is in [`cv/`](cv/), and demo videos (sample data only) are in [`media/`](media/).
 
 ---
 
@@ -57,7 +57,7 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 
 ## 🛠️ Services
 - School & College ERP (MySchool ERP)
-- Hospital & Clinic Systems (Quaprit HMS)
+- Hospital & Clinic Systems
 - Web Development
 - Promo Reels & Brochures
 - Cybersecurity Consulting
@@ -84,7 +84,7 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 
 - Pure HTML, CSS & JavaScript
 - Hosted on **GitHub Pages** — free & fast
-- Fonts: Google Fonts (Playfair Display + DM Sans)
+- Fonts: Google Fonts (Cormorant Garamond + Outfit); shared styles in `assets/site.css`
 
 ---
 

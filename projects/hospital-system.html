@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hospital &amp; Clinic System · Case study · Massab Farooq</title>
+<meta name="description" content="Case study: a Django hospital system in daily use, connecting reception, doctors, laboratory, imaging, pharmacy and billing, with audit trails and access-control tests."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Massab Farooq</a>
+    <ul><li><a href="../index.html#projects">Projects</a></li><li><a href="../index.html#ai">AI work</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+    <a class="btn btn-primary" href="../cv/Massab-Farooq-CV.pdf" download>Download CV</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="case-hero">
+  <div class="wrap">
+    <p class="eyebrow">Case study · in production</p>
+    <h1>Hospital &amp; Clinic System</h1>
+    <p class="lead">One live Django system for reception, doctors, laboratory, imaging, pharmacy and billing at a private hospital — from patient token to report.</p>
+  </div>
+</section>
+
+<section style="padding-top:1rem">
+  <div class="wrap case">
+    <article>
+      <h2>Problem</h2>
+      <p>Busy OPD hours meant crowded waiting areas, handwritten tokens, lost lab slips and patients walking between departments to ask whether a report was ready. Doctors could not see a patient’s tests and earlier prescriptions in one place.</p>
+
+      <h2>Users</h2>
+      <p>Receptionists, doctors, nurses, laboratory staff, billing staff and managers — each with a separate role — plus patients through their own portal.</p>
+
+      <h2>My role</h2>
+      <p>I designed, built and maintain the system end to end: the clinical and financial data model, department workflows, printed documents, permissions and tests, working directly with hospital staff on how each department actually operates.</p>
+
+      <h2>Implemented features</h2>
+      <ul>
+        <li><b>Reception:</b> patient registration, appointments and doctor schedules, daily tokens per department with printed token slips.</li>
+        <li><b>OPD:</b> visits, medical records, consultation templates, and prescriptions printed on the hospital letterhead.</li>
+        <li><b>Laboratory and imaging:</b> test orders, results with parameters, and tracking of X-ray, MRI and ultrasound procedures.</li>
+        <li><b>Indoor care:</b> admissions and rooms, nursing medication, surgeries and implants, physiotherapy, dressing and injection services.</li>
+        <li><b>Pharmacy and stock:</b> a pharmacy point of sale with medicine stock, and internal inventory for consumables.</li>
+        <li><b>Money:</b> invoices, payments, refunds, cash reconciliation and an immutable day-end audit snapshot.</li>
+        <li><b>Staff:</b> attendance, exceptions and payroll.</li>
+        <li><b>Clinical safety:</b> drug-interaction, allergy and contraindication warnings while prescribing, with every override recorded in an audit log.</li>
+      </ul>
+
+      <h2>Architecture decisions</h2>
+      <ul>
+        <li><b>One shared visit record.</b> Reception, doctor, lab, imaging, pharmacy and billing all work on the same visit, so nothing is retyped and nothing travels on paper.</li>
+        <li><b>Separate Django apps by responsibility:</b> the core hospital workflow, clinical safety, pharmacy point of sale and internal inventory.</li>
+        <li><b>Clinical-safety checks as small APIs</b> (Django REST Framework): drug interactions, allergy checks and contraindications are checked while the doctor prescribes, and overrides are posted back with a reason.</li>
+        <li><b>SQLite today, PostgreSQL ready.</b> Setting one environment variable moves the system to PostgreSQL with no code change.</li>
+      </ul>
+
+      <h2>Security and data handling</h2>
+      <ul>
+        <li>Role-based access with checks on the server, covered by automated tests — for example: a patient cannot list other patients, only a manager can see payroll, and only billing staff can turn an order into an invoice — a nurse or a patient trying is refused.</li>
+        <li>Audit trails that are never edited: the activity log, day-end audit snapshots, and the clinical override log.</li>
+        <li>The secret key comes from an environment variable or a private file on the server; debug mode is off.</li>
+        <li>Public material uses sample patients only; no live address or login is published.</li>
+      </ul>
+
+      <h2>Challenges and lessons</h2>
+      <ul>
+        <li><b>Departments see the same patient differently.</b> Making the visit the shared record, with lab, imaging, pharmacy and billing orders attached to it, means no department retypes another’s data.</li>
+        <li><b>Money needs an audit trail, not just totals.</b> Day-end snapshots cannot be edited after they are taken, so the day’s figures can be checked later against what was recorded at the time.</li>
+        <li><b>Clinical warnings must not block care silently.</b> A doctor can override a warning, but must give a reason, and the override is logged.</li>
+        <li><b>Reproducible setup matters.</b> Pinning the project’s dependencies let the full test suite run cleanly from a fresh environment.</li>
+      </ul>
+
+      <h2>Evidence</h2>
+      <p><b>68 automated tests</b> pass, including an access-control suite. The demo video uses sample patients. Source code is private because the system holds patient records; a walkthrough on a demo database is available on request.</p>
+      <a class="back" href="../index.html#projects">← Back to all projects</a>
+    </article>
+
+    <aside class="aside" aria-label="Project summary">
+      <div class="reel"><video controls playsinline preload="none" poster="../media/quaprit-hms-reel.jpg"><source src="../media/quaprit-hms-reel.mp4" type="video/mp4"/>Demo video of the hospital system</video></div>
+      <div class="panel">
+        <h3>At a glance</h3>
+        <dl>
+          <dt>Status</dt><dd>In daily production use at a private hospital</dd>
+          <dt>Stack</dt><dd>Python, Django 5, Django REST Framework, SQLite (PostgreSQL-ready), pandas, openpyxl</dd>
+          <dt>Tests</dt><dd>68 automated tests, including access control</dd>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Massab Farooq</span><span><a href="../index.html#contact">Contact</a></span></div></footer>
+</body>
+</html>
