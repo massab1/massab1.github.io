@@ -20,7 +20,7 @@
   --border:rgba(212,168,75,0.18);--border2:rgba(255,255,255,0.06);
   --teal:#017E84;
 }
-html{scroll-behavior:smooth;cursor:none}
+html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;line-height:1.6}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4;z-index:1;pointer-events:none}
@@ -206,7 +206,7 @@ section{padding:7rem 5%;position:relative;z-index:2}
 /* CERTIFICATIONS */
 #certifications{background:var(--bg2)}
 .cert-filter{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:3rem}
-.cf-btn{padding:.5rem 1.3rem;border:1px solid var(--border2);border-radius:20px;font-size:.76rem;cursor:none;transition:all .3s;color:var(--gray2);background:transparent;font-family:'Outfit',sans-serif;letter-spacing:.5px}
+.cf-btn{padding:.5rem 1.3rem;border:1px solid var(--border2);border-radius:20px;font-size:.76rem;cursor:pointer;transition:all .3s;color:var(--gray2);background:transparent;font-family:'Outfit',sans-serif;letter-spacing:.5px}
 .cf-btn.active,.cf-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold3)}
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem}
 .cert-card{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:1.5rem;transition:all .35s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:.8rem}
@@ -279,9 +279,9 @@ section{padding:7rem 5%;position:relative;z-index:2}
 .fg label{display:block;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;color:var(--gray2);margin-bottom:.5rem}
 .fg input,.fg select,.fg textarea{width:100%;background:var(--bg2);border:1px solid var(--border2);border-radius:4px;padding:.7rem 1rem;color:var(--cream);font-family:'Outfit',sans-serif;font-size:.88rem;transition:border-color .3s;outline:none}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
-.fg select{cursor:none}.fg textarea{min-height:100px;resize:vertical}
+.fg select{cursor:pointer}.fg textarea{min-height:100px;resize:vertical}
 .fg select option{background:var(--bg2)}
-.form-btn{width:100%;background:var(--gold);color:var(--bg);border:none;border-radius:4px;padding:.9rem;font-size:.88rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:none;transition:all .3s;font-family:'Outfit',sans-serif}
+.form-btn{width:100%;background:var(--gold);color:var(--bg);border:none;border-radius:4px;padding:.9rem;font-size:.88rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Outfit',sans-serif}
 .form-btn:hover{background:var(--gold2);transform:translateY(-1px)}
 .form-success{display:none;text-align:center;padding:2rem}
 .form-success-icon{font-size:2.5rem;margin-bottom:1rem}
@@ -321,6 +321,14 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 .hl-list li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
 .hl-list li b{color:var(--cream);font-weight:600}
 .reel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,310px));gap:1.6rem;justify-content:center}
+
+/* accessibility: visible focus, reduced motion */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}#particles-canvas{display:none}.reveal,.reveal-left,.reveal-right{opacity:1!important;transform:none!important}}
+.form-note{font-size:.72rem;color:var(--gray2);margin-top:.7rem;line-height:1.6}
+.form-btn-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.form-btn.wa{background:transparent;color:var(--cream);border:1px solid var(--border)}
+.form-error{display:none;color:#f87171;font-size:.78rem;margin-bottom:.6rem}
 @media(max-width:1024px){.reel-grid{grid-template-columns:repeat(2,minmax(0,310px))}}
 .reel-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
 .reel-card video{width:100%;aspect-ratio:9/16;display:block;background:#000}
@@ -371,8 +379,6 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 </style>
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 <canvas id="particles-canvas"></canvas>
 
 <nav id="navbar">
@@ -850,13 +856,13 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         <div class="form-title">Send a Message</div>
         <div class="form-subtitle">I typically respond within 24 hours · WhatsApp: 0333 673 5267</div>
         <div class="form-row2">
-          <div class="fg"><label>First Name</label><input type="text" placeholder="Your first name"/></div>
-          <div class="fg"><label>Last Name</label><input type="text" placeholder="Your last name"/></div>
+          <div class="fg"><label for="cfFirst">First Name</label><input id="cfFirst" type="text" autocomplete="given-name" placeholder="Your first name"/></div>
+          <div class="fg"><label for="cfLast">Last Name</label><input id="cfLast" type="text" autocomplete="family-name" placeholder="Your last name"/></div>
         </div>
-        <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"/></div>
+        <div class="fg"><label for="cfEmail">Email Address</label><input id="cfEmail" type="email" autocomplete="email" placeholder="your@email.com"/></div>
         <div class="fg">
-          <label>I Need</label>
-          <select>
+          <label for="cfNeed">I Need</label>
+          <select id="cfNeed">
             <option value="">Select what you need…</option>
             <option>Restaurant POS System (like Model Town Club)</option>
             <option>School / College ERP (MySchool ERP)</option>
@@ -869,12 +875,13 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
             <option>General Inquiry</option>
           </select>
         </div>
-        <div class="fg"><label>Message</label><textarea placeholder="Tell me about your project…"></textarea></div>
-        <button class="form-btn" onclick="submitForm()">Send Message →</button>
-        <div class="form-success" id="formSuccess">
-          <div class="form-success-icon">✅</div>
-          <p>Message sent! I'll get back to you within 24 hours.</p>
+        <div class="fg"><label for="cfMsg">Message</label><textarea id="cfMsg" placeholder="Tell me about your project…"></textarea></div>
+        <div class="form-error" id="cfError" role="alert">Please write a short message first.</div>
+        <div class="form-btn-row">
+          <button type="button" class="form-btn" onclick="sendMessage('email')">Send by Email →</button>
+          <button type="button" class="form-btn wa" onclick="sendMessage('whatsapp')">Send on WhatsApp</button>
         </div>
+        <p class="form-note">Opens your email app or WhatsApp with this message filled in, so it reaches me directly. Nothing is stored on this site.</p>
       </div>
     </div>
   </div>
@@ -897,18 +904,8 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 <a href="#hero" class="btt" id="btt">↑</a>
 
 <script>
-// CURSOR
-const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px'});
-function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)}
-animRing();
-document.querySelectorAll('a,button,.svc,.cert-card,.venture,.about-card,.skill,.cf-btn').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cursor.classList.add('hover');ring.classList.add('hover')});
-  el.addEventListener('mouseleave',()=>{cursor.classList.remove('hover');ring.classList.remove('hover')});
-});
-
-// PARTICLES
+// PARTICLES (skipped when the visitor prefers reduced motion)
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const canvas=document.getElementById('particles-canvas'),ctx=canvas.getContext('2d');
 let W,H,parts=[];
 function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
@@ -920,7 +917,7 @@ for(let i=0;i<80;i++)parts.push(new P());
 function animP(){ctx.clearRect(0,0,W,H);parts.forEach(p=>{p.update();p.draw()});
 for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){const dx=parts[i].x-parts[j].x,dy=parts[i].y-parts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){ctx.beginPath();ctx.moveTo(parts[i].x,parts[i].y);ctx.lineTo(parts[j].x,parts[j].y);ctx.strokeStyle=`rgba(212,168,75,${.08*(1-d/100)})`;ctx.lineWidth=.5;ctx.stroke()}}
 requestAnimationFrame(animP)}
-animP();
+if(!reduceMotion)animP();
 
 // NAV + BACK TO TOP
 const navbar=document.getElementById('navbar'),btt=document.getElementById('btt');
@@ -944,14 +941,21 @@ function filterCerts(cat,btn){
 }
 
 // CONTACT FORM
-function submitForm(){
-  const btn=document.querySelector('.form-btn');
-  btn.textContent='Sending…';btn.disabled=true;
-  setTimeout(()=>{
-    document.querySelectorAll('.fg').forEach(f=>f.style.display='none');
-    btn.style.display='none';
-    document.getElementById('formSuccess').style.display='block';
-  },1200);
+function sendMessage(via){
+  const v=id=>document.getElementById(id).value.trim();
+  const name=[v('cfFirst'),v('cfLast')].filter(Boolean).join(' ');
+  const msg=v('cfMsg'),err=document.getElementById('cfError');
+  if(!msg){err.style.display='block';document.getElementById('cfMsg').focus();return}
+  err.style.display='none';
+  const need=v('cfNeed'),email=v('cfEmail');
+  const lines=[msg,''];
+  if(name)lines.push('From: '+name);
+  if(email)lines.push('Email: '+email);
+  if(need)lines.push('About: '+need);
+  const text=lines.join('\n').trim();
+  if(via==='whatsapp'){window.open('https://wa.me/923336735267?text='+encodeURIComponent(text),'_blank','noopener');return}
+  const subject='Portfolio enquiry'+(name?' from '+name:'');
+  window.location.href='mailto:musabfarouq555@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text);
 }
 </script>
 </body>
