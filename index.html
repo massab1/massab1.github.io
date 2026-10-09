@@ -307,7 +307,14 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 /* RESPONSIVE */
 
 /* ---- 2026 update: photo, showreel, third project ---- */
-.profile-photo{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.profile-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;display:block}
+.profile-card .profile-card-overlay{display:none}
+.profile-card .profile-card-info{position:relative;padding:1.2rem 1.4rem 1.3rem;background:linear-gradient(180deg,#0b1424,#070c18);border-top:1px solid var(--border)}
+.profile-card .profile-card-name{font-size:1.45rem}
+.profile-card .profile-card-role{font-size:.7rem;margin-bottom:.8rem}
+.profile-card .profile-card-stats{justify-content:space-between}
+.profile-card .profile-card-tag{top:.7rem;right:.7rem;font-size:.6rem;padding:.25rem .7rem}
+@media(max-width:480px){#hero .profile-card{width:min(300px,84vw)}.profile-card .pcs-label{white-space:nowrap;font-size:.58rem}.profile-card .profile-card-info{padding:1rem 1.1rem}.profile-card .profile-card-name{font-size:1.25rem}.profile-card .pcs-num{font-size:1.2rem}}
 .new-pill{display:inline-block;background:var(--green);color:#04261a;font-size:.6rem;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:10px;margin-left:.4rem;vertical-align:middle;text-transform:uppercase}
 .hl-list{list-style:none;margin:0 0 1.4rem;display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1rem}
 .hl-list li{font-size:.8rem;color:var(--gray2);padding-left:1.1rem;position:relative;line-height:1.5}
@@ -466,7 +473,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
           <div class="skill"><span>Python</span></div><div class="skill"><span>Django</span></div>
           <div class="skill"><span>Full Stack Web Dev</span></div><div class="skill"><span>SQL / Databases</span></div>
           <div class="skill"><span>REST APIs / AJAX</span></div><div class="skill"><span>HTML / CSS / JavaScript</span></div>
-          <div class="skill"><span>PythonAnywhere Deployment</span></div><div class="skill"><span>Cybersecurity</span></div>
+          <div class="skill"><span>Cloud Deployment</span></div><div class="skill"><span>Cybersecurity</span></div>
           <div class="skill"><span>Data Analytics</span></div><div class="skill"><span>POS Systems</span></div>
           <div class="skill"><span>Membership Portals</span></div><div class="skill"><span>Kitchen Display Systems</span></div>
           <div class="skill"><span>School &amp; College ERP</span></div><div class="skill"><span>Hospital Management</span></div>
@@ -495,13 +502,13 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <!-- PROJECT 1: MODEL TOWN CLUB POS -->
   <div class="project-featured reveal">
     <div class="project-featured-visual" style="background:linear-gradient(135deg,#020c14,#041a24,#0a0d1a)">
-      <div class="pos-live-badge"><div class="pos-live-dot"></div> Live at modeltownclub.pythonanywhere.com</div>
+      <div class="pos-live-badge"><div class="pos-live-dot"></div> Hosted on Cloud</div>
       <div class="pos-screen">
         <div class="pos-topbar">
           <div class="pos-dot" style="background:#ff5f57"></div>
           <div class="pos-dot" style="background:#febc2e"></div>
           <div class="pos-dot" style="background:#28c840"></div>
-          <span class="pos-url">modeltownclub.pythonanywhere.com/pos</span>
+          <span class="pos-url">Model Town Club · POS</span>
         </div>
         <div style="background:#1e293b;padding:.3rem .6rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid rgba(255,255,255,.05)">
           <span style="font-size:.5rem;font-weight:700;color:#017E84;font-family:'Cormorant Garamond',serif">Model</span>
@@ -568,26 +575,26 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       </div>
       <div class="project-tech" style="margin-top:1rem">
         <span class="pt">Python 3.11</span><span class="pt">Django 5.0</span><span class="pt">SQLite</span>
-        <span class="pt">Vanilla JS</span><span class="pt">PythonAnywhere</span><span class="pt">80mm Thermal</span>
+        <span class="pt">Vanilla JS</span><span class="pt">Cloud Hosted</span><span class="pt">80mm Thermal</span>
       </div>
       <div class="project-btns">
-        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
+        <a href="cafe%20Brew.mp4" target="_blank" class="project-btn-live">▶ Watch Demo Video</a>
         <a href="#contact" class="project-btn-code">💬 Build Similar System</a>
       </div>
-      <div class="project-demo-note">Demo: <span>membership: MTC001</span> · <span>password: MTC001</span> (member view) · Admin available on request</div>
+      <div class="project-demo-note">Live system is private to protect member data · <span>Live demo on request</span></div>
     </div>
   </div>
 
   <!-- PROJECT 2: MYSCHOOL -->
   <div class="project-featured reveal" style="background:var(--bg2)">
     <div class="project-featured-visual" style="background:linear-gradient(135deg,#050d1f,#0a1a3a,#050d1f)">
-      <div class="pos-live-badge"><div class="pos-live-dot"></div> Live at massabfarooq.pythonanywhere.com</div>
+      <div class="pos-live-badge"><div class="pos-live-dot"></div> Hosted on Cloud</div>
       <div class="pf-screen">
         <div class="pf-screen-bar">
           <div class="pf-dot" style="background:#ff5f57"></div>
           <div class="pf-dot" style="background:#febc2e"></div>
           <div class="pf-dot" style="background:#28c840"></div>
-          <span class="pf-screen-url">massabfarooq.pythonanywhere.com</span>
+          <span class="pf-screen-url">MySchool ERP · Finance</span>
         </div>
         <div class="pf-screen-body">
           <div style="font-size:.58rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">💰 Finance Dashboard — March 2026</div>
@@ -635,14 +642,14 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       </div>
       <div class="project-tech">
         <span class="pt">Python</span><span class="pt">Django 5</span><span class="pt">SQLite / MySQL</span>
-        <span class="pt">ReportLab PDF</span><span class="pt">PWA</span><span class="pt">PythonAnywhere</span><span class="pt">Offline Licence</span>
+        <span class="pt">ReportLab PDF</span><span class="pt">PWA</span><span class="pt">Cloud Hosted</span><span class="pt">Offline Licence</span>
       </div>
       <div class="project-btns">
-        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="project-btn-live">🌐 View Live System</a>
+        <a href="media/myschool-erp-reel.mp4" target="_blank" class="project-btn-live">▶ Watch Demo Video</a>
         <a href="media/MySchool-ERP-Brochure.pdf" target="_blank" class="project-btn-code">📄 Brochure</a>
-        <a href="#showreel" class="project-btn-code">▶ Reel</a>
+        <a href="#contact" class="project-btn-code">💬 Book a Demo</a>
       </div>
-      <div class="project-demo-note">Demo login: <span>username: demo</span> · <span>password: demo1234</span></div>
+      <div class="project-demo-note">Live school data is private · <span>Live demo on request</span></div>
     </div>
   </div>
   <!-- PROJECT 3: QUAPRIT HMS -->
@@ -769,22 +776,22 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         <div class="venture-meta"><span class="venture-followers">📞 0333 673 5267</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
-    <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="venture v3 reveal">
+    <a href="cafe%20Brew.mp4" target="_blank" class="venture v3 reveal">
       <div class="venture-img">🍽️</div>
       <div class="venture-body">
         <div class="venture-tag">Django · POS · ERP · Membership · Live</div>
         <h3>Model Town Club POS</h3>
         <p>Full restaurant &amp; club management built in Django — kitchen display, 200+ member portal, mobile ordering &amp; admin panel. Live in Lahore, Pakistan.</p>
-        <div class="venture-meta"><span class="venture-followers">🌐 Live on PythonAnywhere</span><div class="venture-arrow">↗</div></div>
+        <div class="venture-meta"><span class="venture-followers">☁️ Hosted on Cloud · ▶ Demo</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
-    <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="venture v1 reveal">
+    <a href="#showreel" class="venture v1 reveal">
       <div class="venture-img">🏫</div>
       <div class="venture-body">
         <div class="venture-tag">Django · ERP · 28 Modules · Live</div>
         <h3>MySchool ERP</h3>
         <p>School &amp; college ERP — online admission, real-time result cards, finance &amp; HR, parents app, WhatsApp quizzes and 277 lesson worksheets. Live at MySchool Jhang.</p>
-        <div class="venture-meta"><span class="venture-followers">🌐 Live on PythonAnywhere</span><div class="venture-arrow">↗</div></div>
+        <div class="venture-meta"><span class="venture-followers">☁️ Hosted on Cloud · ▶ Demo</span><div class="venture-arrow">↗</div></div>
       </div>
     </a>
   </div>
@@ -800,7 +807,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     <div class="svc svc-teal reveal"><div class="svc-icon">🍽️</div><h3>Restaurant POS Systems</h3><p>Complete cloud POS — kitchen display, member portal, mobile ordering, receipt printing, admin panel. As deployed at Model Town Club, Lahore.</p></div>
     <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School &amp; College ERP</h3><p>MySchool ERP — 28 modules in Basic, Standard &amp; Premium plans: admissions, result cards, exams, finance, HR, parents app. Live at MySchool Jhang.</p></div>
     <div class="svc svc-teal reveal"><div class="svc-icon">🏥</div><h3>Hospital &amp; Clinic Systems</h3><p>Quaprit HMS — patient tokens, OPD, laboratory, radiology and e-prescriptions in real time. For hospitals, clinics and diagnostic centres.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Custom Web Applications</h3><p>Bespoke Django web apps — ERPs, membership portals, dashboards. CS50W certified, production-ready PythonAnywhere deployments.</p></div>
+    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Custom Web Applications</h3><p>Bespoke Django web apps — ERPs, membership portals, dashboards. CS50W certified, production-ready cloud deployments.</p></div>
     <div class="svc reveal"><div class="svc-icon">📊</div><h3>Data Analytics &amp; BI</h3><p>Dashboards, reports and business intelligence using Python, R and Google BI tools. Google Advanced Data Analytics certified.</p></div>
     <div class="svc reveal"><div class="svc-icon">🔒</div><h3>Cybersecurity</h3><p>Security assessments, threat analysis and consulting. Harvard CS50 Cybersecurity + Google Cybersecurity Professional certified.</p></div>
     <div class="svc reveal"><div class="svc-icon">📱</div><h3>Digital Marketing</h3><p>SEO, e-commerce, and campaign strategy. Google certified with 133K+ real-world audience building experience.</p></div>
@@ -825,8 +832,8 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
         <a href="https://credly.com/users/massab-farooq" target="_blank" class="cl"><div class="cl-icon">🏅</div><div><span class="cl-label">Credly — Verified Certs</span><span class="cl-val">credly.com/users/massab-farooq</span></div></a>
       </div>
       <div class="social-chips">
-        <a href="https://modeltownclub.pythonanywhere.com" target="_blank" class="sc">🍽️ MTC POS Live</a>
-        <a href="https://massabfarooq.pythonanywhere.com" target="_blank" class="sc">🏫 MySchool Live</a>
+        <a href="cafe%20Brew.mp4" target="_blank" class="sc">🍽️ MTC POS Demo</a>
+        <a href="media/myschool-erp-reel.mp4" target="_blank" class="sc">🏫 MySchool Demo</a>
         <a href="#showreel" class="sc">🎬 Showreel</a>
         <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="sc">📡 Voice of Jhang</a>
         <a href="https://web.facebook.com/Quaprit" target="_blank" class="sc">💻 Quaprit Tech</a>
@@ -874,8 +881,8 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     <div class="footer-links">
       <a href="https://github.com/massab1" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/musabfarouq" target="_blank">LinkedIn</a>
-      <a href="https://modeltownclub.pythonanywhere.com" target="_blank">MTC Live</a>
-      <a href="https://massabfarooq.pythonanywhere.com" target="_blank">School Live</a>
+      <a href="cafe%20Brew.mp4" target="_blank">MTC Demo</a>
+      <a href="#showreel">Showreel</a>
       <a href="https://credly.com/users/massab-farooq" target="_blank">Credly</a>
     </div>
   </div>
