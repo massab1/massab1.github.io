@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MySchool ERP · Case study · Massab Farooq</title>
+<meta name="description" content="Case study: a Django ERP for schools and colleges in daily production use, with feature plans, offline licensing, PDF result cards and Claude-powered assistants."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/site.css"/>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Massab Farooq</a>
+    <ul><li><a href="../index.html#projects">Projects</a></li><li><a href="../index.html#ai">AI work</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+    <a class="btn btn-primary" href="../cv/Massab-Farooq-CV.pdf" download>Download CV</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="case-hero">
+  <div class="wrap">
+    <p class="eyebrow">Case study · in production</p>
+    <h1>MySchool ERP</h1>
+    <p class="lead">A Django ERP for schools and colleges, used every day at MySchool Jhang for admissions, exams, fees, finance, staff and parents.</p>
+  </div>
+</section>
+
+<section style="padding-top:1rem">
+  <div class="wrap case">
+    <article>
+      <h2>Problem</h2>
+      <p>The school ran on registers, paper fee receipts and spreadsheets. It needed one system for admissions, exams, fees and staff, with result cards, receipts and certificates printed from the same data, and a way for parents to see fees, attendance and results themselves.</p>
+
+      <h2>Users</h2>
+      <p>Administrators, the principal, teachers, accountants, parents and admission applicants — each with their own login and permissions.</p>
+
+      <h2>My role</h2>
+      <p>I gathered requirements with school staff, then designed, built, deployed and maintain the system: data model, screens, PDF documents, permissions, tests and the server. I use AI coding assistants in my workflow and review and test everything that ships.</p>
+
+      <h2>Implemented features</h2>
+      <ul>
+        <li><b>Admissions:</b> student records, online applications with documents and fee challan, entrance test (timed, with tab-switch control), merit list and enrolment.</li>
+        <li><b>Exams:</b> marks entry, real-time result cards as PDF (one student or a whole class), school leaving certificates.</li>
+        <li><b>Assessment:</b> question bank, paper builder, daily tests, and online exams for students who are away.</li>
+        <li><b>Teaching content:</b> 277 printable A4 lesson worksheets for Oxford Progressive English Books 1–5, each in three levels with answer keys and an audio QR code for parents.</li>
+        <li><b>Fees and finance:</b> fee vouchers, family fee, bank-list import, defaulter lists, chart of accounts, double-entry vouchers, trial balance and profit and loss, month-end locks.</li>
+        <li><b>Staff:</b> HR records, departments, salary structures, payroll and attendance.</li>
+        <li><b>Parents:</b> an installable web app (PWA) with results, attendance, fees and homework diary; WhatsApp report links.</li>
+        <li><b>AI (Claude API):</b> a school assistant chatbot that answers questions from live school data, and a fee-reminder assistant that drafts a personal message per defaulter and prepares a WhatsApp link for a person to send.</li>
+      </ul>
+
+      <h2>Architecture decisions</h2>
+      <ul>
+        <li><b>Feature plans instead of forks.</b> A feature registry and middleware switch whole modules on or off per institution (Basic, Standard, Premium). A school can upgrade later without migrating data.</li>
+        <li><b>Offline installs with a signed licence.</b> For schools without reliable internet, the same code runs on a local computer and checks a cryptographically signed licence key.</li>
+        <li><b>One codebase, several institutions.</b> Each server reads its own private settings file (secret key, database, plan), so a second institution runs the same code with its own data.</li>
+        <li><b>Server-rendered Django.</b> Pages are rendered on the server with small amounts of JavaScript, which keeps the system fast on low-end phones and simple to maintain.</li>
+        <li><b>PDFs generated in Python.</b> Result cards, certificates, vouchers and worksheets are produced with ReportLab, including Urdu text shaping.</li>
+      </ul>
+
+      <h2>Security and data handling</h2>
+      <ul>
+        <li>Role-based access for every screen; the principal’s role is read-only where it should be, enforced in middleware.</li>
+        <li>National identity (CNIC) numbers validated to one 13-digit format everywhere, with a data migration that cleaned existing records.</li>
+        <li>Secrets and database settings live in a private environment file; debug mode is off by default.</li>
+        <li>Finance months can be locked, and changes to the books are audited.</li>
+        <li>The live system holds children’s records, so public material uses sample data only and no live address or login is published.</li>
+      </ul>
+
+      <h2>Challenges and lessons</h2>
+      <ul>
+        <li><b>Messy real-world data.</b> CNIC numbers had been typed in several formats on different screens. A single shared field plus a migration that tidied old records fixed it once, instead of patching each screen.</li>
+        <li><b>Different institutions want different things.</b> Building feature plans early avoided maintaining separate copies of the code for each customer.</li>
+        <li><b>Content at scale needs checks.</b> The 277 worksheets are written in a small Python format and checked automatically for A4 fit and complete answer keys before they reach teachers.</li>
+        <li><b>AI should draft, people should decide.</b> The fee assistant drafts messages but never sends them; a staff member reviews and sends each one.</li>
+      </ul>
+
+      <h2>Evidence</h2>
+      <p><b>36 automated tests</b> pass on the current code. The demo video and brochure use sample data. Source code is private because the system runs a real school; a walkthrough on a demo database is available on request.</p>
+      <a class="back" href="../index.html#projects">← Back to all projects</a>
+    </article>
+
+    <aside class="aside" aria-label="Project summary">
+      <div class="reel"><video controls playsinline preload="none" poster="../media/myschool-erp-reel.jpg"><source src="../media/myschool-erp-reel.mp4" type="video/mp4"/>Demo video of MySchool ERP</video></div>
+      <div class="panel">
+        <h3>At a glance</h3>
+        <dl>
+          <dt>Status</dt><dd>In daily production use</dd>
+          <dt>Stack</dt><dd>Python, Django 5, SQLite / MySQL, ReportLab, openpyxl, Claude API</dd>
+          <dt>Tests</dt><dd>36 automated tests</dd>
+          <dt>Links</dt><dd><a href="../media/MySchool-ERP-Brochure.pdf" target="_blank" rel="noopener">Brochure (PDF)</a> · <a href="https://github.com/massab1/myschool-jhang-demo" target="_blank" rel="noopener">Structure overview repo</a></dd>
+        </dl>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Massab Farooq</span><span><a href="../index.html#contact">Contact</a></span></div></footer>
+</body>
+</html>

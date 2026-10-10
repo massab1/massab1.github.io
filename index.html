@@ -3,958 +3,260 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Massab Farooq | Full Stack Django Developer & Tech Entrepreneur</title>
-<meta name="description" content="Full Stack Django Developer from Jhang, Pakistan. HarvardX & Google Certified. Builder of 3 live production systems — MySchool ERP for schools & colleges, Quaprit HMS for hospitals & clinics, and Model Town Club POS."/>
-<meta property="og:title" content="Massab Farooq | Full Stack Django Developer"/>
-<meta property="og:description" content="HarvardX & Google Certified Django Developer with 3 live production systems — school ERP, hospital management and restaurant POS."/>
-<meta property="og:image" content="https://massab1.github.io/media/myschool-erp-reel.jpg"/>
+<title>Massab Farooq · Python/Django Engineer</title>
+<meta name="description" content="Python/Django engineer building production business systems for a school, a hospital and a members' club, with about 18 years in the ARY News newsroom. Open to remote roles from Jhang, Pakistan."/>
+<meta property="og:title" content="Massab Farooq · Python/Django Engineer"/>
+<meta property="og:description" content="Production Django systems for real operations, plus a newsroom background. Open to remote software engineering and AI application roles."/>
 <meta property="og:type" content="website"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#050810;--bg2:#080d1a;--bg3:#0c1220;
-  --gold:#d4a84b;--gold2:#f0c96a;--gold3:rgba(212,168,75,0.15);
-  --cyan:#00d4ff;--green:#10b981;
-  --white:#ffffff;--cream:#e8e0d0;--gray:#6b7280;--gray2:#9ca3af;
-  --border:rgba(212,168,75,0.18);--border2:rgba(255,255,255,0.06);
-  --teal:#017E84;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;line-height:1.6}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4;z-index:1;pointer-events:none}
-#particles-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
-.cursor{position:fixed;width:12px;height:12px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .2s,height .2s;mix-blend-mode:difference}
-.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(212,168,75,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .12s ease-out,width .3s,height .3s,border-color .3s}
-.cursor.hover{width:6px;height:6px}.cursor-ring.hover{width:52px;height:52px;border-color:var(--gold)}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:1.4rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
-nav.scrolled{background:rgba(5,8,16,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1rem 5%}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--gold);letter-spacing:2px}
-.nav-logo span{color:var(--cream)}
-.nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{color:var(--gray2);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
-.nav-links a:hover{color:var(--gold)}.nav-links a:hover::after{width:100%}
-.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);padding:.5rem 1.2rem;border-radius:2px;font-size:.78rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s}
-.nav-cta:hover{background:var(--gold);color:var(--bg)}
-
-/* HERO */
-#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:0 5%}
-.hero-bg-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,75,0.08) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:pulse 4s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.6}50%{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
-.hero-lines{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.hero-line{position:absolute;width:1px;background:linear-gradient(to bottom,transparent,rgba(212,168,75,0.15),transparent);animation:lineFloat 6s ease-in-out infinite}
-.hero-line:nth-child(1){left:15%;height:40%;top:10%;animation-delay:0s}
-.hero-line:nth-child(2){left:35%;height:60%;top:5%;animation-delay:1s}
-.hero-line:nth-child(3){left:65%;height:50%;top:20%;animation-delay:2s}
-.hero-line:nth-child(4){left:82%;height:35%;top:15%;animation-delay:.5s}
-@keyframes lineFloat{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-20px)}}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;width:100%;position:relative;z-index:2;padding-top:5rem}
-.hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:2rem;opacity:0;animation:fadeUp .8s .3s ease forwards}
-.hero-eyebrow-line{width:40px;height:1px;background:var(--gold)}
-.hero-eyebrow span{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500}
-.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:300;line-height:1;color:var(--white);margin-bottom:.5rem;opacity:0;animation:fadeUp .8s .45s ease forwards}
-.hero-name strong{font-weight:700;color:var(--gold);display:block}
-.hero-title{font-size:1rem;color:var(--gray2);margin-bottom:2rem;font-weight:300;opacity:0;animation:fadeUp .8s .6s ease forwards;letter-spacing:.5px}
-.hero-title span{color:var(--gold);font-weight:500}
-.hero-badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem;opacity:0;animation:fadeUp .8s .75s ease forwards}
-.badge{display:flex;align-items:center;gap:.4rem;padding:.35rem .9rem;border-radius:20px;font-size:.72rem;font-weight:500;letter-spacing:.5px;border:1px solid}
-.badge-harvard{border-color:rgba(165,28,48,0.5);background:rgba(165,28,48,0.1);color:#e8a0a8}
-.badge-google{border-color:rgba(66,133,244,0.5);background:rgba(66,133,244,0.1);color:#93b4f8}
-.badge-media{border-color:rgba(212,168,75,0.4);background:rgba(212,168,75,0.08);color:var(--gold2)}
-.badge-django{border-color:rgba(16,185,129,0.5);background:rgba(16,185,129,0.1);color:#6ee7b7}
-.hero-desc{color:var(--gray2);line-height:1.8;margin-bottom:2.5rem;font-size:.95rem;max-width:460px;opacity:0;animation:fadeUp .8s .9s ease forwards}
-.hero-btns{display:flex;gap:1rem;opacity:0;animation:fadeUp .8s 1.05s ease forwards;flex-wrap:wrap}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.btn-gold{background:var(--gold);color:var(--bg);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--gold);display:inline-flex;align-items:center;gap:.4rem}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 10px 30px rgba(212,168,75,0.3)}
-.btn-ghost{background:transparent;color:var(--cream);padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--border2);display:inline-flex;align-items:center;gap:.4rem}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-.btn-teal{background:rgba(1,126,132,0.15);color:#5eead4;padding:.85rem 2rem;border-radius:2px;font-size:.82rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid rgba(1,126,132,0.4);display:inline-flex;align-items:center;gap:.4rem}
-.btn-teal:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
-
-/* PROFILE CARD */
-.hero-right{display:flex;justify-content:center;align-items:center;opacity:0;animation:fadeIn .8s 1.2s ease forwards}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.profile-card{position:relative;width:340px}
-.profile-card-inner{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 30px 80px rgba(0,0,0,0.5)}
-.profile-card-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,#0a1628,#162540,#0c1f3a);display:flex;align-items:center;justify-content:center;font-size:5rem}
-.profile-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,16,0.95) 0%,rgba(5,8,16,0.3) 40%,transparent 70%)}
-.profile-card-info{position:absolute;bottom:0;left:0;right:0;padding:2rem}
-.profile-card-name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--white);margin-bottom:.3rem}
-.profile-card-role{font-size:.78rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem}
-.profile-card-stats{display:flex;gap:1.5rem}
-.pcs{text-align:center}
-.pcs-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--gold);display:block}
-.pcs-label{font-size:.62rem;color:var(--gray2);letter-spacing:1px;text-transform:uppercase}
-.profile-card-tag{position:absolute;top:1.2rem;right:1.2rem;background:rgba(5,8,16,0.85);backdrop-filter:blur(10px);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:.35rem .9rem;font-size:.68rem;color:var(--green);letter-spacing:1px;text-transform:uppercase}
-.profile-card-corner{position:absolute;top:-1px;left:-1px;width:60px;height:60px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);border-radius:12px 0 0 0;pointer-events:none}
-.profile-card-corner2{position:absolute;bottom:-1px;right:-1px;width:60px;height:60px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);border-radius:0 0 12px 0;pointer-events:none}
-.floating-cert{position:absolute;background:rgba(8,13,26,0.92);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:8px;padding:.7rem 1rem;display:flex;align-items:center;gap:.6rem;font-size:.72rem;color:var(--cream);white-space:nowrap;animation:floatCert 3s ease-in-out infinite}
-.floating-cert span{color:var(--gold);font-weight:500}
-.fc1{top:10%;left:-20%;animation-delay:0s}.fc2{bottom:25%;right:-15%;animation-delay:1.5s}
-@keyframes floatCert{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:2;opacity:0;animation:fadeIn 1s 2s ease forwards}
-.scroll-ind span{font-size:.64rem;letter-spacing:3px;text-transform:uppercase;color:var(--gray)}
-.scroll-mouse{width:20px;height:32px;border:1px solid var(--border);border-radius:10px;display:flex;justify-content:center;padding-top:5px}
-.scroll-dot{width:3px;height:6px;background:var(--gold);border-radius:2px;animation:scrollBounce 2s ease-in-out infinite}
-@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(8px);opacity:.3}}
-
-/* STATS BAR */
-.stats-bar{position:relative;z-index:2;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2rem 5%;display:flex;align-items:center;justify-content:space-around;flex-wrap:wrap;gap:1rem}
-.stat-item{text-align:center;padding:0 2rem}
-.stat-item-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:700;color:var(--gold);display:block;line-height:1}
-.stat-item-label{font-size:.7rem;color:var(--gray2);letter-spacing:2px;text-transform:uppercase;margin-top:.3rem}
-.stat-divider{width:1px;height:50px;background:var(--border)}
-
-/* SECTIONS */
-section{padding:7rem 5%;position:relative;z-index:2}
-.sec-header{margin-bottom:4rem}
-.sec-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
-.sec-eyebrow-line{width:30px;height:1px;background:var(--gold)}
-.sec-eyebrow span{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:var(--white);line-height:1.1}
-.sec-title strong{font-weight:700;color:var(--gold)}
-.sec-desc{color:var(--gray2);line-height:1.8;max-width:500px;margin-top:.8rem;font-size:.92rem}
-
-/* ABOUT */
-#about{background:var(--bg2)}
-.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:start}
-.about-text p{color:var(--gray2);line-height:1.9;margin-bottom:1.5rem;font-size:.95rem}
-.about-text p strong{color:var(--cream)}
-.skills-wrap{margin-top:2.5rem}
-.skills-label{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.skills-list{display:flex;flex-wrap:wrap;gap:.6rem}
-.skill{padding:.38rem .85rem;border:1px solid var(--border);border-radius:2px;font-size:.76rem;color:var(--gray2);transition:all .3s;position:relative;overflow:hidden}
-.skill::before{content:'';position:absolute;inset:0;background:var(--gold3);transform:translateX(-100%);transition:transform .3s}
-.skill:hover{border-color:var(--gold);color:var(--gold)}.skill:hover::before{transform:translateX(0)}
-.skill span{position:relative;z-index:1}
-.about-card{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:2rem;margin-bottom:1.2rem;transition:all .3s;position:relative;overflow:hidden}
-.about-card::before{content:'';position:absolute;left:0;top:0;width:2px;height:0;background:var(--gold);transition:height .4s}
-.about-card:hover{border-color:var(--border);transform:translateX(6px)}.about-card:hover::before{height:100%}
-.about-card-icon{font-size:1.5rem;margin-bottom:.8rem}
-.about-card h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--white);margin-bottom:.4rem;font-weight:600}
-.about-card p{font-size:.82rem;color:var(--gray2);line-height:1.7}
-
-/* PROJECTS */
-#projects{background:var(--bg)}
-.project-featured{display:grid;grid-template-columns:1.1fr 1fr;gap:0;align-items:stretch;margin-bottom:4rem;background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.project-featured-visual{min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:3rem}
-.project-featured-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(212,168,75,0.08),transparent 70%)}
-.pos-screen{width:100%;max-width:360px;background:#0f172a;border-radius:10px;border:1px solid rgba(1,126,132,0.3);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
-.pos-topbar{background:#1e293b;padding:.4rem .8rem;display:flex;align-items:center;gap:.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
-.pos-dot{width:7px;height:7px;border-radius:50%}
-.pos-url{font-size:.55rem;color:#475569;margin-left:.3rem;font-family:monospace}
-.pos-body{display:grid;grid-template-columns:1fr 120px;gap:0;min-height:260px}
-.pos-menu{padding:.7rem;border-right:1px solid rgba(255,255,255,.05)}
-.pos-menu-title{font-size:.5rem;color:#017E84;text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem}
-.pos-items-grid{display:grid;grid-template-columns:1fr 1fr;gap:.3rem}
-.pos-item{background:#1e293b;border-radius:4px;padding:.4rem;border:1px solid rgba(255,255,255,.04)}
-.pos-item-emoji{font-size:.9rem;display:block;margin-bottom:.2rem}
-.pos-item-name{font-size:.45rem;color:#94a3b8;display:block}
-.pos-item-price{font-size:.5rem;color:#017E84;font-weight:700;display:block}
-.pos-order{background:#1a0d24;padding:.6rem}
-.pos-order-title{font-size:.48rem;color:#714B67;text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem;font-weight:700}
-.pos-cart-item{display:flex;justify-content:space-between;align-items:center;padding:.3rem 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.44rem}
-.pos-cart-qty{background:#017E84;color:#fff;border-radius:3px;padding:1px 4px;font-size:.4rem;font-weight:700}
-.pos-cart-name{color:#cbd5e1;flex:1;margin:0 .3rem}
-.pos-cart-price{color:#f0c96a;font-weight:700}
-.pos-total{background:#017E84;border-radius:4px;padding:.4rem;margin-top:.4rem;text-align:center}
-.pos-total-label{font-size:.44rem;color:rgba(255,255,255,.7)}
-.pos-total-amount{font-size:.7rem;font-weight:700;color:#fff}
-.pos-live-badge{position:absolute;top:1rem;right:1rem;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);border-radius:20px;padding:.3rem .7rem;font-size:.62rem;color:var(--green);display:flex;align-items:center;gap:.3rem}
-.pos-live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.pf-screen{width:100%;max-width:320px;background:var(--bg3);border-radius:10px;border:1px solid var(--border);overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
-.pf-screen-bar{background:#0c1220;padding:.5rem .8rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid var(--border2)}
-.pf-dot{width:7px;height:7px;border-radius:50%}
-.pf-screen-url{font-size:.6rem;color:#555;margin-left:.5rem;font-family:monospace}
-.pf-screen-body{padding:1rem}
-.pf-kpi-row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.6rem}
-.pf-kpi{background:var(--bg2);border-radius:6px;padding:.6rem;border:1px solid var(--border2)}
-.pf-kpi-num{font-size:.95rem;font-weight:700;color:var(--gold);display:block}
-.pf-kpi-label{font-size:.55rem;color:#555;text-transform:uppercase;letter-spacing:1px}
-.pf-bar-row{background:var(--bg2);border-radius:6px;padding:.6rem;margin-bottom:.4rem}
-.pf-bar-label{font-size:.58rem;color:#888;margin-bottom:.3rem;display:flex;justify-content:space-between}
-.pf-bar-track{height:3px;background:rgba(255,255,255,0.05);border-radius:2px}
-.pf-bar-fill{height:3px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
-.project-featured-info{padding:3rem}
-.project-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
-.project-tag-dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
-.project-featured-info h3{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--white);margin-bottom:1rem;line-height:1.2}
-.project-featured-info p{font-size:.88rem;color:var(--gray2);line-height:1.8;margin-bottom:1.5rem}
-.project-modules{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
-.pm{padding:.28rem .7rem;border-radius:20px;font-size:.66rem;border:1px solid var(--border2);color:var(--gray2)}
-.project-tech{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem;flex-wrap:wrap}
-.pt{font-size:.7rem;color:var(--gold);background:var(--gold3);border:1px solid var(--border);padding:.2rem .6rem;border-radius:3px}
-.project-btns{display:flex;gap:.8rem;flex-wrap:wrap}
-.project-btn-live{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:var(--green);color:#fff;border-radius:4px;font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;transition:all .3s}
-.project-btn-live:hover{background:#0da874;transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,0.3)}
-.project-btn-code{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.4rem;background:transparent;color:var(--cream);border-radius:4px;font-size:.78rem;font-weight:500;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:1px solid var(--border2)}
-.project-btn-code:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-.project-demo-note{font-size:.72rem;color:#555;margin-top:.8rem}
-.project-demo-note span{color:var(--gold)}
-.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
-.feat{background:rgba(1,126,132,0.08);border:1px solid rgba(1,126,132,0.2);border-radius:8px;padding:.9rem;text-align:center}
-.feat-icon{font-size:1.3rem;margin-bottom:.4rem}
-.feat-label{font-size:.7rem;color:#5eead4;font-weight:600;display:block}
-.feat-desc{font-size:.62rem;color:var(--gray2);margin-top:.2rem}
-
-/* CERTIFICATIONS */
-#certifications{background:var(--bg2)}
-.cert-filter{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:3rem}
-.cf-btn{padding:.5rem 1.3rem;border:1px solid var(--border2);border-radius:20px;font-size:.76rem;cursor:pointer;transition:all .3s;color:var(--gray2);background:transparent;font-family:'Outfit',sans-serif;letter-spacing:.5px}
-.cf-btn.active,.cf-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--gold3)}
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.2rem}
-.cert-card{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:1.5rem;transition:all .35s;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:.8rem}
-.cert-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold3),transparent);opacity:0;transition:opacity .35s}
-.cert-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.3)}.cert-card:hover::after{opacity:1}
-.cert-card.hidden{display:none}
-.cert-card-top{display:flex;align-items:center;gap:1rem;position:relative;z-index:1}
-.cert-ico{width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-.cert-ico.h{background:rgba(165,28,48,0.12);border:1px solid rgba(165,28,48,0.25)}
-.cert-ico.g{background:rgba(66,133,244,0.12);border:1px solid rgba(66,133,244,0.25)}
-.cert-org{font-size:.64rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-bottom:.2rem}
-.cert-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--white);line-height:1.25;font-weight:600}
-.cert-foot{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
-.cert-date{font-size:.7rem;color:var(--gray)}
-.cert-badge2{font-size:.65rem;padding:.18rem .55rem;border-radius:10px;border:1px solid;font-weight:500}
-.cb-v{color:#4ade80;border-color:rgba(74,222,128,0.3);background:rgba(74,222,128,0.07)}
-.cb-p{color:var(--gold2);border-color:rgba(212,168,75,0.3);background:rgba(212,168,75,0.07)}
-.certs-cta{text-align:center;margin-top:3rem}
-
-/* VENTURES */
-#ventures{background:var(--bg2)}
-.ventures-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.venture{border:1px solid var(--border2);border-radius:10px;overflow:hidden;text-decoration:none;display:block;transition:all .4s;position:relative;background:var(--bg3)}
-.venture:hover{border-color:var(--gold);transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,0.4)}
-.venture-img{height:160px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;overflow:hidden}
-.venture-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,var(--bg3))}
-.v1 .venture-img{background:linear-gradient(135deg,#0d1f3c,#1a3a6b)}
-.v2 .venture-img{background:linear-gradient(135deg,#051a0d,#0a3320)}
-.v3 .venture-img{background:linear-gradient(135deg,#001a1a,#014f53)}
-.venture-body{padding:1.5rem}
-.venture-tag{font-size:.64rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
-.venture h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:.6rem}
-.venture p{font-size:.82rem;color:var(--gray2);line-height:1.7;margin-bottom:1rem}
-.venture-meta{display:flex;align-items:center;justify-content:space-between}
-.venture-followers{font-size:.72rem;color:var(--gold);font-weight:500}
-.venture-arrow{width:32px;height:32px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--gray2);transition:all .3s}
-.venture:hover .venture-arrow{border-color:var(--gold);color:var(--gold);background:var(--gold3)}
-
-/* SERVICES */
-#services{background:var(--bg)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.svc{background:var(--bg2);border:1px solid var(--border2);border-radius:8px;padding:2rem;transition:all .35s;position:relative;overflow:hidden}
-.svc::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s}
-.svc:hover{border-color:var(--border);transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,0.3)}.svc:hover::before{width:100%}
-.svc-icon{width:50px;height:50px;border-radius:10px;background:var(--gold3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.3rem;transition:transform .3s}
-.svc:hover .svc-icon{transform:scale(1.1) rotate(5deg)}
-.svc h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:.6rem}
-.svc p{font-size:.82rem;color:var(--gray2);line-height:1.7}
-.svc-teal{border-color:rgba(1,126,132,0.25)}.svc-teal .svc-icon{background:rgba(1,126,132,0.12);border-color:rgba(1,126,132,0.25)}.svc-teal::before{background:var(--teal)}
-.svc-highlight{border-color:var(--border);background:linear-gradient(135deg,var(--bg2),rgba(212,168,75,0.03))}
-
-/* CONTACT */
-#contact{background:var(--bg2)}
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-#contact p{color:var(--gray2);line-height:1.8;margin-bottom:2rem;font-size:.95rem}
-.contact-links{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
-.cl{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;text-decoration:none;transition:all .3s}
-.cl:hover{border-color:var(--gold);transform:translateX(4px)}
-.cl-icon{font-size:1.2rem}
-.cl-label{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);display:block}
-.cl-val{font-size:.88rem;color:var(--cream)}
-.social-chips{display:flex;flex-wrap:wrap;gap:.6rem}
-.sc{padding:.45rem 1rem;background:var(--bg3);border:1px solid var(--border2);border-radius:20px;font-size:.76rem;color:var(--gray2);text-decoration:none;transition:all .3s}
-.sc:hover{border-color:var(--gold);color:var(--gold)}
-.contact-form{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:2.5rem}
-.form-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--white);margin-bottom:.4rem;font-weight:600}
-.form-subtitle{font-size:.78rem;color:var(--gray);margin-bottom:2rem}
-.form-row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fg{margin-bottom:1.2rem}
-.fg label{display:block;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;color:var(--gray2);margin-bottom:.5rem}
-.fg input,.fg select,.fg textarea{width:100%;background:var(--bg2);border:1px solid var(--border2);border-radius:4px;padding:.7rem 1rem;color:var(--cream);font-family:'Outfit',sans-serif;font-size:.88rem;transition:border-color .3s;outline:none}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
-.fg select{cursor:pointer}.fg textarea{min-height:100px;resize:vertical}
-.fg select option{background:var(--bg2)}
-.form-btn{width:100%;background:var(--gold);color:var(--bg);border:none;border-radius:4px;padding:.9rem;font-size:.88rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Outfit',sans-serif}
-.form-btn:hover{background:var(--gold2);transform:translateY(-1px)}
-.form-success{display:none;text-align:center;padding:2rem}
-.form-success-icon{font-size:2.5rem;margin-bottom:1rem}
-.form-success p{color:var(--green);font-size:.95rem}
-
-/* FOOTER */
-footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var(--border);padding:3rem 5%}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--gold)}
-.footer-copy{font-size:.76rem;color:var(--gray);text-align:center}
-.footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:.78rem;color:var(--gray2);text-decoration:none;transition:color .3s}
-.footer-links a:hover{color:var(--gold)}
-.btt{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;background:var(--gold);color:var(--bg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;text-decoration:none;z-index:50;transition:all .3s;opacity:0;pointer-events:none;transform:translateY(10px)}
-.btt.show{opacity:1;pointer-events:auto;transform:translateY(0)}
-.btt:hover{background:var(--gold2);transform:translateY(-2px)}
-
-/* REVEAL */
-.reveal,.reveal-left,.reveal-right{opacity:0;transition:opacity .7s ease,transform .7s ease}
-.reveal{transform:translateY(24px)}.reveal-left{transform:translateX(-24px)}.reveal-right{transform:translateX(24px)}
-.reveal.visible,.reveal-left.visible,.reveal-right.visible{opacity:1;transform:none}
-
-/* RESPONSIVE */
-
-/* ---- 2026 update: photo, showreel, third project ---- */
-.profile-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;display:block}
-.profile-card .profile-card-overlay{display:none}
-.profile-card .profile-card-info{position:relative;padding:1.2rem 1.4rem 1.3rem;background:linear-gradient(180deg,#0b1424,#070c18);border-top:1px solid var(--border)}
-.profile-card .profile-card-name{font-size:1.45rem}
-.profile-card .profile-card-role{font-size:.7rem;margin-bottom:.8rem}
-.profile-card .profile-card-stats{justify-content:space-between}
-.profile-card .profile-card-tag{top:.7rem;right:.7rem;font-size:.6rem;padding:.25rem .7rem}
-@media(max-width:480px){#hero .profile-card{width:min(300px,84vw)}.profile-card .pcs-label{white-space:nowrap;font-size:.58rem}.profile-card .profile-card-info{padding:1rem 1.1rem}.profile-card .profile-card-name{font-size:1.25rem}.profile-card .pcs-num{font-size:1.2rem}}
-.new-pill{display:inline-block;background:var(--green);color:#04261a;font-size:.6rem;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:10px;margin-left:.4rem;vertical-align:middle;text-transform:uppercase}
-.hl-list{list-style:none;margin:0 0 1.4rem;display:grid;grid-template-columns:1fr 1fr;gap:.45rem 1rem}
-.hl-list li{font-size:.8rem;color:var(--gray2);padding-left:1.1rem;position:relative;line-height:1.5}
-.hl-list li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
-.hl-list li b{color:var(--cream);font-weight:600}
-.reel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,310px));gap:1.6rem;justify-content:center}
-
-/* accessibility: visible focus, reduced motion */
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}#particles-canvas{display:none}.reveal,.reveal-left,.reveal-right{opacity:1!important;transform:none!important}}
-.form-note{font-size:.72rem;color:var(--gray2);margin-top:.7rem;line-height:1.6}
-.form-btn-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
-.form-btn.wa{background:transparent;color:var(--cream);border:1px solid var(--border)}
-.form-error{display:none;color:#f87171;font-size:.78rem;margin-bottom:.6rem}
-@media(max-width:1024px){.reel-grid{grid-template-columns:repeat(2,minmax(0,310px))}}
-.reel-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.reel-card video{width:100%;aspect-ratio:9/16;display:block;background:#000}
-.reel-body{padding:1.2rem 1.4rem 1.4rem}
-.reel-body h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--white);font-weight:600;margin-bottom:.3rem}
-.reel-body p{font-size:.8rem;color:var(--gray2);line-height:1.6}
-.reel-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.7rem}
-.reel-tags span{font-size:.62rem;border:1px solid var(--border2);border-radius:10px;padding:2px 8px;color:var(--gray2)}
-.dl-row{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem}
-.dl-card{display:flex;align-items:center;gap:1rem;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem 1.3rem;text-decoration:none;color:var(--cream);transition:all .3s;max-width:420px}
-.dl-card:hover{border-color:var(--gold);transform:translateY(-3px)}
-.dl-card .dl-ico{font-size:1.8rem}
-.dl-card b{display:block;color:var(--white);font-size:.95rem}
-.dl-card span{font-size:.75rem;color:var(--gray2)}
-.tok-screen{width:100%;max-width:320px;border-radius:10px;overflow:hidden;position:relative;z-index:2;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(45,212,191,.35);background:#06202b}
-.tok-now{background:linear-gradient(135deg,#0d9488,#0f766e);text-align:center;padding:1rem .8rem;color:#fff}
-.tok-now small{font-size:.55rem;letter-spacing:3px;font-weight:600;opacity:.85}
-.tok-now b{display:block;font-size:2.6rem;font-weight:700;line-height:1;letter-spacing:2px;margin:.2rem 0}
-.tok-now span{font-size:.6rem}
-.tok-row{display:grid;grid-template-columns:3.2rem 1fr auto;align-items:center;gap:.4rem;padding:.5rem .8rem;border-top:1px solid rgba(255,255,255,.07);font-size:.65rem;color:#cbd5e1}
-.tok-row b{color:#7dd3fc}
-.tok-st{font-size:.5rem;font-weight:700;padding:1px 7px;border-radius:8px;color:#022}
-.hms-lab{margin-top:.8rem;width:100%;max-width:320px;background:#fff;border-radius:10px;padding:.7rem .9rem;color:#0f2733;font-size:.6rem;position:relative;z-index:2}
-.hms-lab .r{display:grid;grid-template-columns:1.4fr .7fr 1fr;padding:.25rem 0;border-top:1px solid #e6eef2}
-.hms-lab .hi{color:#e11d48;font-weight:700}
-@media(max-width:768px){.reel-grid{grid-template-columns:minmax(0,330px)}.hl-list{grid-template-columns:1fr}}
-@media(max-width:1024px){
-  .hero-inner{grid-template-columns:1fr;gap:3rem}
-  .hero-right{order:-1}.profile-card{width:280px}.fc1,.fc2{display:none}
-  .about-grid{grid-template-columns:1fr;gap:3rem}
-  .contact-wrap{grid-template-columns:1fr;gap:3rem}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .ventures-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:768px){
-  section{padding:5rem 5%}
-  .nav-links,.nav-cta{display:none}
-  .hero-inner{padding-top:7rem}
-  .project-featured{grid-template-columns:1fr}
-  .project-featured-visual{min-height:300px}
-  .services-grid,.ventures-grid{grid-template-columns:1fr}
-  .feat-grid{grid-template-columns:repeat(2,1fr)}
-  .footer-inner{flex-direction:column;text-align:center}
-  .stat-divider{display:none}.stat-item{padding:.5rem 1rem}
-  .form-row2{grid-template-columns:1fr}
-}
-@media(max-width:480px){.hero-name{font-size:3rem}.profile-card{width:240px}.certs-grid{grid-template-columns:1fr}}
-</style>
+<meta property="og:image" content="https://massab1.github.io/media/myschool-erp-reel.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/site.css"/>
 </head>
 <body>
-<canvas id="particles-canvas"></canvas>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav id="navbar">
-  <div class="nav-logo">Massab<span>.</span></div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#showreel">Showreel</a></li>
-    <li><a href="#certifications">Certs</a></li>
-    <li><a href="#ventures">Ventures</a></li>
-    <li><a href="#services">Services</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Hire Me</a>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Massab Farooq</a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#ai">AI work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="cv/Massab-Farooq-CV.pdf" download>Download CV</a>
+  </div>
 </nav>
 
-<section id="hero">
-  <div class="hero-bg-glow"></div>
-  <div class="hero-lines">
-    <div class="hero-line"></div><div class="hero-line"></div><div class="hero-line"></div><div class="hero-line"></div>
-  </div>
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-eyebrow">
-        <div class="hero-eyebrow-line"></div>
-        <span>Full Stack Django Developer · Jhang, Pakistan</span>
+<main id="main">
+<!-- 1. Headline and summary -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Jhang, Pakistan · open to remote roles</p>
+      <h1>Massab Farooq</h1>
+      <p class="headline">Python/Django Engineer · Production business systems · Media background</p>
+      <p class="sub">I build and maintain Django systems that a school, a hospital and a members’ club use every day — and I spent about 18 years in the ARY News newsroom, so I know how editorial teams actually work.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="cv/Massab-Farooq-CV.pdf" download>Download CV (PDF)</a>
+        <a class="btn btn-ghost" href="https://github.com/massab1" target="_blank" rel="noopener">View GitHub</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
       </div>
-      <h1 class="hero-name">Massab<br><strong>Farooq</strong></h1>
-      <p class="hero-title">Full Stack Developer · <span>HarvardX</span> &amp; <span>Google</span> Certified · Tech Entrepreneur</p>
-      <div class="hero-badges">
-        <span class="badge badge-django">🐍 Django Developer</span>
-        <span class="badge badge-harvard">🎓 8× HarvardX</span>
-        <span class="badge badge-google">🔵 5× Google</span>
-        <span class="badge badge-media">📡 133K+ Followers</span>
-        <span class="badge badge-django">🏥 Hospital Systems</span>
-      </div>
-      <p class="hero-desc">I build real-world systems that organisations use every day — <b>MySchool ERP</b> for schools &amp; colleges, <b>Quaprit HMS</b> for hospitals &amp; clinics, and a restaurant POS with a membership portal. All three are live in production in Pakistan.</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-gold">View Live Projects</a>
-        <a href="#showreel" class="btn-teal">▶ Watch Showreel</a>
-        <a href="#contact" class="btn-ghost">Let's Connect</a>
+      <div class="facts">
+        <div class="fact"><b>3 systems</b><span>in daily production use</span></div>
+        <div class="fact"><b>104 tests</b><span>passing across the school and hospital systems</span></div>
+        <div class="fact"><b>Claude API</b><span>AI features shipped in the school ERP</span></div>
+        <div class="fact"><b>~18 years</b><span>journalism and field reporting, ARY News</span></div>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="profile-card">
-        <div class="floating-cert fc1"><span style="font-size:1rem">🐍</span><span>Django</span> 3 Live Systems</div>
-        <div class="floating-cert fc2"><span style="font-size:1rem">🎓</span><span>Harvard</span> CS50W Certified</div>
-        <div class="profile-card-inner">
-          <img class="profile-photo" src="photo.jpeg" alt="Massab Farooq" loading="eager"/>
-          <div class="profile-card-overlay"></div>
-          <div class="profile-card-info">
-            <div class="profile-card-name">Massab Farooq</div>
-            <div class="profile-card-role">Full Stack Developer · Jhang, PK</div>
-            <div class="profile-card-stats">
-              <div class="pcs"><span class="pcs-num">13+</span><span class="pcs-label">Certs</span></div>
-              <div class="pcs"><span class="pcs-num">3</span><span class="pcs-label">Live Apps</span></div>
-              <div class="pcs"><span class="pcs-num">133K</span><span class="pcs-label">Followers</span></div>
-            </div>
-          </div>
-          <div class="profile-card-tag">Available for Projects</div>
-        </div>
-        <div class="profile-card-corner"></div>
-        <div class="profile-card-corner2"></div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-ind">
-    <span>Scroll</span>
-    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <figure class="photo">
+      <img src="photo.jpeg" alt="Massab Farooq" width="340" height="425"/>
+      <figcaption>Massab Farooq · Python/Django Engineer</figcaption>
+    </figure>
   </div>
 </section>
 
-<div class="stats-bar">
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="13">0</span><div class="stat-item-label">Certifications</div></div>
-  <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="3">0</span><div class="stat-item-label">Live Systems</div></div>
-  <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="45">0</span><div class="stat-item-label">+ Modules Built</div></div>
-  <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="133">0</span><div class="stat-item-label">K+ Followers</div></div>
-  <div class="stat-divider"></div>
-  <div class="stat-item reveal"><span class="stat-item-num count-up" data-target="277">0</span><div class="stat-item-label">Lesson Worksheets</div></div>
-</div>
-
-<section id="about">
-  <div class="about-grid">
-    <div class="reveal-left">
-      <div class="sec-header">
-        <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Who I Am</span></div>
-        <h2 class="sec-title">Driven by Purpose,<br><strong>Backed by Excellence</strong></h2>
-      </div>
-      <div class="about-text">
-        <p>I'm <strong>Massab Farooq</strong> — a Full Stack Django Developer and tech entrepreneur from Jhang, Pakistan. I've built and deployed <strong>three complete production systems</strong> from scratch: <strong>MySchool ERP</strong> (a full ERP for schools &amp; colleges), <strong>Quaprit HMS</strong> (a real-time hospital &amp; clinic system) and a restaurant POS &amp; membership system — all live and serving real users.</p>
-        <p>Beyond development, I hold <strong>13+ certifications</strong> from Harvard University and Google covering Computer Science, Cybersecurity, Data Analytics, Python, SQL, and more. I founded three ventures including <strong>Voice of Jhang</strong> (133K+ followers) and <strong>Quaprit Technologies</strong>.</p>
-        <p>With 18+ years in investigative journalism at ARY News, I understand how organisations actually work — what data matters, and how to build systems real people use every day.</p>
-      </div>
-      <div class="skills-wrap">
-        <div class="skills-label">Core Technologies &amp; Skills</div>
-        <div class="skills-list">
-          <div class="skill"><span>Python</span></div><div class="skill"><span>Django</span></div>
-          <div class="skill"><span>Full Stack Web Dev</span></div><div class="skill"><span>SQL / Databases</span></div>
-          <div class="skill"><span>REST APIs / AJAX</span></div><div class="skill"><span>HTML / CSS / JavaScript</span></div>
-          <div class="skill"><span>Cloud Deployment</span></div><div class="skill"><span>Cybersecurity</span></div>
-          <div class="skill"><span>Data Analytics</span></div><div class="skill"><span>POS Systems</span></div>
-          <div class="skill"><span>Membership Portals</span></div><div class="skill"><span>Kitchen Display Systems</span></div>
-          <div class="skill"><span>School &amp; College ERP</span></div><div class="skill"><span>Hospital Management</span></div>
-          <div class="skill"><span>Double-Entry Accounting</span></div><div class="skill"><span>PDF Reports (ReportLab)</span></div>
-          <div class="skill"><span>PWA / Mobile Web</span></div><div class="skill"><span>Promo Videos &amp; Brochures</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="reveal-right">
-      <div class="about-card"><div class="about-card-icon">🏫</div><h4>MySchool ERP — Schools &amp; Colleges</h4><p>28 connected modules — online admission &amp; entrance test, real-time result cards, finance &amp; HR, parents app, WhatsApp quizzes and 277 ready lesson worksheets. Live at MySchool Jhang.</p></div>
-      <div class="about-card"><div class="about-card-icon">🏥</div><h4>Quaprit HMS — Hospitals &amp; Clinics</h4><p>Real-time hospital system — patient tokens, OPD, laboratory, X-ray &amp; MRI, digital prescriptions and role-based access. In daily use at a private hospital.</p></div>
-      <div class="about-card"><div class="about-card-icon">🍽️</div><h4>Restaurant POS &amp; ERP</h4><p>Complete POS system with kitchen display, member portal, mobile ordering, receipt printing and admin panel — live at Model Town Club, Lahore.</p></div>
-      <div class="about-card"><div class="about-card-icon">🎓</div><h4>Harvard &amp; Google Certified</h4><p>13+ verified credentials — CS50, CS50P, CS50W, Cybersecurity, Google Advanced Data Analytics, Business Intelligence and more.</p></div>
-      <div class="about-card"><div class="about-card-icon">📡</div><h4>Digital Media Pioneer</h4><p>Founder of Voice of Jhang — a 133K+ follower digital news channel. Proven ability to build and engage large audiences.</p></div>
-    </div>
-  </div>
-</section>
-
+<!-- 2. Featured projects -->
 <section id="projects">
-  <div class="sec-header reveal">
-    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Live Projects</span></div>
-    <h2 class="sec-title">Built &amp;<br><strong>Deployed</strong></h2>
-    <p class="sec-desc">Three complete Django systems live in production — not tutorials, not demos. Real systems serving schools, hospitals and clubs in Pakistan.</p>
-  </div>
-
-  <!-- PROJECT 1: MODEL TOWN CLUB POS -->
-  <div class="project-featured reveal">
-    <div class="project-featured-visual" style="background:linear-gradient(135deg,#020c14,#041a24,#0a0d1a)">
-      <div class="pos-live-badge"><div class="pos-live-dot"></div> Hosted on Cloud</div>
-      <div class="pos-screen">
-        <div class="pos-topbar">
-          <div class="pos-dot" style="background:#ff5f57"></div>
-          <div class="pos-dot" style="background:#febc2e"></div>
-          <div class="pos-dot" style="background:#28c840"></div>
-          <span class="pos-url">Model Town Club · POS</span>
-        </div>
-        <div style="background:#1e293b;padding:.3rem .6rem;display:flex;align-items:center;gap:.4rem;border-bottom:1px solid rgba(255,255,255,.05)">
-          <span style="font-size:.5rem;font-weight:700;color:#017E84;font-family:'Cormorant Garamond',serif">Model</span>
-          <span style="font-size:.5rem;font-weight:700;color:#714B67;font-family:'Cormorant Garamond',serif">Town</span>
-          <span style="font-size:.5rem;font-weight:700;color:#017E84;font-family:'Cormorant Garamond',serif">Club</span>
-          <span style="margin-left:auto;font-size:.45rem;background:#f3eef1;color:#714B67;padding:1px 5px;border-radius:8px">MTC001 — Ahmed</span>
-          <span style="font-size:.45rem;background:#e6f7f7;color:#017E84;padding:1px 5px;border-radius:8px">Main Hall — T1</span>
-        </div>
-        <div class="pos-body">
-          <div class="pos-menu">
-            <div class="pos-menu-title">Menu</div>
-            <div class="pos-items-grid">
-              <div class="pos-item"><span class="pos-item-emoji">☕</span><span class="pos-item-name">Cappuccino</span><span class="pos-item-price">Rs.700</span></div>
-              <div class="pos-item"><span class="pos-item-emoji">🍔</span><span class="pos-item-name">Smash Burger</span><span class="pos-item-price">Rs.1050</span></div>
-              <div class="pos-item"><span class="pos-item-emoji">🥗</span><span class="pos-item-name">Caesar Salad</span><span class="pos-item-price">Rs.700</span></div>
-              <div class="pos-item" style="border:1px solid rgba(1,126,132,0.4)"><span class="pos-item-emoji">🥤</span><span class="pos-item-name">Cafe Shake</span><span class="pos-item-price" style="color:#f59e0b">Rs.650</span></div>
-            </div>
-          </div>
-          <div class="pos-order">
-            <div class="pos-order-title">Current Order</div>
-            <div class="pos-cart-item"><span class="pos-cart-qty">2</span><span class="pos-cart-name">Cappuccino</span><span class="pos-cart-price">1400</span></div>
-            <div class="pos-cart-item"><span class="pos-cart-qty">1</span><span class="pos-cart-name">Smash Burger</span><span class="pos-cart-price">1050</span></div>
-            <div class="pos-cart-item" style="border-color:rgba(1,126,132,0.3)"><span class="pos-cart-qty">1</span><span class="pos-cart-name">Cafe Shake</span><span class="pos-cart-price">650</span></div>
-            <div class="pos-total"><div class="pos-total-label">TOTAL</div><div class="pos-total-amount">Rs. 3,100</div></div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:.3rem">
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">1</div>
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">2</div>
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">3</div>
-              <div style="background:#714B67;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#fff">Qty</div>
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">4</div>
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">5</div>
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.4rem;color:#94a3b8">6</div>
-              <div style="background:#1e293b;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#714B67">Disc%</div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px">
-              <div style="background:#7c2d12;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#fed7aa">🔥 Kitchen</div>
-              <div style="background:#017E84;border-radius:2px;text-align:center;padding:2px;font-size:.38rem;color:#fff">💳 Pay</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="project-featured-info">
-      <div class="project-tag">
-        <div class="project-tag-dot"></div>
-        Live Production · Django · REST · Mobile-First
-        <span style="background:rgba(1,126,132,0.15);color:#5eead4;border:1px solid rgba(1,126,132,0.3);border-radius:10px;padding:2px 8px;font-size:.6rem">Lahore, Pakistan</span>
-      </div>
-      <h3>Model Town Club<br>POS &amp; ERP System</h3>
-      <p>A complete cloud-based Point of Sale and club management system built from scratch for Model Town Club Lahore. Handles everything from table-side ordering on mobile to kitchen display, member portal, and admin management — all in one Django application.</p>
-      <div class="feat-grid">
-        <div class="feat"><div class="feat-icon">📱</div><span class="feat-label">Mobile POS</span><div class="feat-desc">Waiters take orders from tablets — slides up from bottom</div></div>
-        <div class="feat"><div class="feat-icon">🔥</div><span class="feat-label">Kitchen Display</span><div class="feat-desc">3-column kanban: New → Preparing → Ready</div></div>
-        <div class="feat"><div class="feat-icon">🪪</div><span class="feat-label">200+ Members</span><div class="feat-desc">Member portal with orders, history &amp; announcements</div></div>
-        <div class="feat"><div class="feat-icon">🖨️</div><span class="feat-label">Receipt Printing</span><div class="feat-desc">80mm thermal printer with logo &amp; Quaprit footer</div></div>
-        <div class="feat"><div class="feat-icon">⚙️</div><span class="feat-label">Frontend Admin</span><div class="feat-desc">Manage menu, tables, staff — no Django admin needed</div></div>
-        <div class="feat"><div class="feat-icon">📊</div><span class="feat-label">Live Dashboard</span><div class="feat-desc">Today's revenue, top items, served orders</div></div>
-      </div>
-      <div class="project-modules" style="margin-top:1.5rem">
-        <span class="pm">🍽️ Hybrid POS</span><span class="pm">🔥 Kitchen KDS</span><span class="pm">🪪 Member Portal</span>
-        <span class="pm">📱 Mobile Order</span><span class="pm">🏠 Floor &amp; Tables</span><span class="pm">⏸️ Hold Orders</span>
-        <span class="pm">💳 Payment &amp; Print</span><span class="pm">👨‍🍳 Cancel Orders</span><span class="pm">📢 Announcements</span>
-        <span class="pm">👨‍👩‍👧 Family Members</span><span class="pm">🏅 VIP Pricing</span><span class="pm">📈 Admin Panel</span>
-      </div>
-      <div class="project-tech" style="margin-top:1rem">
-        <span class="pt">Python 3.11</span><span class="pt">Django 5.0</span><span class="pt">SQLite</span>
-        <span class="pt">Vanilla JS</span><span class="pt">Cloud Hosted</span><span class="pt">80mm Thermal</span>
-      </div>
-      <div class="project-btns">
-        <a href="media/mtc-pos-reel.mp4" target="_blank" class="project-btn-live">▶ Watch Demo Video</a>
-        <a href="#contact" class="project-btn-code">💬 Build Similar System</a>
-      </div>
-      <div class="project-demo-note">Live system is private to protect member data · <span>Live demo on request</span></div>
-    </div>
-  </div>
-
-  <!-- PROJECT 2: MYSCHOOL -->
-  <div class="project-featured reveal" style="background:var(--bg2)">
-    <div class="project-featured-visual" style="background:linear-gradient(135deg,#050d1f,#0a1a3a,#050d1f)">
-      <div class="pos-live-badge"><div class="pos-live-dot"></div> Hosted on Cloud</div>
-      <div class="pf-screen">
-        <div class="pf-screen-bar">
-          <div class="pf-dot" style="background:#ff5f57"></div>
-          <div class="pf-dot" style="background:#febc2e"></div>
-          <div class="pf-dot" style="background:#28c840"></div>
-          <span class="pf-screen-url">MySchool ERP · Finance</span>
-        </div>
-        <div class="pf-screen-body">
-          <div style="font-size:.58rem;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">💰 Finance Dashboard — March 2026</div>
-          <div class="pf-kpi-row">
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">Rs. 45,000</span><span class="pf-kpi-label">Fee Collected</span></div>
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--gold)">Rs. 5,200</span><span class="pf-kpi-label">Outstanding</span></div>
-          </div>
-          <div class="pf-kpi-row">
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:#f43f5e">Rs. 28,000</span><span class="pf-kpi-label">Expenses</span></div>
-            <div class="pf-kpi"><span class="pf-kpi-num" style="color:var(--green)">+Rs. 17K</span><span class="pf-kpi-label">Net Profit</span></div>
-          </div>
-          <div class="pf-bar-row"><div class="pf-bar-label"><span>🏠 Rent</span><span style="color:var(--gold)">35%</span></div><div class="pf-bar-track"><div class="pf-bar-fill" style="width:35%"></div></div></div>
-          <div class="pf-bar-row"><div class="pf-bar-label"><span>👥 Salaries</span><span style="color:var(--gold)">42%</span></div><div class="pf-bar-track"><div class="pf-bar-fill" style="width:42%"></div></div></div>
-          <div class="pf-bar-row"><div class="pf-bar-label"><span>💡 Utilities</span><span style="color:var(--gold)">23%</span></div><div class="pf-bar-track"><div class="pf-bar-fill" style="width:23%"></div></div></div>
-        </div>
-      </div>
-    </div>
-    <div class="project-featured-info">
-      <div class="project-tag">
-        <div class="project-tag-dot"></div>
-        Featured Project · Django · Python · Live
-        <span style="background:rgba(16,185,129,0.1);color:#6ee7b7;border:1px solid rgba(16,185,129,0.3);border-radius:10px;padding:2px 8px;font-size:.6rem">Jhang, Pakistan</span>
-      </div>
-      <h3>MySchool ERP<br>for Schools &amp; Colleges <span class="new-pill">Updated</span></h3>
-      <p>A complete school &amp; college ERP built from scratch and sold in plans for every size — Basic, Standard and Premium, with single packs that switch on later without losing data. Running every day at MySchool Jhang; also installable offline with a licence key.</p>
-      <ul class="hl-list">
-        <li><b>Online admission</b>, entrance test &amp; merit list</li>
-        <li><b>Real-time result cards</b> (single or whole class PDF)</li>
-        <li><b>School leaving certificates</b> in one click</li>
-        <li><b>Question bank &amp; Paper Studio</b>, daily tests</li>
-        <li><b>Online &amp; remote exams</b> with tab-switch control</li>
-        <li><b>277 lesson worksheets</b> — OPE Books 1–5, 3 levels, audio QR</li>
-        <li><b>WhatsApp quizzes</b> &amp; weekly parent reports</li>
-        <li><b>Parents app</b> (PWA) — results, fee, diary</li>
-        <li><b>Double-entry finance</b>: chart of accounts, vouchers, P&amp;L</li>
-        <li><b>Fee heads</b>, family fee, bank-list import</li>
-        <li><b>HR &amp; payroll</b>, CNIC-validated records</li>
-        <li><b>AI fee agent</b>, analytics &amp; command center</li>
-      </ul>
-      <div class="project-modules">
-        <span class="pm">🎓 Admissions</span><span class="pm">🌐 Online Admission</span><span class="pm">📝 Results</span>
-        <span class="pm">📄 Paper Studio</span><span class="pm">💻 Remote Exams</span><span class="pm">📚 Worksheets</span>
-        <span class="pm">💰 Fees</span><span class="pm">📊 Finance</span><span class="pm">👩‍🏫 HR</span>
-        <span class="pm">📲 WhatsApp</span><span class="pm">📱 Parents App</span><span class="pm">🏢 Multi-Campus</span>
-      </div>
-      <div class="project-tech">
-        <span class="pt">Python</span><span class="pt">Django 5</span><span class="pt">SQLite / MySQL</span>
-        <span class="pt">ReportLab PDF</span><span class="pt">PWA</span><span class="pt">Cloud Hosted</span><span class="pt">Offline Licence</span>
-      </div>
-      <div class="project-btns">
-        <a href="media/myschool-erp-reel.mp4" target="_blank" class="project-btn-live">▶ Watch Demo Video</a>
-        <a href="media/MySchool-ERP-Brochure.pdf" target="_blank" class="project-btn-code">📄 Brochure</a>
-        <a href="#contact" class="project-btn-code">💬 Book a Demo</a>
-      </div>
-      <div class="project-demo-note">Live school data is private · <span>Live demo on request</span></div>
-    </div>
-  </div>
-  <!-- PROJECT 3: QUAPRIT HMS -->
-  <div class="project-featured reveal">
-    <div class="project-featured-visual" style="background:linear-gradient(135deg,#03111b,#072a3a,#04141f)">
-      <div class="pos-live-badge"><div class="pos-live-dot"></div> In daily use at a private hospital</div>
-      <div class="tok-screen">
-        <div class="tok-now"><small>NOW SERVING</small><b>A-047</b><span>Room 3 · Medicine OPD</span></div>
-        <div class="tok-row"><b>A-048</b><span>Medicine</span><span class="tok-st" style="background:#fbbf24">Waiting</span></div>
-        <div class="tok-row"><b>B-012</b><span>Orthopaedics</span><span class="tok-st" style="background:#38bdf8">Called</span></div>
-        <div class="tok-row"><b>C-005</b><span>Paediatrics</span><span class="tok-st" style="background:#2dd4bf">Seen</span></div>
-      </div>
-      <div class="hms-lab">
-        <div style="font-weight:700;margin-bottom:.3rem">CBC · Sample patient</div>
-        <div class="r"><span>Haemoglobin</span><b>13.8</b><span>13.0 – 17.0</span></div>
-        <div class="r"><span>WBC count</span><b class="hi">11.6 H</b><span>4.0 – 11.0</span></div>
-        <div class="r"><span>Platelets</span><b>245</b><span>150 – 400</span></div>
-      </div>
-    </div>
-    <div class="project-featured-info">
-      <div class="project-tag">
-        <div class="project-tag-dot"></div>
-        Live Production · Django · Real-time <span class="new-pill">New</span>
-      </div>
-      <h3>Quaprit HMS<br>Hospital &amp; Clinic System</h3>
-      <p>A real-time hospital management system — from token to report. Reception, OPD doctors, laboratory and radiology work on one live system, so no paper slips move between departments. Built for any hospital, clinic or diagnostic centre.</p>
-      <ul class="hl-list">
-        <li><b>Token &amp; queue</b> with "now serving" display</li>
-        <li><b>OPD</b> — patient history, vitals, diagnosis</li>
-        <li><b>Laboratory</b> — orders, sample status, reports</li>
-        <li><b>Radiology</b> — X-ray, MRI &amp; ultrasound tracking</li>
-        <li><b>Digital e-prescriptions</b> with follow-up</li>
-        <li><b>Role-based access</b> for every department</li>
-      </ul>
-      <div class="project-tech">
-        <span class="pt">Python</span><span class="pt">Django</span><span class="pt">JavaScript</span>
-        <span class="pt">SQL Database</span><span class="pt">PDF Printing</span><span class="pt">Role-based Logins</span>
-      </div>
-      <div class="project-btns">
-        <a href="#showreel" class="project-btn-live">▶ Watch Reel</a>
-        <a href="#contact" class="project-btn-code">💬 Book a Demo</a>
-      </div>
-      <div class="project-demo-note">Screens shown use <span>sample data only</span> — no real patient information.</div>
-    </div>
-  </div>
-</section>
-
-<section id="showreel">
-  <div class="sec-header reveal">
-    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Showreel</span></div>
-    <h2 class="sec-title">Promo Reels &amp;<br><strong>Brochures</strong></h2>
-    <p class="sec-desc">Demo reels for each system — animated social-media videos with original, copyright-free music, and print-ready brochures.</p>
-  </div>
-  <div class="reel-grid">
-    <div class="reel-card reveal">
-      <video controls playsinline preload="none" poster="media/myschool-erp-reel.jpg"><source src="media/myschool-erp-reel.mp4" type="video/mp4"/></video>
-      <div class="reel-body"><h3>MySchool ERP</h3><p>Admissions, result cards, finance, WhatsApp quizzes, worksheets and plans for every size — in 44 seconds.</p>
-        <div class="reel-tags"><span>1080×1920</span><span>Facebook Reel</span><span>Original music</span></div></div>
-    </div>
-    <div class="reel-card reveal">
-      <video controls playsinline preload="none" poster="media/quaprit-hms-reel.jpg"><source src="media/quaprit-hms-reel.mp4" type="video/mp4"/></video>
-      <div class="reel-body"><h3>Quaprit HMS</h3><p>Token queue, OPD, lab reports, radiology and e-prescriptions — the patient journey from token to report.</p>
-        <div class="reel-tags"><span>1080×1920</span><span>Facebook Reel</span><span>Sample data</span></div></div>
-    </div>
-    <div class="reel-card reveal">
-      <video controls playsinline preload="none" poster="media/mtc-pos-reel.jpg"><source src="media/mtc-pos-reel.mp4" type="video/mp4"/></video>
-      <div class="reel-body"><h3>Model Town Club POS</h3><p>Mobile ordering, kitchen display, tables, 80mm receipts, member portal and live sales dashboard.</p>
-        <div class="reel-tags"><span>1080×1920</span><span>Facebook Reel</span><span>Sample data</span></div></div>
-    </div>
-  </div>
-  <div class="dl-row reveal">
-    <a class="dl-card" href="media/MySchool-ERP-Brochure.pdf" target="_blank"><div class="dl-ico">📄</div><div><b>MySchool ERP Brochure</b><span>6-page A4 PDF · features, plans &amp; technology</span></div></a>
-  </div>
-</section>
-
-<section id="certifications">
-  <div class="sec-header reveal">
-    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Verified Credentials</span></div>
-    <h2 class="sec-title">Harvard &amp; Google<br><strong>Certifications</strong></h2>
-    <p class="sec-desc">13 verified credentials from world-class institutions — covering computer science, cybersecurity, data analytics, digital marketing, and more.</p>
-  </div>
-  <div class="cert-filter reveal">
-    <button class="cf-btn active" onclick="filterCerts('all',this)">All Credentials (13)</button>
-    <button class="cf-btn" onclick="filterCerts('h',this)">🎓 HarvardX / CS50 (8)</button>
-    <button class="cf-btn" onclick="filterCerts('g',this)">🔵 Google (5)</button>
-  </div>
-  <div class="certs-grid" id="certGrid">
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50x: Introduction to Computer Science</div></div></div><div class="cert-foot"><span class="cert-date">June 5, 2023</span><span class="cert-badge2 cb-v">Verified</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50P: Introduction to Programming with Python</div></div></div><div class="cert-foot"><span class="cert-date">July 3, 2023</span><span class="cert-badge2 cb-v">Verified</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50S: Introduction to Programming with Scratch</div></div></div><div class="cert-foot"><span class="cert-date">September 26, 2023</span><span class="cert-badge2 cb-v">Verified</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50W: Web Programming with Python &amp; JavaScript</div></div></div><div class="cert-foot"><span class="cert-date">HarvardX</span><span class="cert-badge2 cb-v">Verified</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">CS50 Cybersecurity</div></div></div><div class="cert-foot"><span class="cert-date">2026</span><span class="cert-badge2 cb-v">Verified</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · Professional Certificate</div><div class="cert-title">Computer Science for Python Programming</div></div></div><div class="cert-foot"><span class="cert-date">July 2023</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · Professional Certificate</div><div class="cert-title">Computer Science for Databases using SQL</div></div></div><div class="cert-foot"><span class="cert-date">April 2024</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-    <div class="cert-card reveal" data-cat="h"><div class="cert-card-top"><div class="cert-ico h">🎓</div><div><div class="cert-org">HarvardX · edX</div><div class="cert-title">PH125.1x: Data Science — R Basics</div></div></div><div class="cert-foot"><span class="cert-date">May 7, 2024</span><span class="cert-badge2 cb-v">Verified</span></div></div>
-    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google IT Support Professional Certificate</div></div></div><div class="cert-foot"><span class="cert-date">March 9, 2025</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Digital Marketing &amp; E-Commerce Certificate</div></div></div><div class="cert-foot"><span class="cert-date">August 9, 2024</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Advanced Data Analytics Certificate</div></div></div><div class="cert-foot"><span class="cert-date">June 26, 2025</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Business Intelligence Certificate</div></div></div><div class="cert-foot"><span class="cert-date">October 9, 2025</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-    <div class="cert-card reveal" data-cat="g"><div class="cert-card-top"><div class="cert-ico g">🔵</div><div><div class="cert-org">Google · Coursera · Credly</div><div class="cert-title">Google Cybersecurity Professional Certificate</div></div></div><div class="cert-foot"><span class="cert-date">February 12, 2026</span><span class="cert-badge2 cb-p">Professional</span></div></div>
-  </div>
-  <div class="certs-cta reveal">
-    <a href="https://credly.com/users/massab-farooq" target="_blank" class="btn-ghost">View Full Transcript on Credly ↗</a>
-  </div>
-</section>
-
-<section id="ventures">
-  <div class="sec-header reveal">
-    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>What I've Built</span></div>
-    <h2 class="sec-title">My <strong>Ventures</strong></h2>
-    <p class="sec-desc">Four platforms united by one mission — to inform, educate, and empower communities through digital innovation.</p>
-  </div>
-  <div class="ventures-grid">
-    <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="venture v1 reveal">
-      <div class="venture-img">📡</div>
-      <div class="venture-body">
-        <div class="venture-tag">Digital Media · News Channel · Founder</div>
-        <h3>Voice of Jhang</h3>
-        <p>A thriving digital news and media channel covering stories from Jhang and beyond — Pakistan's community voice. Founded and grown to 133,000+ followers from the ground up.</p>
-        <div class="venture-meta"><span class="venture-followers">📊 133,000+ Followers</span><div class="venture-arrow">↗</div></div>
-      </div>
-    </a>
-    <a href="https://web.facebook.com/Quaprit" target="_blank" class="venture v2 reveal">
-      <div class="venture-img">💻</div>
-      <div class="venture-body">
-        <div class="venture-tag">Technology · Web Dev · POS · Consulting</div>
-        <h3>Quaprit Technologies</h3>
-        <p>Software company behind MySchool ERP (schools &amp; colleges), Quaprit HMS (hospitals &amp; clinics) and restaurant POS systems — with demos, installation and training. Contact 0341 603 5267 · 0333 673 5267.</p>
-        <div class="venture-meta"><span class="venture-followers">📞 0333 673 5267</span><div class="venture-arrow">↗</div></div>
-      </div>
-    </a>
-    <a href="media/mtc-pos-reel.mp4" target="_blank" class="venture v3 reveal">
-      <div class="venture-img">🍽️</div>
-      <div class="venture-body">
-        <div class="venture-tag">Django · POS · ERP · Membership · Live</div>
-        <h3>Model Town Club POS</h3>
-        <p>Full restaurant &amp; club management built in Django — kitchen display, 200+ member portal, mobile ordering &amp; admin panel. Live in Lahore, Pakistan.</p>
-        <div class="venture-meta"><span class="venture-followers">☁️ Hosted on Cloud · ▶ Demo</span><div class="venture-arrow">↗</div></div>
-      </div>
-    </a>
-    <a href="#showreel" class="venture v1 reveal">
-      <div class="venture-img">🏫</div>
-      <div class="venture-body">
-        <div class="venture-tag">Django · ERP · 28 Modules · Live</div>
+  <div class="wrap">
+    <p class="eyebrow">Featured projects</p>
+    <h2>Software in daily use</h2>
+    <p class="lead">Each project has a case study covering the problem, my role, architecture, security and lessons. Live systems hold real data, so demos use sample data only.</p>
+    <div class="cards">
+      <article class="card">
+        <span class="status">In production · 36 automated tests</span>
         <h3>MySchool ERP</h3>
-        <p>School &amp; college ERP — online admission, real-time result cards, finance &amp; HR, parents app, WhatsApp quizzes and 277 lesson worksheets. Live at MySchool Jhang.</p>
-        <div class="venture-meta"><span class="venture-followers">☁️ Hosted on Cloud · ▶ Demo</span><div class="venture-arrow">↗</div></div>
+        <p>A school and college ERP that replaced registers, paper receipts and spreadsheets at MySchool Jhang.</p>
+        <ul>
+          <li>Admissions, exams and real-time result-card PDFs</li>
+          <li>Fees and double-entry finance, HR and payroll</li>
+          <li>Question bank, online exams, 277 printable worksheets</li>
+          <li>Claude-powered chatbot and fee-reminder assistant</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Django 5</span><span class="chip">SQLite / MySQL</span><span class="chip">ReportLab</span><span class="chip">Claude API</span></div>
+        <div class="links"><a href="projects/myschool-erp.html">Read case study →</a><a href="media/myschool-erp-reel.mp4" target="_blank" rel="noopener">Demo video</a></div>
+      </article>
+      <article class="card">
+        <span class="status">In production · 68 automated tests</span>
+        <h3>Hospital &amp; Clinic System</h3>
+        <p>One live system for reception, doctors, laboratory, imaging, pharmacy and billing at a private hospital.</p>
+        <ul>
+          <li>Patient tokens and department queues</li>
+          <li>OPD consultations and printed e-prescriptions</li>
+          <li>Lab orders and results; X-ray, MRI, ultrasound tracking</li>
+          <li>Pharmacy POS, billing, day-end audit, role-based access</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Django 5</span><span class="chip">Django REST Framework</span><span class="chip">SQLite</span></div>
+        <div class="links"><a href="projects/hospital-system.html">Read case study →</a><a href="media/quaprit-hms-reel.mp4" target="_blank" rel="noopener">Demo video</a></div>
+      </article>
+      <article class="card">
+        <span class="status">In production</span>
+        <h3>Restaurant &amp; Club POS</h3>
+        <p>Point of sale and member ordering for the café at Model Town Club, Lahore.</p>
+        <ul>
+          <li>Touch POS for tables, holds and payments</li>
+          <li>Kitchen display: new, preparing, ready</li>
+          <li>Member portal with phone ordering</li>
+          <li>80 mm thermal receipt printing</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Django</span><span class="chip">JavaScript</span><span class="chip">SQLite</span></div>
+        <div class="links"><a href="projects/restaurant-pos.html">Read case study →</a><a href="media/mtc-pos-reel.mp4" target="_blank" rel="noopener">Demo video</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. AI engineering -->
+<section id="ai">
+  <div class="wrap">
+    <p class="eyebrow">AI engineering</p>
+    <h2>AI features with a human in charge</h2>
+    <p class="lead">What is shipped is marked shipped; what is being designed is marked as design. I treat model output as untrusted input that people review before it counts.</p>
+    <div class="ai-grid">
+      <div class="panel">
+        <span class="badge shipped">Shipped · in production</span>
+        <h3>Claude features in MySchool ERP</h3>
+        <ul>
+          <li><b>School assistant chatbot</b> — answers staff and parent questions using live school data placed in the prompt (fees, attendance, results), through the Claude API.</li>
+          <li><b>Fee-reminder assistant</b> — a scheduled command finds fee defaulters, asks Claude to draft a personal reminder for each, saves it, and prepares a WhatsApp link. A person sends it; nothing goes out automatically.</li>
+        </ul>
       </div>
-    </a>
+      <div class="panel">
+        <span class="badge design">In design · build starting</span>
+        <h3>AI Newsroom Assistant</h3>
+        <p>Reporter notes in; a structured English or Urdu draft and a fact-check list out; an editor approves. Built on 18 years of newsroom practice.</p>
+        <ul>
+          <li>Every name, date, place and claim carries the exact line of the notes it came from</li>
+          <li>Quotes not found in the notes are flagged and block approval</li>
+          <li>No publish button: an editor approves or rejects with a reason</li>
+          <li>Django, structured LLM output, server-side validation, tests that run without an API key</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="services">
-  <div class="sec-header reveal">
-    <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>What I Offer</span></div>
-    <h2 class="sec-title">Services &amp;<br><strong>Expertise</strong></h2>
-    <p class="sec-desc">Harvard &amp; Google-certified expertise with three live production Django systems — across 9 core service areas.</p>
-  </div>
-  <div class="services-grid">
-    <div class="svc svc-teal reveal"><div class="svc-icon">🍽️</div><h3>Restaurant POS Systems</h3><p>Complete cloud POS — kitchen display, member portal, mobile ordering, receipt printing, admin panel. As deployed at Model Town Club, Lahore.</p></div>
-    <div class="svc svc-highlight reveal"><div class="svc-icon">🏫</div><h3>School &amp; College ERP</h3><p>MySchool ERP — 28 modules in Basic, Standard &amp; Premium plans: admissions, result cards, exams, finance, HR, parents app. Live at MySchool Jhang.</p></div>
-    <div class="svc svc-teal reveal"><div class="svc-icon">🏥</div><h3>Hospital &amp; Clinic Systems</h3><p>Quaprit HMS — patient tokens, OPD, laboratory, radiology and e-prescriptions in real time. For hospitals, clinics and diagnostic centres.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🌐</div><h3>Custom Web Applications</h3><p>Bespoke Django web apps — ERPs, membership portals, dashboards. CS50W certified, production-ready cloud deployments.</p></div>
-    <div class="svc reveal"><div class="svc-icon">📊</div><h3>Data Analytics &amp; BI</h3><p>Dashboards, reports and business intelligence using Python, R and Google BI tools. Google Advanced Data Analytics certified.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🔒</div><h3>Cybersecurity</h3><p>Security assessments, threat analysis and consulting. Harvard CS50 Cybersecurity + Google Cybersecurity Professional certified.</p></div>
-    <div class="svc reveal"><div class="svc-icon">📱</div><h3>Digital Marketing</h3><p>SEO, e-commerce, and campaign strategy. Google certified with 133K+ real-world audience building experience.</p></div>
-    <div class="svc reveal"><div class="svc-icon">🎬</div><h3>Promo Reels &amp; Brochures</h3><p>Animated Facebook/Instagram reels with original copyright-free music, and print-ready product brochures in English &amp; Urdu.</p></div>
-    <div class="svc reveal"><div class="svc-icon">📚</div><h3>Educational Content</h3><p>Question banks and printable A4 worksheets mapped to textbooks — 277 lessons for Oxford Progressive English Books 1–5.</p></div>
+<!-- 4. Skills -->
+<section id="skills">
+  <div class="wrap">
+    <p class="eyebrow">Skills</p>
+    <h2>Grouped by how I use them</h2>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th scope="col">Level</th><th scope="col">Skills</th></tr></thead>
+      <tbody>
+        <tr><td><b>Production use</b></td><td>Python, Django, server-rendered HTML/CSS/JavaScript, SQLite and MySQL, ReportLab PDF generation, role-based access, Git and GitHub, cloud deployment and maintenance</td></tr>
+        <tr><td><b>Working knowledge</b></td><td>Claude API integration, Django REST Framework, pandas, openpyxl (Excel import/export), Bootstrap, progressive web apps</td></tr>
+        <tr><td><b>Coursework</b></td><td>Data analysis and business intelligence, R, cybersecurity fundamentals, SQL databases (HarvardX, Google)</td></tr>
+        <tr><td><b>Domain knowledge</b></td><td>Newsroom workflows and editorial standards, school administration, hospital OPD and laboratory workflows, restaurant operations</td></tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </section>
 
+<!-- 5. Experience -->
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2>Engineering, with a newsroom behind it</h2>
+    <div class="timeline">
+      <div class="job">
+        <h3>Quaprit Technologies Inc.</h3>
+        <p class="meta">Founder and software developer</p>
+        <p>Design, build, deploy and support Django systems for a school, a private hospital and a members’ club: requirements with non-technical staff, data modelling, PDF documents, role-based access, automated tests and ongoing maintenance.</p>
+      </div>
+      <div class="job">
+        <h3>ARY News</h3>
+        <p class="meta">Journalism and field reporting · about 18 years</p>
+        <p>Field reporting and newsroom work: gathering facts under deadline, checking sources, and working inside editorial approval processes. This is the experience behind the newsroom assistant’s design.</p>
+      </div>
+      <div class="job">
+        <h3>Voice of Jhang</h3>
+        <p class="meta">Founder · digital news channel · 133K+ followers</p>
+        <p>Built and run a local digital news channel on Facebook covering Jhang and the surrounding region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Certifications -->
+<section id="certifications">
+  <div class="wrap">
+    <p class="eyebrow">Education &amp; certifications</p>
+    <h2>Computer science and professional certificates</h2>
+    <p class="lead">Verified on <a href="https://credly.com/users/massab-farooq" target="_blank" rel="noopener">Credly</a>.</p>
+    <ul class="certs">
+      <li>HarvardX CS50x: Introduction to Computer Science<span>June 2023</span></li>
+      <li>HarvardX CS50P: Programming with Python<span>July 2023</span></li>
+      <li>HarvardX CS50W: Web Programming with Python and JavaScript<span>HarvardX</span></li>
+      <li>HarvardX CS50 Cybersecurity<span>2026</span></li>
+      <li>HarvardX CS50S: Programming with Scratch<span>September 2023</span></li>
+      <li>HarvardX Professional Certificate: Computer Science for Python Programming<span>July 2023</span></li>
+      <li>HarvardX Professional Certificate: Computer Science for Databases using SQL<span>April 2024</span></li>
+      <li>HarvardX PH125.1x: Data Science — R Basics<span>May 2024</span></li>
+      <li>Google Cybersecurity Professional Certificate<span>February 2026</span></li>
+      <li>Google Business Intelligence Certificate<span>October 2025</span></li>
+      <li>Google Advanced Data Analytics Certificate<span>June 2025</span></li>
+      <li>Google IT Support Professional Certificate<span>March 2025</span></li>
+      <li>Google Digital Marketing &amp; E-Commerce Certificate<span>August 2024</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. Contact -->
 <section id="contact">
-  <div class="contact-wrap">
-    <div class="reveal-left">
-      <div class="sec-header">
-        <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span>Get In Touch</span></div>
-        <h2 class="sec-title">Let's Build<br><strong>Something Great</strong></h2>
-      </div>
-      <p>Need a school or college ERP, a hospital or clinic system, a restaurant POS, or a custom web application? I build real systems that actually get deployed. Three live systems — let's make it four.</p>
-      <div class="contact-links">
-        <a href="mailto:musabfarouq555@gmail.com" class="cl"><div class="cl-icon">✉️</div><div><span class="cl-label">Email</span><span class="cl-val">musabfarouq555@gmail.com</span></div></a>
-        <a href="tel:+923336735267" class="cl"><div class="cl-icon">📞</div><div><span class="cl-label">Phone / WhatsApp</span><span class="cl-val">0333 673 5267</span></div></a>
-        <a href="https://github.com/massab1" target="_blank" class="cl"><div class="cl-icon">🐙</div><div><span class="cl-label">GitHub</span><span class="cl-val">github.com/massab1</span></div></a>
-        <a href="https://www.linkedin.com/in/musabfarouq" target="_blank" class="cl"><div class="cl-icon">💼</div><div><span class="cl-label">LinkedIn</span><span class="cl-val">linkedin.com/in/musabfarouq</span></div></a>
-        <a href="https://credly.com/users/massab-farooq" target="_blank" class="cl"><div class="cl-icon">🏅</div><div><span class="cl-label">Credly — Verified Certs</span><span class="cl-val">credly.com/users/massab-farooq</span></div></a>
-      </div>
-      <div class="social-chips">
-        <a href="media/mtc-pos-reel.mp4" target="_blank" class="sc">🍽️ MTC POS Demo</a>
-        <a href="media/myschool-erp-reel.mp4" target="_blank" class="sc">🏫 MySchool Demo</a>
-        <a href="#showreel" class="sc">🎬 Showreel</a>
-        <a href="https://web.facebook.com/voiceofjhang3" target="_blank" class="sc">📡 Voice of Jhang</a>
-        <a href="https://web.facebook.com/Quaprit" target="_blank" class="sc">💻 Quaprit Tech</a>
-      </div>
-    </div>
-    <div class="reveal-right">
-      <div class="contact-form" id="contactForm">
-        <div class="form-title">Send a Message</div>
-        <div class="form-subtitle">I typically respond within 24 hours · WhatsApp: 0333 673 5267</div>
-        <div class="form-row2">
-          <div class="fg"><label for="cfFirst">First Name</label><input id="cfFirst" type="text" autocomplete="given-name" placeholder="Your first name"/></div>
-          <div class="fg"><label for="cfLast">Last Name</label><input id="cfLast" type="text" autocomplete="family-name" placeholder="Your last name"/></div>
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Let’s talk</h2>
+    <p class="lead">Open to remote software engineering and AI application roles, working from Jhang, Pakistan (PKT, UTC+5).</p>
+    <div class="contact">
+      <ul class="contact-links">
+        <li><a href="mailto:musabfarouq555@gmail.com"><small>Email</small>musabfarouq555@gmail.com</a></li>
+        <li><a href="https://wa.me/923336735267" target="_blank" rel="noopener"><small>WhatsApp</small>+92 333 673 5267</a></li>
+        <li><a href="https://www.linkedin.com/in/musabfarouq" target="_blank" rel="noopener"><small>LinkedIn</small>linkedin.com/in/musabfarouq</a></li>
+        <li><a href="https://github.com/massab1" target="_blank" rel="noopener"><small>GitHub</small>github.com/massab1</a></li>
+      </ul>
+      <form class="msg" onsubmit="return false" aria-label="Write a message">
+        <div class="row2">
+          <div><label for="cfName">Name</label><input id="cfName" type="text" autocomplete="name"/></div>
+          <div><label for="cfEmail">Your email</label><input id="cfEmail" type="email" autocomplete="email"/></div>
         </div>
-        <div class="fg"><label for="cfEmail">Email Address</label><input id="cfEmail" type="email" autocomplete="email" placeholder="your@email.com"/></div>
-        <div class="fg">
-          <label for="cfNeed">I Need</label>
-          <select id="cfNeed">
-            <option value="">Select what you need…</option>
-            <option>Restaurant POS System (like Model Town Club)</option>
-            <option>School / College ERP (MySchool ERP)</option>
-            <option>Hospital / Clinic System (Quaprit HMS)</option>
-            <option>Custom Web Application (Django)</option>
-            <option>Membership / Club Portal</option>
-            <option>Data Analytics / Dashboard</option>
-            <option>Cybersecurity Consulting</option>
-            <option>Digital Marketing</option>
-            <option>General Inquiry</option>
-          </select>
+        <label for="cfMsg">Message</label>
+        <textarea id="cfMsg"></textarea>
+        <p class="form-error" id="cfError" role="alert">Please write a short message first.</p>
+        <div class="btns">
+          <button type="button" class="btn btn-primary" onclick="sendMessage('email')">Send by email</button>
+          <button type="button" class="btn btn-ghost" onclick="sendMessage('whatsapp')">Send on WhatsApp</button>
         </div>
-        <div class="fg"><label for="cfMsg">Message</label><textarea id="cfMsg" placeholder="Tell me about your project…"></textarea></div>
-        <div class="form-error" id="cfError" role="alert">Please write a short message first.</div>
-        <div class="form-btn-row">
-          <button type="button" class="form-btn" onclick="sendMessage('email')">Send by Email →</button>
-          <button type="button" class="form-btn wa" onclick="sendMessage('whatsapp')">Send on WhatsApp</button>
-        </div>
-        <p class="form-note">Opens your email app or WhatsApp with this message filled in, so it reaches me directly. Nothing is stored on this site.</p>
-      </div>
+        <p class="form-note">Opens your email app or WhatsApp with this message filled in. Nothing is stored on this site.</p>
+      </form>
     </div>
   </div>
 </section>
+</main>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo">Massab Farooq</div>
-    <div class="footer-copy">© 2026 · Quaprit Technologies · Full Stack Django Developer · 0333 673 5267</div>
-    <div class="footer-links">
-      <a href="https://github.com/massab1" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/musabfarouq" target="_blank">LinkedIn</a>
-      <a href="media/mtc-pos-reel.mp4" target="_blank">MTC Demo</a>
-      <a href="#showreel">Showreel</a>
-      <a href="https://credly.com/users/massab-farooq" target="_blank">Credly</a>
-    </div>
+  <div class="wrap">
+    <span>© 2026 Massab Farooq · Quaprit Technologies Inc.</span>
+    <span><a href="https://github.com/massab1" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/musabfarouq" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://credly.com/users/massab-farooq" target="_blank" rel="noopener">Credly</a></span>
   </div>
 </footer>
 
-<a href="#hero" class="btt" id="btt">↑</a>
-
 <script>
-// PARTICLES (skipped when the visitor prefers reduced motion)
-const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const canvas=document.getElementById('particles-canvas'),ctx=canvas.getContext('2d');
-let W,H,parts=[];
-function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
-resize();window.addEventListener('resize',resize);
-class P{constructor(){this.reset()}reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.5+.3;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.alpha=Math.random()*.4+.1;this.color=Math.random()>.5?'212,168,75':'0,212,255'}
-update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset()}
-draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(${this.color},${this.alpha})`;ctx.fill()}}
-for(let i=0;i<80;i++)parts.push(new P());
-function animP(){ctx.clearRect(0,0,W,H);parts.forEach(p=>{p.update();p.draw()});
-for(let i=0;i<parts.length;i++)for(let j=i+1;j<parts.length;j++){const dx=parts[i].x-parts[j].x,dy=parts[i].y-parts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<100){ctx.beginPath();ctx.moveTo(parts[i].x,parts[i].y);ctx.lineTo(parts[j].x,parts[j].y);ctx.strokeStyle=`rgba(212,168,75,${.08*(1-d/100)})`;ctx.lineWidth=.5;ctx.stroke()}}
-requestAnimationFrame(animP)}
-if(!reduceMotion)animP();
-
-// NAV + BACK TO TOP
-const navbar=document.getElementById('navbar'),btt=document.getElementById('btt');
-window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',scrollY>50);btt.classList.toggle('show',scrollY>400)});
-
-// REVEAL ANIMATIONS
-const reveals=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
-const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target)}});},{threshold:.1});
-reveals.forEach(el=>obs.observe(el));
-
-// COUNT-UP
-const counters=document.querySelectorAll('.count-up');
-const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const target=+e.target.dataset.target,duration=1500,step=target/duration*16;let current=0;const timer=setInterval(()=>{current+=step;if(current>=target){e.target.textContent=target;clearInterval(timer)}else{e.target.textContent=Math.floor(current)}},16);cObs.unobserve(e.target)}});},{threshold:.5});
-counters.forEach(c=>cObs.observe(c));
-
-// CERT FILTER
-function filterCerts(cat,btn){
-  document.querySelectorAll('.cf-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.cert-card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat===cat)?'flex':'none'});
-}
-
-// CONTACT FORM
 function sendMessage(via){
   const v=id=>document.getElementById(id).value.trim();
-  const name=[v('cfFirst'),v('cfLast')].filter(Boolean).join(' ');
   const msg=v('cfMsg'),err=document.getElementById('cfError');
   if(!msg){err.style.display='block';document.getElementById('cfMsg').focus();return}
   err.style.display='none';
-  const need=v('cfNeed'),email=v('cfEmail');
   const lines=[msg,''];
-  if(name)lines.push('From: '+name);
-  if(email)lines.push('Email: '+email);
-  if(need)lines.push('About: '+need);
+  if(v('cfName'))lines.push('From: '+v('cfName'));
+  if(v('cfEmail'))lines.push('Email: '+v('cfEmail'));
   const text=lines.join('\n').trim();
   if(via==='whatsapp'){window.open('https://wa.me/923336735267?text='+encodeURIComponent(text),'_blank','noopener');return}
-  const subject='Portfolio enquiry'+(name?' from '+name:'');
+  const subject='Portfolio enquiry'+(v('cfName')?' from '+v('cfName'):'');
   window.location.href='mailto:musabfarouq555@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text);
 }
 </script>
