@@ -18,7 +18,7 @@ I'm **Massab Farooq** — an entrepreneur, digital creator, and tech professiona
 | 🏥 **Hospital & Clinic System** | Hospital system — patient tokens, OPD, laboratory, X-ray/MRI, e-prescriptions, role-based access. In daily use at a private hospital. |
 | 🍽️ **Model Town Club POS** | Restaurant POS & membership system — kitchen display, member portal, mobile ordering. Live in Lahore. |
 
-📄 Case studies are in [`projects/`](projects/), the CV is in [`cv/`](cv/), and demo videos (sample data only) are in [`media/`](media/).
+📄 Case studies are in [`projects/`](projects/), and demo videos (sample data only) are in [`media/`](media/).
 
 ---
 
